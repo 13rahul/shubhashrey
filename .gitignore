@@ -1,0 +1,2 @@
+# Local form/order logs (created by PHP when mail() is unavailable)
+storage/*.txt

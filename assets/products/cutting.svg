@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 240" role="img" aria-label="Cutting electrodes">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0E6E8D"/>
+      <stop offset="100%" stop-color="#073d4f"/>
+    </linearGradient>
+  </defs>
+  <rect width="320" height="240" fill="#e8f4f8"/>
+  <rect x="118" y="36" width="28" height="168" rx="6" fill="url(#g)"/>
+  <polygon points="132,28 148,52 116,52" fill="#F2711C"/>
+  <text x="170" y="118" font-family="Segoe UI, sans-serif" font-size="18" font-weight="700" fill="#0E6E8D">CUTTING</text>
+  <text x="170" y="142" font-family="Segoe UI, sans-serif" font-size="18" font-weight="700" fill="#0E6E8D">ELECTRODES</text>
+</svg>
