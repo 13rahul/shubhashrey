@@ -24,9 +24,20 @@
         <span></span><span></span><span></span>
       </button>
       <nav class="site-nav" id="site-nav" aria-label="Primary">
+        <a href="index.html">Home</a>
         <a href="shop.html">Shop</a>
         <a href="industries.html">Industries</a>
-        <a href="about.html">About</a>
+        <div class="nav-dropdown">
+          <button class="nav-dropdown__toggle" type="button" aria-expanded="false" aria-haspopup="true" aria-controls="about-menu">
+            About
+            <svg class="nav-dropdown__chevron" viewBox="0 0 24 24" aria-hidden="true" width="16" height="16"><path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          </button>
+          <ul class="nav-dropdown__menu" id="about-menu" role="menu">
+            <li role="none"><a role="menuitem" href="about.html">Company Profile</a></li>
+            <li role="none"><a role="menuitem" href="vision.html">Vision</a></li>
+            <li role="none"><a role="menuitem" href="mission.html">Mission</a></li>
+          </ul>
+        </div>
         <a href="contact.html">Contact</a>
         <a class="nav-cart" href="cart.html">Cart <span class="cart-badge" data-cart-count hidden>0</span></a>
         <a class="nav-whatsapp" href="https://wa.me/919168679621" target="_blank" rel="noopener noreferrer">WhatsApp</a>
@@ -53,7 +64,7 @@
             <p>Sheet metal welding, gate and grill fabrication, light-duty steel structures, maintenance, and vehicle bodies.</p>
             <p><strong>Industries:</strong> General fabrication, furniture, construction, repair shops.</p>
             <p><strong>Features:</strong> Easy to strike, stable arc, smooth finish, easy slag removal.</p>
-            <a class="btn btn--primary" href="product.html?id=e-6013">View E-6013 — ₹1,900</a>
+            <a class="btn btn--primary" href="product.html?id=e-6013">View E-6013</a>
           </div>
         </div>
       </div>
@@ -68,7 +79,7 @@
             <p>High-tensile steels, structural frames, bridges, heavy machinery parts, and pressure vessels.</p>
             <p><strong>Industries:</strong> Heavy construction, mining, oil and gas, shipbuilding.</p>
             <p><strong>Features:</strong> High-strength welds, crack-resistant, low-hydrogen.</p>
-            <a class="btn btn--primary" href="product.html?id=e-7018">View E-7018 — ₹3,000</a>
+            <a class="btn btn--primary" href="product.html?id=e-7018">View E-7018</a>
           </div>
           <img class="product-photo reveal" src="assets/products/e-7018.png" alt="E-7018 Bharatweld welding electrode" width="800" height="500" />
         </div>
@@ -84,7 +95,7 @@
             <h2>Stainless steel work</h2>
             <p>Welding 18/8 stainless grades for food, chemical, pharmaceutical, and architectural applications.</p>
             <p><strong>Industries:</strong> Food processing, chemical, pharmaceutical, architectural stainless.</p>
-            <a class="btn btn--primary" href="product.html?id=e-308l">View E-308L — ₹5,000</a>
+            <a class="btn btn--primary" href="product.html?id=e-308l">View E-308L</a>
           </div>
         </div>
       </div>
@@ -98,7 +109,7 @@
             <h2>Cutting &amp; maintenance</h2>
             <p>Cut, pierce, and gouge metal for maintenance, demolition, and repair without oxy-fuel equipment.</p>
             <p><strong>Industries:</strong> Maintenance, demolition, foundries, general fabrication.</p>
-            <a class="btn btn--primary" href="product.html?id=cutting">View Cutting Electrodes — ₹2,500</a>
+            <a class="btn btn--primary" href="product.html?id=cutting">View Cutting Electrodes</a>
           </div>
           <img class="product-photo reveal" src="assets/products/cutting.png" alt="Captain-Cut cutting electrodes" width="800" height="500" />
         </div>
@@ -114,7 +125,7 @@
             <h2>Hardfacing &amp; wear protection</h2>
             <p>Wear-resistant overlays for crushers, rails, and mining equipment in heavy industrial environments.</p>
             <p><strong>Industries:</strong> Mining, quarrying, railways, heavy industry.</p>
-            <a class="btn btn--primary" href="product.html?id=manganese">View Manganese Electrodes — ₹20,000</a>
+            <a class="btn btn--primary" href="product.html?id=manganese">View Manganese Electrodes</a>
           </div>
         </div>
       </div>
@@ -138,7 +149,7 @@
       </div>
       <div>
         <h3>Location</h3>
-        <p>G-241/4/2, MIDC, Baramati-413133</p>
+        <p>2, G-241/4, Maharashtra Industrial Development Corporation Area, Baramati, Katphal, Maharashtra 413133</p>
       </div>
       <div>
         <h3>Contact</h3>
@@ -148,7 +159,10 @@
       </div>
     </div>
     <div class="container footer-bottom">
-      <p>&copy; <span id="year"></span> Shubhshrey Industries Private Limited. All rights reserved.</p>
+      <div class="footer-bottom-inner">
+        <p>&copy; <span id="year"></span> Shubhshrey Industries Private Limited. All rights reserved.</p>
+        <p>Developed by <a href="https://fundaking.com/" target="_blank" rel="noopener noreferrer">Fundaking Media</a></p>
+      </div>
     </div>
   </footer>
 

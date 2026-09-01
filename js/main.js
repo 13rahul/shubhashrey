@@ -32,7 +32,33 @@ function initNav() {
       toggle.classList.remove("is-active");
       toggle.setAttribute("aria-expanded", "false");
       document.body.classList.remove("nav-open");
+      nav.querySelectorAll(".nav-dropdown.is-open").forEach((dropdown) => {
+        dropdown.classList.remove("is-open");
+        const btn = dropdown.querySelector(".nav-dropdown__toggle");
+        if (btn) btn.setAttribute("aria-expanded", "false");
+      });
     });
+  });
+
+  nav.querySelectorAll(".nav-dropdown").forEach((dropdown) => {
+    const btn = dropdown.querySelector(".nav-dropdown__toggle");
+    if (!btn) return;
+
+    btn.addEventListener("click", (event) => {
+      event.stopPropagation();
+      const open = dropdown.classList.toggle("is-open");
+      btn.setAttribute("aria-expanded", open ? "true" : "false");
+    });
+  });
+
+  document.addEventListener("click", (event) => {
+    if (!event.target.closest(".nav-dropdown")) {
+      nav.querySelectorAll(".nav-dropdown.is-open").forEach((dropdown) => {
+        dropdown.classList.remove("is-open");
+        const btn = dropdown.querySelector(".nav-dropdown__toggle");
+        if (btn) btn.setAttribute("aria-expanded", "false");
+      });
+    }
   });
 }
 
@@ -50,12 +76,19 @@ function initHeaderScroll() {
 
 function setActiveNav() {
   const path = window.location.pathname.split("/").pop() || "index.html";
+  const aboutPages = ["about.html", "vision.html", "mission.html"];
+
   document.querySelectorAll(".site-nav a[href]").forEach((link) => {
     const href = link.getAttribute("href");
     if (href === path || (path === "" && href === "index.html")) {
       link.setAttribute("aria-current", "page");
     }
   });
+
+  if (aboutPages.includes(path)) {
+    const aboutToggle = document.querySelector(".nav-dropdown__toggle");
+    if (aboutToggle) aboutToggle.setAttribute("aria-current", "page");
+  }
 }
 
 let revealObserver = null;
@@ -150,10 +183,8 @@ function renderProductPage() {
         <h1>${product.name}</h1>
         <p class="product-detail__sku">SKU: ${product.sku}</p>
         <p>${product.description}</p>
-        <p class="product-item__price">${formatINR(product.price)}${product.unit ? ` <small>${product.unit}</small>` : ""}</p>
         <div class="cta-row">
-          <button type="button" class="btn btn--primary" data-add-to-cart="${product.id}">Add to cart</button>
-          <a class="btn btn--ghost" href="checkout.html" id="buy-now-link">Buy now via WhatsApp</a>
+          <button type="button" class="btn btn--primary" data-buy-now="${product.id}">Buy now</button>
         </div>
         <table class="spec-table">
           <tbody>
@@ -167,17 +198,8 @@ function renderProductPage() {
     </div>
   `;
 
-  bindAddToCartButtons(root);
+  bindBuyNowButtons(root);
   initReveals();
-
-  const buyNow = document.getElementById("buy-now-link");
-  if (buyNow) {
-    buyNow.addEventListener("click", (e) => {
-      e.preventDefault();
-      addToCart(product.id, 1);
-      window.location.href = "checkout.html";
-    });
-  }
 }
 
 function initTestimonialSlider() {

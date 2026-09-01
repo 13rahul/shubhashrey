@@ -61,14 +61,13 @@ function getCartLines() {
       return {
         ...item,
         product,
-        lineTotal: product.price * item.qty,
       };
     })
     .filter(Boolean);
 }
 
 function getCartSubtotal() {
-  return getCartLines().reduce((sum, line) => sum + line.lineTotal, 0);
+  return 0;
 }
 
 function updateCartBadge() {
@@ -90,9 +89,8 @@ function renderProductCard(product, { featured = false } = {}) {
         <h3 class="product-item__name"><a href="product.html?id=${product.id}">${product.name}</a></h3>
         <p class="product-item__desc">${product.description}</p>
         <div class="product-item__meta">
-          <span class="product-item__price">${formatINR(product.price)}${product.unit ? ` <small>${product.unit}</small>` : ""}</span>
-          <button type="button" class="btn btn--primary btn--sm" data-add-to-cart="${product.id}">
-            Add to cart
+          <button type="button" class="btn btn--primary btn--sm" data-buy-now="${product.id}">
+            Buy now
           </button>
         </div>
       </div>
@@ -100,18 +98,16 @@ function renderProductCard(product, { featured = false } = {}) {
   `;
 }
 
-function bindAddToCartButtons(root = document) {
-  root.querySelectorAll("[data-add-to-cart]").forEach((btn) => {
+function buyNow(productId, qty = 1) {
+  addToCart(productId, qty);
+  window.location.href = "checkout.html";
+}
+
+function bindBuyNowButtons(root = document) {
+  root.querySelectorAll("[data-buy-now]").forEach((btn) => {
     btn.addEventListener("click", () => {
-      const id = btn.getAttribute("data-add-to-cart");
-      addToCart(id, 1);
-      btn.classList.add("is-added");
-      const original = btn.textContent;
-      btn.textContent = "Added";
-      setTimeout(() => {
-        btn.textContent = original;
-        btn.classList.remove("is-added");
-      }, 1200);
+      const id = btn.getAttribute("data-buy-now");
+      buyNow(id, 1);
     });
   });
 }
@@ -125,7 +121,7 @@ function renderCartPage() {
     root.innerHTML = `
       <div class="empty-state">
         <h2>Your cart is empty</h2>
-        <p>Browse Bharatweld electrodes and add products to get started.</p>
+        <p>Browse Bharatweld electrodes and buy a product to get started.</p>
         <a class="btn btn--primary" href="shop.html">Go to shop</a>
       </div>
     `;
@@ -143,7 +139,6 @@ function renderCartPage() {
             <span>${line.product.sku}</span>
           </div>
         </td>
-        <td>${formatINR(line.product.price)}</td>
         <td>
           <div class="qty-control">
             <button type="button" data-qty-dec="${line.id}" aria-label="Decrease quantity">−</button>
@@ -151,7 +146,6 @@ function renderCartPage() {
             <button type="button" data-qty-inc="${line.id}" aria-label="Increase quantity">+</button>
           </div>
         </td>
-        <td>${formatINR(line.lineTotal)}</td>
         <td>
           <button type="button" class="link-danger" data-remove="${line.id}">Remove</button>
         </td>
@@ -167,9 +161,7 @@ function renderCartPage() {
           <thead>
             <tr>
               <th>Product</th>
-              <th>Price</th>
               <th>Qty</th>
-              <th>Total</th>
               <th></th>
             </tr>
           </thead>
@@ -178,11 +170,7 @@ function renderCartPage() {
       </div>
       <aside class="cart-summary">
         <h2>Order summary</h2>
-        <div class="cart-summary__row">
-          <span>Subtotal</span>
-          <strong>${formatINR(getCartSubtotal())}</strong>
-        </div>
-        <p class="cart-summary__note">Next: enter your details and send the order on WhatsApp.</p>
+        <p class="cart-summary__note">Enter your details on the next step and send the order on WhatsApp.</p>
         <a class="btn btn--primary btn--block" href="checkout.html">Checkout via WhatsApp</a>
         <a class="btn btn--ghost btn--block" href="shop.html">Continue shopping</a>
       </aside>
@@ -242,16 +230,11 @@ function renderCheckoutSummary() {
           (line) => `
         <li>
           <span>${line.product.name} × ${line.qty}</span>
-          <strong>${formatINR(line.lineTotal)}</strong>
         </li>
       `
         )
         .join("")}
     </ul>
-    <div class="cart-summary__row">
-      <span>Subtotal</span>
-      <strong>${formatINR(getCartSubtotal())}</strong>
-    </div>
   `;
 }
 
@@ -270,7 +253,7 @@ function buildWhatsAppOrderMessage(form, lines) {
   const itemLines = lines
     .map(
       (line) =>
-        `- ${line.product.name} (${line.product.sku}) x ${line.qty} = ${formatINR(line.lineTotal)}`
+        `- ${line.product.name} (${line.product.sku}) x ${line.qty}`
     )
     .join("\n");
 
@@ -281,8 +264,7 @@ function buildWhatsAppOrderMessage(form, lines) {
     `Email: ${email}\n` +
     `Address: ${address}\n` +
     `City / PIN: ${city} / ${pincode}\n\n` +
-    `Items:\n${itemLines}\n\n` +
-    `Subtotal: ${formatINR(getCartSubtotal())}`;
+    `Items:\n${itemLines}`;
 
   if (notes) {
     message += `\nNotes: ${notes}`;
@@ -329,7 +311,7 @@ function renderShopGrid() {
   const root = document.getElementById("shop-grid");
   if (!root) return;
   root.innerHTML = PRODUCTS.map((p) => renderProductCard(p)).join("");
-  bindAddToCartButtons(root);
+  bindBuyNowButtons(root);
 
   const hash = window.location.hash.slice(1);
   if (hash) {
@@ -346,7 +328,7 @@ function renderFeaturedProducts() {
   root.innerHTML = PRODUCTS.slice(0, 3)
     .map((p) => renderProductCard(p, { featured: true }))
     .join("");
-  bindAddToCartButtons(root);
+  bindBuyNowButtons(root);
 
   if (typeof initReveals === "function") initReveals();
 }
