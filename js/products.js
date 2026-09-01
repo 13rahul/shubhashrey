@@ -8,7 +8,7 @@ const PRODUCTS = [
       "General-purpose rutile electrode for mild steel. Smooth arc, easy slag removal — ideal for fabrication, gates, grills, and repair work.",
     price: 1900,
     unit: "",
-    image: "assets/products/e-6013.svg",
+    image: "assets/products/e-6013.svg?v=3",
     current: "AC / DC",
     industries: ["General fabrication", "Furniture", "Construction", "Repair shops"],
     applications: [
@@ -27,7 +27,7 @@ const PRODUCTS = [
       "Low-hydrogen electrode (E7018/E7018-1) for high-strength, crack-resistant welds on structural steel and heavy fabrication.",
     price: 3000,
     unit: "",
-    image: "assets/products/e-7018.svg",
+    image: "assets/products/e-7018.svg?v=3",
     current: "AC / DC+",
     industries: ["Heavy construction", "Mining", "Oil and gas", "Shipbuilding"],
     applications: [
@@ -46,7 +46,7 @@ const PRODUCTS = [
       "Stainless steel electrode (E308L-16) for 18/8 grades. Stable arc and clean bead for food, chemical, and architectural stainless work.",
     price: 5000,
     unit: "",
-    image: "assets/products/e-308l.svg",
+    image: "assets/products/e-308l.svg?v=3",
     current: "AC / DC",
     industries: ["Food processing", "Chemical", "Pharmaceutical", "Architectural stainless"],
     applications: [
@@ -65,7 +65,7 @@ const PRODUCTS = [
       "Captain-Cut cutting electrodes for metal cutting, piercing, and gouging — mild steel, cast iron, and non-ferrous metals without oxygen.",
     price: 2500,
     unit: "",
-    image: "assets/products/cutting.svg",
+    image: "assets/products/cutting.svg?v=3",
     current: "AC / DC",
     industries: ["Maintenance", "Demolition", "Foundries", "General fabrication"],
     applications: [
@@ -84,7 +84,7 @@ const PRODUCTS = [
       "High-manganese hardfacing electrodes for wear-resistant overlays on crushers, rails, mining equipment, and heavy wear surfaces.",
     price: 20000,
     unit: "",
-    image: "assets/products/manganese.svg",
+    image: "assets/products/manganese.svg?v=3",
     current: "AC / DC",
     industries: ["Mining", "Quarrying", "Railways", "Heavy industry"],
     applications: [
@@ -103,7 +103,7 @@ const INDUSTRIES = [
     grades: "E-6013",
     summary:
       "Sheet metal, gates, grills, furniture, and light steel structures — easy arc, smooth finish, easy slag removal.",
-    image: "assets/products/e-6013.svg",
+    image: "assets/products/e-6013.svg?v=3",
   },
   {
     id: "structural",
@@ -111,7 +111,7 @@ const INDUSTRIES = [
     grades: "E-7018",
     summary:
       "High-tensile steel, bridges, heavy frames, mining equipment, and pressure vessels with low-hydrogen strength.",
-    image: "assets/products/e-7018.svg",
+    image: "assets/products/e-7018.svg?v=3",
   },
   {
     id: "stainless",
@@ -119,7 +119,7 @@ const INDUSTRIES = [
     grades: "E-308L",
     summary:
       "Food, chemical, and pharmaceutical equipment plus architectural stainless fabrication with corrosion resistance.",
-    image: "assets/products/e-308l.svg",
+    image: "assets/products/e-308l.svg?v=3",
   },
   {
     id: "cutting",
@@ -127,7 +127,7 @@ const INDUSTRIES = [
     grades: "Captain-Cut",
     summary:
       "Cut, pierce, and gouge metal for maintenance, demolition, and repair without oxy-fuel equipment.",
-    image: "assets/products/cutting.svg",
+    image: "assets/products/cutting.svg?v=3",
   },
   {
     id: "hardfacing",
@@ -135,7 +135,7 @@ const INDUSTRIES = [
     grades: "Manganese Electrodes",
     summary:
       "Wear-resistant overlays for crushers, rails, and mining equipment in heavy industrial environments.",
-    image: "assets/products/manganese.svg",
+    image: "assets/products/manganese.svg?v=3",
   },
 ];
 
