@@ -1,13 +1,14 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 240" role="img" aria-label="E-6013 electrode">
-  <defs>
-    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#0E6E8D"/>
-      <stop offset="100%" stop-color="#073d4f"/>
-    </linearGradient>
-  </defs>
-  <rect width="320" height="240" fill="#e8f4f8"/>
-  <rect x="118" y="36" width="28" height="168" rx="6" fill="url(#g)"/>
-  <rect x="112" y="28" width="40" height="24" rx="4" fill="#F2711C"/>
-  <circle cx="132" cy="210" r="10" fill="#F2711C" opacity="0.85"/>
-  <text x="170" y="125" font-family="Segoe UI, sans-serif" font-size="22" font-weight="700" fill="#0E6E8D">E-6013</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 240" role="img" aria-label="Bharatweld E-6013 packaging">
+  <rect width="320" height="240" fill="#ffffff"/>
+  <rect width="320" height="118" fill="#00AEEF"/>
+  <line x1="0" y1="118" x2="320" y2="118" stroke="#0090C8" stroke-width="2"/>
+  <text x="18" y="72" font-family="Georgia, serif" font-size="34" font-style="italic" fill="#ffffff" letter-spacing="1">BHARATWELD</text>
+  <polygon points="248,28 256,48 278,44 264,62 272,84 248,70 224,84 232,62 218,44 240,48" fill="#ffffff"/>
+  <text x="248" y="62" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="700" fill="#00AEEF">E-6013</text>
+  <text x="18" y="142" font-family="Arial, sans-serif" font-size="9" font-weight="700" fill="#00AEEF" letter-spacing="0.5">SHUBHSHREY INDUSTRIES PVT. LTD.</text>
+  <text x="18" y="162" font-family="Georgia, serif" font-size="18" font-style="italic" fill="#00AEEF">BHARATWELD</text>
+  <rect x="200" y="128" width="14" height="88" rx="4" fill="#0078A8"/>
+  <rect x="194" y="118" width="26" height="18" rx="3" fill="#0090C8"/>
+  <circle cx="207" cy="220" r="8" fill="#00AEEF"/>
+  <text x="18" y="188" font-family="Arial, sans-serif" font-size="8" font-weight="600" fill="#0D3A52">GENERAL PURPOSE · AC/DC</text>
 </svg>

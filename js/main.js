@@ -176,7 +176,7 @@ function renderProductPage() {
     <div class="product-detail">
       <div class="product-detail__media reveal">
         <img src="${product.image}" alt="${product.name} Bharatweld electrode" width="800" height="600" />
-        <img class="product-detail__pack" src="assets/bharatweld-pack.png" alt="Bharatweld welding electrodes packaging" width="800" height="500" loading="lazy" />
+        <img class="product-detail__pack" src="assets/bharatweld-pack.png?v=2" alt="Bharatweld welding electrodes packaging" width="800" height="500" loading="lazy" />
       </div>
       <div class="product-detail__info reveal">
         <p class="eyebrow">${product.category}</p>
