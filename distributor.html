@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Checkout | Shubhshrey Industries</title>
-  <meta name="description" content="Complete your Bharatweld electrode order." />
+  <title>Become a Distributor | Bharatweld | Shubhshrey Industries</title>
+  <meta name="description" content="Apply to become a Bharatweld electrode distributor. Partner with Shubhshrey Industries — send your enquiry on WhatsApp." />
   <link rel="icon" href="assets/logo.png" type="image/png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -37,69 +37,125 @@
   </header>
 
   <main id="main">
-    <div class="page-hero">
+    <div class="page-hero page-hero--distributor">
       <div class="container">
-        <p class="eyebrow">Checkout</p>
-        <h1>Send order on WhatsApp</h1>
-        <p>Fill in your details. We will open WhatsApp with your order ready to send to +91 91686 79621.</p>
+        <p class="eyebrow">Partnership</p>
+        <h1>Become our distributor</h1>
+        <p>Join the Bharatweld dealer network across India. Fill in your details — we will open WhatsApp with your application ready to send to +91 91686 79621.</p>
       </div>
     </div>
 
+    <section class="section section--compact">
+      <div class="container">
+        <ul class="distributor-benefits reveal">
+          <li>
+            <strong>Quality brand</strong>
+            <span>ISO 9001:2015 Bharatweld electrodes trusted by fabricators and industries.</span>
+          </li>
+          <li>
+            <strong>Reliable supply</strong>
+            <span>Manufactured in MIDC Baramati with consistent dispatch support.</span>
+          </li>
+          <li>
+            <strong>Partner growth</strong>
+            <span>Dealers &amp; vendors as partners — fair dealing and long-term relationships.</span>
+          </li>
+          <li>
+            <strong>Full range</strong>
+            <span>E6013, E7018, E308L, cutting, and manganese hardfacing grades.</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
     <section class="section">
-      <div class="container checkout-layout">
-        <form id="checkout-form" class="checkout-panel" novalidate>
-          <h2>Your details</h2>
+      <div class="container contact-layout">
+        <form id="distributor-form" class="checkout-panel" novalidate>
+          <h2 class="form-panel-title">Distributor application</h2>
+          <p class="form-panel-lead">Tell us about your business. We will review and get back to you on WhatsApp.</p>
+
           <div class="form-grid">
             <div class="form-field">
-              <label for="firstName">First Name <span class="req">*</span></label>
-              <input id="firstName" name="firstName" type="text" required autocomplete="given-name" />
+              <label for="fullName">Contact person <span class="req">*</span></label>
+              <input id="fullName" name="fullName" type="text" required autocomplete="name" />
             </div>
             <div class="form-field">
-              <label for="lastName">Last Name <span class="req">*</span></label>
-              <input id="lastName" name="lastName" type="text" required autocomplete="family-name" />
+              <label for="company">Company / firm name <span class="req">*</span></label>
+              <input id="company" name="company" type="text" required autocomplete="organization" />
             </div>
             <div class="form-field">
               <label for="email">Email <span class="req">*</span></label>
               <input id="email" name="email" type="email" required autocomplete="email" />
             </div>
             <div class="form-field">
-              <label for="phone">Phone <span class="req">*</span></label>
+              <label for="phone">WhatsApp / phone <span class="req">*</span></label>
               <input id="phone" name="phone" type="tel" required autocomplete="tel" />
-            </div>
-            <div class="form-field form-field--full">
-              <label for="address">Address <span class="req">*</span></label>
-              <textarea id="address" name="address" rows="3" required autocomplete="street-address"></textarea>
             </div>
             <div class="form-field">
               <label for="city">City <span class="req">*</span></label>
               <input id="city" name="city" type="text" required autocomplete="address-level2" />
             </div>
             <div class="form-field">
-              <label for="pincode">PIN code <span class="req">*</span></label>
-              <input id="pincode" name="pincode" type="text" required pattern="[0-9]{6}" inputmode="numeric" autocomplete="postal-code" />
+              <label for="state">State <span class="req">*</span></label>
+              <input id="state" name="state" type="text" required autocomplete="address-level1" />
             </div>
             <div class="form-field form-field--full">
-              <label for="notes">Order notes</label>
-              <textarea id="notes" name="notes" rows="3" placeholder="Pack sizes, delivery window, GST details…"></textarea>
+              <label for="area">Preferred distribution area / territory <span class="req">*</span></label>
+              <input id="area" name="area" type="text" required placeholder="e.g. Pune district, Western Maharashtra" />
+            </div>
+            <div class="form-field">
+              <label for="businessType">Business type <span class="req">*</span></label>
+              <select id="businessType" name="businessType" required>
+                <option value="">Select…</option>
+                <option value="Distributor">Distributor</option>
+                <option value="Dealer / retailer">Dealer / retailer</option>
+                <option value="Wholesaler">Wholesaler</option>
+                <option value="Hardware / welding shop">Hardware / welding shop</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+            <div class="form-field">
+              <label for="experience">Years in welding / hardware trade</label>
+              <input id="experience" name="experience" type="text" placeholder="e.g. 5 years" />
+            </div>
+            <div class="form-field form-field--full">
+              <label for="interest">Products of interest</label>
+              <select id="interest" name="interest">
+                <option value="Full Bharatweld range">Full Bharatweld range</option>
+                <option value="Mild steel electrodes (E6013 / E7018)">Mild steel electrodes (E6013 / E7018)</option>
+                <option value="Stainless electrodes (E308L)">Stainless electrodes (E308L)</option>
+                <option value="Cutting electrodes">Cutting electrodes</option>
+                <option value="Hardfacing / manganese">Hardfacing / manganese</option>
+              </select>
+            </div>
+            <div class="form-field form-field--full">
+              <label for="message">Tell us about your business <span class="req">*</span></label>
+              <textarea id="message" name="message" rows="5" required placeholder="Current brands you deal in, monthly volume, warehouse capacity, why you want to partner with Bharatweld…"></textarea>
             </div>
           </div>
+
           <div class="cta-row">
-            <button class="btn btn--primary" type="submit">Send order on WhatsApp</button>
-            <a class="btn btn--ghost" href="cart.html">Back to cart</a>
+            <button class="btn btn--primary" type="submit">Send application on WhatsApp</button>
+            <a class="btn btn--ghost" href="contact.html">General enquiry</a>
           </div>
-          <p id="checkout-status" class="form-status" role="status" aria-live="polite"></p>
+          <p id="distributor-status" class="form-status" role="status" aria-live="polite"></p>
         </form>
 
-        <aside>
-          <div class="checkout-panel" id="checkout-summary"></div>
-          <div id="checkout-success" class="success-box" hidden style="margin-top:1.25rem">
-            <h2>WhatsApp opened</h2>
-            <p>Your order details were filled into WhatsApp. Tap <strong>Send</strong> in WhatsApp to deliver the order to us.</p>
-            <div class="cta-row">
-              <a class="btn btn--primary" href="shop.html">Continue shopping</a>
-              <a class="btn btn--ghost" href="https://wa.me/919168679621" target="_blank" rel="noopener noreferrer">Open WhatsApp again</a>
-            </div>
-          </div>
+        <aside class="contact-aside">
+          <h2>Why partner with us</h2>
+          <dl>
+            <dt>Brand</dt>
+            <dd>Bharatweld — Proudly Indian For Indians</dd>
+            <dt>Manufacturer</dt>
+            <dd>Shubhshrey Industries Private Limited, MIDC Baramati</dd>
+            <dt>Certification</dt>
+            <dd>ISO 9001:2015 Certified Company</dd>
+            <dt>Talk to us</dt>
+            <dd><a href="tel:+919168679621">+91-9168679621</a></dd>
+            <dd><a href="mailto:contact@shubhshrey.com">contact@shubhshrey.com</a></dd>
+            <dd><a href="https://wa.me/919168679621" target="_blank" rel="noopener noreferrer">WhatsApp chat</a></dd>
+          </dl>
+          <p class="aside-note">Applications are reviewed by our team. We typically respond within 1–2 business days.</p>
         </aside>
       </div>
     </section>
@@ -112,7 +168,7 @@
         <div>
           <strong>SHUBHSHREY INDUSTRIES PRIVATE LIMITED</strong>
           <p>Bharatweld — Proudly Indian For Indians</p>
-                    <div class="social-links">
+          <div class="social-links">
             <a href="https://www.linkedin.com/company/shubhshrey-industries-pvt-ltd/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 114.127 0 2.063 2.063 0 01-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
             <a href="http://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
             <a href="http://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a>
@@ -127,6 +183,7 @@
           <li><a href="industries.html">Industries &amp; applications</a></li>
           <li><a href="welding-process.html">Welding process guide</a></li>
           <li><a href="about.html">Company profile</a></li>
+          <li><a href="distributor.html">Become a distributor</a></li>
           <li><a href="contact.html">Contact us</a></li>
         </ul>
       </div>

@@ -13,6 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initTestimonialSlider();
   initCheckoutForm();
   initContactForm();
+  initDistributorForm();
   setActiveNav();
 });
 
@@ -424,6 +425,59 @@ function initContactForm() {
 
     form.reset();
     status.textContent = "WhatsApp opened with your message. Tap Send in WhatsApp to deliver it to us.";
+    status.className = "form-status is-success";
+  });
+}
+
+function initDistributorForm() {
+  const form = document.getElementById("distributor-form");
+  if (!form) return;
+
+  const whatsappNumber =
+    typeof WHATSAPP_ORDER_NUMBER !== "undefined" ? WHATSAPP_ORDER_NUMBER : "919168679621";
+
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    const status = document.getElementById("distributor-status");
+
+    if (!form.checkValidity()) {
+      form.reportValidity();
+      return;
+    }
+
+    const fullName = form.fullName.value.trim();
+    const company = form.company.value.trim();
+    const email = form.email.value.trim();
+    const phone = form.phone.value.trim();
+    const city = form.city.value.trim();
+    const state = form.state.value.trim();
+    const area = form.area.value.trim();
+    const businessType = form.businessType.value;
+    const experience = form.experience.value.trim();
+    const interest = form.interest.value;
+    const message = form.message.value.trim();
+
+    let text =
+      `*Distributor application — Bharatweld / Shubhshrey*\n\n` +
+      `*Contact person:* ${fullName}\n` +
+      `*Company:* ${company}\n` +
+      `*Email:* ${email}\n` +
+      `*Phone / WhatsApp:* ${phone}\n` +
+      `*City:* ${city}\n` +
+      `*State:* ${state}\n` +
+      `*Territory:* ${area}\n` +
+      `*Business type:* ${businessType}\n`;
+
+    if (experience) text += `*Experience:* ${experience}\n`;
+    text += `*Products of interest:* ${interest}\n`;
+    text += `\n*About the business:*\n${message}`;
+
+    const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(text)}`;
+    window.open(url, "_blank", "noopener,noreferrer");
+
+    form.reset();
+    status.textContent =
+      "WhatsApp opened with your distributor application. Tap Send in WhatsApp to deliver it to us.";
     status.className = "form-status is-success";
   });
 }

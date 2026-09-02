@@ -2783,6 +2783,85 @@ p {
   }
 }
 
+/* Distributor page */
+.page-hero--distributor {
+  background:
+    linear-gradient(135deg, rgba(0, 120, 168, 0.92), rgba(0, 174, 239, 0.85)),
+    url("../assets/industries/manufacturing.png") center / cover no-repeat;
+}
+
+.distributor-benefits {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.distributor-benefits li {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 1.15rem;
+  box-shadow: var(--shadow-sm);
+  border-top: 3px solid var(--brand);
+}
+
+.distributor-benefits strong {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  color: var(--brand-dark);
+  margin-bottom: 0.35rem;
+}
+
+.distributor-benefits span {
+  font-size: 0.9rem;
+  color: var(--muted);
+  line-height: 1.45;
+}
+
+.form-panel-title {
+  margin: 0 0 0.35rem;
+  font-size: 1.35rem;
+}
+
+.form-panel-lead {
+  margin: 0 0 1.25rem;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.aside-note {
+  margin-top: 1.25rem;
+  font-size: 0.88rem;
+  color: var(--muted);
+}
+
+.form-field select {
+  width: 100%;
+  padding: 0.85rem 1rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  font-family: inherit;
+  font-size: 1rem;
+  background: #fff;
+  color: var(--ink);
+}
+
+@media (max-width: 900px) {
+  .distributor-benefits {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .distributor-benefits {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* Reduced motion */
 @media (prefers-reduced-motion: reduce) {
   *,
