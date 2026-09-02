@@ -76,7 +76,6 @@ function initHeaderScroll() {
 
 function setActiveNav() {
   const path = window.location.pathname.split("/").pop() || "index.html";
-  const aboutPages = ["about.html", "vision.html", "mission.html"];
 
   document.querySelectorAll(".site-nav a[href]").forEach((link) => {
     const href = link.getAttribute("href");
@@ -84,11 +83,6 @@ function setActiveNav() {
       link.setAttribute("aria-current", "page");
     }
   });
-
-  if (aboutPages.includes(path)) {
-    const aboutToggle = document.querySelector(".nav-dropdown__toggle");
-    if (aboutToggle) aboutToggle.setAttribute("aria-current", "page");
-  }
 }
 
 let revealObserver = null;
