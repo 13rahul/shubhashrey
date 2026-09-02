@@ -1,6 +1,8 @@
 document.addEventListener("DOMContentLoaded", () => {
+  renderNavMega();
   initNav();
   initHeaderScroll();
+  renderValuesGrid();
   updateCartBadge();
   renderFeaturedProducts();
   renderShopGrid();
@@ -32,9 +34,9 @@ function initNav() {
       toggle.classList.remove("is-active");
       toggle.setAttribute("aria-expanded", "false");
       document.body.classList.remove("nav-open");
-      nav.querySelectorAll(".nav-dropdown.is-open").forEach((dropdown) => {
+      nav.querySelectorAll(".nav-dropdown.is-open, .nav-mega.is-open").forEach((dropdown) => {
         dropdown.classList.remove("is-open");
-        const btn = dropdown.querySelector(".nav-dropdown__toggle");
+        const btn = dropdown.querySelector(".nav-dropdown__toggle, .nav-mega__toggle");
         if (btn) btn.setAttribute("aria-expanded", "false");
       });
     });
@@ -52,13 +54,24 @@ function initNav() {
   });
 
   document.addEventListener("click", (event) => {
-    if (!event.target.closest(".nav-dropdown")) {
-      nav.querySelectorAll(".nav-dropdown.is-open").forEach((dropdown) => {
+    if (!event.target.closest(".nav-dropdown, .nav-mega")) {
+      nav.querySelectorAll(".nav-dropdown.is-open, .nav-mega.is-open").forEach((dropdown) => {
         dropdown.classList.remove("is-open");
-        const btn = dropdown.querySelector(".nav-dropdown__toggle");
+        const btn = dropdown.querySelector(".nav-dropdown__toggle, .nav-mega__toggle");
         if (btn) btn.setAttribute("aria-expanded", "false");
       });
     }
+  });
+
+  nav.querySelectorAll(".nav-mega").forEach((mega) => {
+    const btn = mega.querySelector(".nav-mega__toggle");
+    if (!btn) return;
+
+    btn.addEventListener("click", (event) => {
+      event.stopPropagation();
+      const open = mega.classList.toggle("is-open");
+      btn.setAttribute("aria-expanded", open ? "true" : "false");
+    });
   });
 }
 
@@ -83,6 +96,72 @@ function setActiveNav() {
       link.setAttribute("aria-current", "page");
     }
   });
+
+  if (path === "shop.html" || path === "product.html") {
+    const megaToggle = document.querySelector(".nav-mega__toggle");
+    if (megaToggle) megaToggle.setAttribute("aria-current", "page");
+  }
+}
+
+function renderNavMega() {
+  const roots = document.querySelectorAll("[data-nav-mega]");
+  if (!roots.length || typeof PRODUCT_CATEGORIES === "undefined") return;
+
+  const chevron = `<svg class="nav-mega__chevron" viewBox="0 0 24 24" aria-hidden="true" width="16" height="16"><path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>`;
+
+  const panelCols = PRODUCT_CATEGORIES.map((cat) => {
+    const products = getProductsByCategory(cat.id);
+    return `
+      <div class="nav-mega__col">
+        <h3 class="nav-mega__col-title">${cat.title}</h3>
+        <p class="nav-mega__col-sub">${cat.subtitle}</p>
+        <ul class="nav-mega__list">
+          ${products
+            .map(
+              (p) =>
+                `<li><a href="product.html?id=${p.id}">${p.name}</a></li>`
+            )
+            .join("")}
+        </ul>
+        <a class="nav-mega__cat-link" href="shop.html#category-${cat.id}">Browse ${cat.title.toLowerCase()} →</a>
+      </div>
+    `;
+  }).join("");
+
+  const html = `
+    <button class="nav-mega__toggle" type="button" aria-expanded="false" aria-haspopup="true" aria-controls="products-mega">
+      Products
+      ${chevron}
+    </button>
+    <div class="nav-mega__panel" id="products-mega">
+      <div class="nav-mega__inner">
+        <div class="nav-mega__cols">${panelCols}</div>
+        <div class="nav-mega__footer">
+          <a class="nav-mega__all" href="shop.html">View full product catalogue →</a>
+          <a class="nav-mega__guide" href="welding-process.html">Welding process guide</a>
+        </div>
+      </div>
+    </div>
+  `;
+
+  roots.forEach((root) => {
+    root.classList.add("nav-mega");
+    root.innerHTML = html;
+  });
+}
+
+function renderValuesGrid() {
+  const root = document.getElementById("values-grid");
+  if (!root || typeof COMPANY_VALUES === "undefined") return;
+
+  root.innerHTML = COMPANY_VALUES.map(
+    (item) => `
+    <article class="value-card">
+      <h3>${item.title}</h3>
+      <p>${item.text}</p>
+    </article>
+  `
+  ).join("");
 }
 
 let revealObserver = null;
@@ -166,27 +245,45 @@ function renderProductPage() {
 
   document.title = `${product.name} | Bharatweld | Shubhshrey Industries`;
 
+  const related = PRODUCTS.filter(
+    (p) => p.categoryGroup === product.categoryGroup && p.id !== product.id
+  );
+
   root.innerHTML = `
     <div class="product-detail">
       <div class="product-detail__media reveal">
-        <img src="${product.image}" alt="${product.name} Bharatweld welding electrodes with packaging" width="1200" height="900" />
+        <img src="${product.image}" alt="${product.name} — Bharatweld welding electrodes with packaging" width="1200" height="900" />
       </div>
       <div class="product-detail__info reveal">
         <p class="eyebrow">${product.category}</p>
         <h1>${product.name}</h1>
-        <p class="product-detail__sku">SKU: ${product.sku}</p>
+        <p class="product-detail__tagline">${product.tagline || ""}</p>
+        <p class="product-detail__sku">SKU: ${product.sku} · AWS ${product.aws || "—"}</p>
         <p>${product.description}</p>
         <div class="cta-row">
           <button type="button" class="btn btn--primary" data-buy-now="${product.id}">Buy now</button>
+          <a class="btn btn--ghost" href="contact.html">Enquire</a>
         </div>
         <table class="spec-table">
           <tbody>
-            <tr><th>Current</th><td>${product.current || "—"}</td></tr>
+            <tr><th>AWS classification</th><td>${product.aws || "—"}</td></tr>
+            <tr><th>Coating type</th><td>${product.coating || "—"}</td></tr>
+            <tr><th>Welding positions</th><td>${product.positions || "—"}</td></tr>
+            <tr><th>Current / polarity</th><td>${product.polarity || product.current || "—"}</td></tr>
+            <tr><th>Diameters</th><td>${product.diameters || "—"}</td></tr>
             <tr><th>Industries</th><td>${(product.industries || []).join(", ")}</td></tr>
             <tr><th>Applications</th><td>${(product.applications || []).join("; ")}</td></tr>
           </tbody>
         </table>
-        <p><a href="shop.html" class="back-link">← Back to shop</a></p>
+        ${
+          related.length
+            ? `<div class="product-related">
+            <h2>Related products</h2>
+            <ul>${related.map((p) => `<li><a href="product.html?id=${p.id}">${p.name}</a></li>`).join("")}</ul>
+          </div>`
+            : ""
+        }
+        <p><a href="shop.html#category-${product.categoryGroup}" class="back-link">← Back to ${product.category}</a></p>
       </div>
     </div>
   `;

@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/styles.css?v=10" />
+  <link rel="stylesheet" href="css/styles.css?v=11" />
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to Content</a>
@@ -25,7 +25,7 @@
       </button>
       <nav class="site-nav" id="site-nav" aria-label="Primary">
         <a href="index.html">Home</a>
-        <a href="shop.html">Shop</a>
+        <div class="nav-mega" data-nav-mega></div>
         <a href="industries.html">Industries</a>
         <a href="about.html">Company Profile</a>
         <a href="contact.html">Contact</a>
@@ -56,6 +56,7 @@
           <a href="#overview">Overview</a>
           <a href="#vision">Vision</a>
           <a href="#mission">Mission</a>
+          <a href="#values">Our values</a>
           <a href="#products">Products</a>
           <a href="#leadership">Leadership</a>
         </nav>
@@ -134,6 +135,17 @@
       </div>
     </section>
 
+    <section class="section" id="values">
+      <div class="container">
+        <div class="profile-block reveal">
+          <p class="eyebrow">Our values</p>
+          <h2>What we stand for</h2>
+          <p>These principles guide how we manufacture Bharatweld electrodes, serve customers, and work with our people and partners across India.</p>
+        </div>
+        <div class="values-grid reveal" id="values-grid"></div>
+      </div>
+    </section>
+
     <section class="section section--alt" id="products">
       <div class="container">
         <div class="profile-block reveal">
@@ -144,11 +156,11 @@
           </p>
         </div>
         <ul class="profile-products reveal">
-          <li><strong>E-6013</strong> — General-purpose rutile electrode for mild steel, gates, grills, and light fabrication</li>
-          <li><strong>E-7018</strong> — Low-hydrogen electrode for structural steel, heavy fabrication, and crack-resistant welds</li>
-          <li><strong>E-308L</strong> — Stainless steel electrode for food, chemical, and architectural stainless work</li>
-          <li><strong>Captain-Cut</strong> — Cutting and gouging electrodes for maintenance and demolition work</li>
-          <li><strong>Manganese</strong> — Hardfacing electrodes for wear-resistant overlays on industrial parts</li>
+          <li><a href="product.html?id=e-6013"><strong>E6013 Welding Electrodes</strong></a> — Mild steel fabrication, gates, grills, and light structural work</li>
+          <li><a href="product.html?id=e-7018"><strong>E7018 Welding Electrodes</strong></a> — Low-hydrogen structural and heavy fabrication</li>
+          <li><a href="product.html?id=e-308l"><strong>E308L Stainless Steel Electrodes</strong></a> — Food, chemical, and architectural stainless</li>
+          <li><a href="product.html?id=cutting"><strong>Industrial Cutting Electrodes</strong></a> — Metal cutting, gouging, and maintenance</li>
+          <li><a href="product.html?id=manganese"><strong>Manganese Hardfacing Electrodes</strong></a> — Wear-resistant overlays for mining and heavy industry</li>
         </ul>
         <div class="cta-row reveal">
           <a class="btn btn--primary" href="shop.html">Browse all products</a>
@@ -242,8 +254,8 @@
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
   </script>
-  <script src="js/products.js?v=6"></script>
-  <script src="js/cart.js?v=3"></script>
-  <script src="js/main.js?v=5"></script>
+  <script src="js/products.js?v=7"></script>
+  <script src="js/cart.js?v=4"></script>
+  <script src="js/main.js?v=6"></script>
 </body>
 </html>

@@ -79,16 +79,19 @@ function updateCartBadge() {
 }
 
 function renderProductCard(product, { featured = false } = {}) {
+  const aws = product.aws ? `<span class="product-item__aws">${product.aws}</span>` : "";
   return `
-    <article class="product-item reveal" data-product-id="${product.id}">
+    <article class="product-item reveal" data-product-id="${product.id}" data-category="${product.categoryGroup}">
       <a class="product-item__media" href="product.html?id=${product.id}">
-        <img src="${product.image}" alt="${product.name} welding electrode" width="320" height="240" loading="lazy" />
+        <img src="${product.image}" alt="${product.name} — Bharatweld" width="480" height="360" loading="lazy" />
       </a>
       <div class="product-item__body">
         <p class="product-item__cat">${product.category}</p>
         <h3 class="product-item__name"><a href="product.html?id=${product.id}">${product.name}</a></h3>
-        <p class="product-item__desc">${product.description}</p>
+        ${aws}
+        <p class="product-item__desc">${product.tagline || product.description}</p>
         <div class="product-item__meta">
+          <a class="btn btn--ghost btn--sm" href="product.html?id=${product.id}">View details</a>
           <button type="button" class="btn btn--primary btn--sm" data-buy-now="${product.id}">
             Buy now
           </button>
@@ -308,15 +311,71 @@ function initCheckoutForm() {
 }
 
 function renderShopGrid() {
-  const root = document.getElementById("shop-grid");
-  if (!root) return;
-  root.innerHTML = PRODUCTS.map((p) => renderProductCard(p)).join("");
-  bindBuyNowButtons(root);
+  const catRoot = document.getElementById("shop-categories");
+  const sectionsRoot = document.getElementById("shop-sections");
+  const legacyRoot = document.getElementById("shop-grid");
+
+  if (legacyRoot && !sectionsRoot) {
+    legacyRoot.innerHTML = PRODUCTS.map((p) => renderProductCard(p)).join("");
+    bindBuyNowButtons(legacyRoot);
+    if (typeof initReveals === "function") initReveals();
+    return;
+  }
+
+  if (!sectionsRoot || typeof PRODUCT_CATEGORIES === "undefined") return;
+
+  if (catRoot) {
+    catRoot.innerHTML = `
+      <button type="button" class="shop-cat-btn is-active" data-shop-filter="all">All products</button>
+      ${PRODUCT_CATEGORIES.map(
+        (cat) =>
+          `<button type="button" class="shop-cat-btn" data-shop-filter="${cat.id}">${cat.title}</button>`
+      ).join("")}
+    `;
+
+    catRoot.querySelectorAll("[data-shop-filter]").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        catRoot.querySelectorAll(".shop-cat-btn").forEach((b) => b.classList.remove("is-active"));
+        btn.classList.add("is-active");
+        const filter = btn.getAttribute("data-shop-filter");
+        sectionsRoot.querySelectorAll(".shop-section").forEach((section) => {
+          const show = filter === "all" || section.getAttribute("data-category") === filter;
+          section.hidden = !show;
+        });
+        if (filter !== "all") {
+          const target = sectionsRoot.querySelector(`[data-category="${filter}"]`);
+          target?.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+      });
+    });
+  }
+
+  sectionsRoot.innerHTML = PRODUCT_CATEGORIES.map((cat) => {
+    const products = getProductsByCategory(cat.id);
+    if (!products.length) return "";
+    return `
+      <section class="shop-section reveal" id="category-${cat.id}" data-category="${cat.id}">
+        <div class="shop-section__head">
+          <div>
+            <p class="eyebrow">${cat.subtitle}</p>
+            <h2>${cat.title}</h2>
+            <p>${cat.description}</p>
+          </div>
+        </div>
+        <div class="product-grid">
+          ${products.map((p) => renderProductCard(p)).join("")}
+        </div>
+      </section>
+    `;
+  }).join("");
+
+  bindBuyNowButtons(sectionsRoot);
 
   const hash = window.location.hash.slice(1);
   if (hash) {
-    const el = root.querySelector(`[data-product-id="${hash}"]`);
-    if (el) el.scrollIntoView({ behavior: "smooth", block: "center" });
+    const el = document.getElementById(`category-${hash}`) ||
+      sectionsRoot.querySelector(`[data-product-id="${hash}"]`);
+    if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
   }
 
   if (typeof initReveals === "function") initReveals();
