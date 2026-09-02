@@ -38,7 +38,7 @@ const PRODUCTS = [
       "Bharatweld E6013 is a rutile-coated general-purpose electrode for mild steel. Smooth arc, easy slag removal, and a clean bead — ideal for gates, grills, sheet metal, and everyday workshop welding across India.",
     price: 1900,
     unit: "",
-    image: "assets/products/e-6013.png?v=2",
+    image: "assets/products/e-6013.png?v=3",
     current: "AC / DC",
     aws: "E6013",
     coating: "Rutile",
@@ -65,7 +65,7 @@ const PRODUCTS = [
       "Bharatweld E7018 (E7018/E7018-1) is a low-hydrogen electrode for high-strength, crack-resistant welds on structural steel, heavy fabrication, bridges, and pressure-boundary work where ductility matters.",
     price: 3000,
     unit: "",
-    image: "assets/products/e-7018.png?v=2",
+    image: "assets/products/e-7018.png?v=3",
     current: "AC / DC+",
     aws: "E7018 / E7018-1",
     coating: "Low hydrogen",
@@ -92,7 +92,7 @@ const PRODUCTS = [
       "Bharatweld E308L-16 is designed for 18/8 stainless steels including AISI 304L and 308L. Stable arc, clean bead appearance, and reliable performance for food, chemical, and architectural stainless applications.",
     price: 5000,
     unit: "",
-    image: "assets/products/e-308l.png?v=2",
+    image: "assets/products/e-308l.png?v=3",
     current: "AC / DC",
     aws: "E308L-16",
     coating: "Extra low carbon stainless",
@@ -119,7 +119,7 @@ const PRODUCTS = [
       "Bharatweld Captain-Cut cutting electrodes are for metal severing, piercing, gouging, and weld removal on mild steel, cast iron, and non-ferrous metals — a practical tool for maintenance crews and fabrication shops.",
     price: 2500,
     unit: "",
-    image: "assets/products/cutting.png?v=2",
+    image: "assets/products/cutting.png?v=3",
     current: "AC / DC",
     aws: "Cutting / gouging type",
     coating: "Special cutting flux",
@@ -146,7 +146,7 @@ const PRODUCTS = [
       "Bharatweld manganese hardfacing electrodes deposit wear-resistant overlays on crushers, excavator parts, railway components, and mining equipment subject to heavy impact and abrasion in Indian industrial conditions.",
     price: 20000,
     unit: "",
-    image: "assets/products/manganese.png?v=2",
+    image: "assets/products/manganese.png?v=3",
     current: "AC / DC",
     aws: "High manganese hardfacing",
     coating: "Hardfacing flux",
@@ -197,7 +197,7 @@ const INDUSTRIES = [
     grades: "E6013 Welding Electrodes",
     summary:
       "Sheet metal, gates, grills, furniture, and light steel structures — easy arc, smooth finish, easy slag removal.",
-    image: "assets/products/e-6013.png?v=2",
+    image: "assets/products/e-6013.png?v=3",
   },
   {
     id: "structural",
@@ -205,7 +205,7 @@ const INDUSTRIES = [
     grades: "E7018 Welding Electrodes",
     summary:
       "High-tensile steel, bridges, heavy frames, mining equipment, and pressure vessels with low-hydrogen strength.",
-    image: "assets/products/e-7018.png?v=2",
+    image: "assets/products/e-7018.png?v=3",
   },
   {
     id: "stainless",
@@ -213,7 +213,7 @@ const INDUSTRIES = [
     grades: "E308L Stainless Steel Electrodes",
     summary:
       "Food, chemical, and pharmaceutical equipment plus architectural stainless fabrication with corrosion resistance.",
-    image: "assets/products/e-308l.png?v=2",
+    image: "assets/products/e-308l.png?v=3",
   },
   {
     id: "cutting",
@@ -221,7 +221,7 @@ const INDUSTRIES = [
     grades: "Industrial Cutting Electrodes",
     summary:
       "Cut, pierce, and gouge metal for maintenance, demolition, and repair without oxy-fuel equipment.",
-    image: "assets/products/cutting.png?v=2",
+    image: "assets/products/cutting.png?v=3",
   },
   {
     id: "hardfacing",
@@ -229,7 +229,7 @@ const INDUSTRIES = [
     grades: "Manganese Hardfacing Electrodes",
     summary:
       "Wear-resistant overlays for crushers, rails, and mining equipment in heavy industrial environments.",
-    image: "assets/products/manganese.png?v=2",
+    image: "assets/products/manganese.png?v=3",
   },
 ];
 
