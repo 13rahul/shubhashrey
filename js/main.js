@@ -393,49 +393,37 @@ function initContactForm() {
   const form = document.getElementById("contact-form");
   if (!form) return;
 
-  form.addEventListener("submit", async (e) => {
+  const whatsappNumber =
+    typeof WHATSAPP_ORDER_NUMBER !== "undefined" ? WHATSAPP_ORDER_NUMBER : "919168679621";
+
+  form.addEventListener("submit", (e) => {
     e.preventDefault();
     const status = document.getElementById("contact-status");
-    const submitBtn = form.querySelector('[type="submit"]');
 
     if (!form.checkValidity()) {
       form.reportValidity();
       return;
     }
 
-    const payload = {
-      firstName: form.firstName.value.trim(),
-      lastName: form.lastName.value.trim(),
-      email: form.email.value.trim(),
-      phone: form.phone.value.trim(),
-      message: form.message.value.trim(),
-    };
+    const firstName = form.firstName.value.trim();
+    const lastName = form.lastName.value.trim();
+    const email = form.email.value.trim();
+    const phone = form.phone.value.trim();
+    const message = form.message.value.trim();
 
-    submitBtn.disabled = true;
-    status.textContent = "Sending…";
-    status.className = "form-status";
+    let text =
+      `*New enquiry — Bharatweld / Shubhshrey*\n` +
+      `Name: ${firstName} ${lastName}\n` +
+      `Email: ${email}\n`;
 
-    try {
-      const res = await fetch("api/contact.php", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(payload),
-      });
-      const data = await res.json().catch(() => ({}));
+    if (phone) text += `Phone: ${phone}\n`;
+    text += `\nMessage:\n${message}`;
 
-      if (!res.ok || !data.success) {
-        throw new Error(data.message || "Could not send message.");
-      }
+    const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(text)}`;
+    window.open(url, "_blank", "noopener,noreferrer");
 
-      form.reset();
-      status.textContent = "Thank you. We will be in touch shortly.";
-      status.className = "form-status is-success";
-    } catch (err) {
-      status.textContent =
-        err.message || "Unable to send right now. Email us at contact@shubhshrey.com.";
-      status.className = "form-status is-error";
-    } finally {
-      submitBtn.disabled = false;
-    }
+    form.reset();
+    status.textContent = "WhatsApp opened with your message. Tap Send in WhatsApp to deliver it to us.";
+    status.className = "form-status is-success";
   });
 }
