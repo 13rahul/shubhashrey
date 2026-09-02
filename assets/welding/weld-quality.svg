@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 280" role="img" aria-label="Good weld bead quality indicators">
+  <rect width="480" height="280" fill="#f8fcfe"/>
+  <text x="240" y="28" text-anchor="middle" font-family="Arial,sans-serif" font-size="14" font-weight="700" fill="#0D3A52">READING A CORRECT SMAW BEAD</text>
+  <line x1="60" y1="180" x2="420" y2="180" stroke="#64748b" stroke-width="6"/>
+  <path d="M60 175 Q90 165 120 170 Q150 162 180 168 Q210 160 240 165 Q270 158 300 163 Q330 156 360 160 Q390 155 420 158" stroke="#00AEEF" stroke-width="6" fill="none"/>
+  <text x="240" y="210" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="#16a34a">Uniform ripples · smooth profile · no overlap or undercut</text>
+  <g transform="translate(70,55)">
+    <circle cx="12" cy="12" r="10" fill="#00AEEF" opacity="0.2"/>
+    <text x="30" y="16" font-family="Arial,sans-serif" font-size="11" fill="#0D3A52">Steady sizzling sound (not popping or silence)</text>
+  </g>
+  <g transform="translate(70,85)">
+    <circle cx="12" cy="12" r="10" fill="#00AEEF" opacity="0.2"/>
+    <text x="30" y="16" font-family="Arial,sans-serif" font-size="11" fill="#0D3A52">Molten pool slightly ahead of the arc, moving smoothly</text>
+  </g>
+  <g transform="translate(70,115)">
+    <circle cx="12" cy="12" r="10" fill="#00AEEF" opacity="0.2"/>
+    <text x="30" y="16" font-family="Arial,sans-serif" font-size="11" fill="#0D3A52">Metal flows evenly at the rear of the pool into the bead</text>
+  </g>
+  <text x="240" y="255" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="#4A6478">Inspect after slag removal  especially on hidden fillets in fabrication bays</text>
+</svg>

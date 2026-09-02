@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 320" role="img" aria-label="Travel speed effect on weld bead">
+  <rect width="480" height="320" fill="#f8fcfe"/>
+  <text x="240" y="28" text-anchor="middle" font-family="Arial,sans-serif" font-size="14" font-weight="700" fill="#0D3A52">TRAVEL SPEED &amp; BEAD PROFILE</text>
+  <line x1="50" y1="200" x2="430" y2="200" stroke="#64748b" stroke-width="5"/>
+  <g transform="translate(70,120)">
+    <text x="50" y="0" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" font-weight="700" fill="#dc2626">Too fast</text>
+    <path d="M0 60 Q15 55 30 58 Q45 52 60 56 Q75 50 90 54" stroke="#00AEEF" stroke-width="4" fill="none"/>
+    <path d="M0 60 L90 60" stroke="#cbd5e1" stroke-width="1" stroke-dasharray="3 3"/>
+    <polygon points="95,54 105,58 95,62" fill="#dc2626"/>
+    <text x="50" y="85" text-anchor="middle" font-family="Arial,sans-serif" font-size="9" fill="#4A6478">Narrow, pointed ripples</text>
+    <text x="50" y="98" text-anchor="middle" font-family="Arial,sans-serif" font-size="9" fill="#4A6478">Gas &amp; slag trapped</text>
+  </g>
+  <g transform="translate(195,120)">
+    <text x="50" y="0" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" font-weight="700" fill="#16a34a">Correct</text>
+    <path d="M0 58 Q12 52 24 55 Q36 50 48 54 Q60 49 72 53 Q84 48 96 52" stroke="#00AEEF" stroke-width="5" fill="none"/>
+    <text x="50" y="85" text-anchor="middle" font-family="Arial,sans-serif" font-size="9" fill="#4A6478">Even ripples, smooth tie-in</text>
+    <text x="50" y="98" text-anchor="middle" font-family="Arial,sans-serif" font-size="9" fill="#4A6478">Pool stays ahead of arc</text>
+  </g>
+  <g transform="translate(320,120)">
+    <text x="50" y="0" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" font-weight="700" fill="#d97706">Too slow</text>
+    <path d="M0 45 Q20 40 40 42 Q60 38 80 40" stroke="#00AEEF" stroke-width="8" fill="none"/>
+    <text x="50" y="85" text-anchor="middle" font-family="Arial,sans-serif" font-size="9" fill="#4A6478">High wide bead, straight ripples</text>
+    <text x="50" y="98" text-anchor="middle" font-family="Arial,sans-serif" font-size="9" fill="#4A6478">Excess heat, burn-through risk</text>
+  </g>
+  <text x="240" y="260" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="#0078A8">On long fabrication runs (railings, conveyor frames): keep rhythm steady</text>
+  <text x="240" y="280" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="#4A6478">Pause briefly at starts/stops on critical structural joints</text>
+</svg>

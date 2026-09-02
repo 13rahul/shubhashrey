@@ -1689,7 +1689,7 @@ p {
 
 .footer-grid {
   display: grid;
-  grid-template-columns: 1.4fr 1fr 1fr;
+  grid-template-columns: 1.35fr 1fr 1fr 1fr;
   gap: 2rem;
 }
 
@@ -1990,6 +1990,237 @@ p {
 
 .page-hero {
   padding: var(--space-7) 0 var(--space-6);
+}
+
+.footer-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.45rem;
+}
+
+.footer-links a {
+  font-size: 0.92rem;
+  color: rgba(255, 255, 255, 0.88);
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  color: var(--brand);
+}
+
+/* Welding process guide */
+.page-hero--welding {
+  background:
+    linear-gradient(135deg, rgba(0, 120, 168, 0.92), rgba(0, 174, 239, 0.85)),
+    url("../assets/industries/structural.png") center / cover no-repeat;
+}
+
+.weld-intro__visual {
+  margin: 0;
+}
+
+.weld-intro__visual img {
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  object-fit: cover;
+  aspect-ratio: 4 / 3;
+}
+
+.weld-intro__visual figcaption {
+  margin-top: 0.65rem;
+  font-size: 0.88rem;
+  color: var(--muted);
+}
+
+.weld-checklist {
+  margin: 1rem 0 0;
+  padding-left: 1.25rem;
+  display: grid;
+  gap: 0.45rem;
+}
+
+.weld-checklist a {
+  color: var(--brand-dark);
+}
+
+.weld-quality-banner {
+  display: grid;
+  grid-template-columns: minmax(0, 420px) 1fr;
+  gap: 2rem;
+  align-items: center;
+  padding: 1.5rem;
+  margin-bottom: 2.5rem;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+}
+
+.weld-quality-banner img {
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius-sm);
+}
+
+.weld-quality-banner h3 {
+  margin-bottom: 0.65rem;
+}
+
+.weld-steps {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 2rem;
+}
+
+.weld-step {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.weld-step__head {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.weld-step__num {
+  flex-shrink: 0;
+  width: 2.5rem;
+  height: 2.5rem;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--brand);
+  color: #fff;
+  font-family: var(--font-display);
+  font-weight: 700;
+}
+
+.weld-step__head h3 {
+  margin: 0;
+}
+
+.weld-step__body.split img {
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--line);
+  background: #f8fcfe;
+}
+
+.weld-step__body h4 {
+  margin: 1rem 0 0.5rem;
+  font-size: 1rem;
+}
+
+.weld-step__body ul {
+  margin: 0;
+  padding-left: 1.2rem;
+  display: grid;
+  gap: 0.4rem;
+}
+
+.weld-tip {
+  margin-top: 1rem;
+  padding: 0.75rem 1rem;
+  background: linear-gradient(90deg, rgba(0, 174, 239, 0.1), rgba(0, 174, 239, 0.04));
+  border-left: 3px solid var(--brand);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  font-size: 0.95rem;
+}
+
+.weld-factors {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.25rem;
+}
+
+.weld-factor {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 1.25rem 1.25rem 1.25rem 1.5rem;
+  position: relative;
+  box-shadow: var(--shadow-sm);
+}
+
+.weld-factor__n {
+  position: absolute;
+  top: 1rem;
+  left: -0.65rem;
+  width: 1.75rem;
+  height: 1.75rem;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--brand);
+  color: #fff;
+  font-size: 0.8rem;
+  font-weight: 700;
+  font-family: var(--font-display);
+}
+
+.weld-factor h3 {
+  margin: 0 0 0.5rem 0.5rem;
+  font-size: 1.05rem;
+}
+
+.weld-factor p {
+  margin: 0 0 0.5rem;
+  font-size: 0.95rem;
+}
+
+.weld-factor__ex {
+  margin-bottom: 0 !important;
+  font-size: 0.88rem;
+  color: var(--muted);
+}
+
+.weld-factor__ex a {
+  color: var(--brand-dark);
+}
+
+.weld-industry-strip {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.weld-industry-strip img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  aspect-ratio: 4 / 3;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+}
+
+@media (max-width: 900px) {
+  .weld-quality-banner,
+  .weld-factors,
+  .weld-industry-strip {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* Reduced motion */

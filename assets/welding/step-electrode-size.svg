@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 320" role="img" aria-label="Electrode diameter selection diagram">
+  <rect width="480" height="320" fill="#f8fcfe"/>
+  <text x="240" y="28" text-anchor="middle" font-family="Arial,sans-serif" font-size="14" font-weight="700" fill="#0D3A52">MATCH ROD SIZE TO PLATE THICKNESS</text>
+  <rect x="40" y="50" width="120" height="12" rx="2" fill="#94a3b8"/>
+  <text x="100" y="82" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#4A6478">Thin sheet (24 mm)</text>
+  <rect x="40" y="95" width="8" height="80" rx="3" fill="#00AEEF"/>
+  <text x="100" y="140" font-family="Arial,sans-serif" font-size="10" fill="#0078A8">2.5 mm rod</text>
+  <rect x="180" y="50" width="120" height="20" rx="2" fill="#94a3b8"/>
+  <text x="240" y="88" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#4A6478">Medium plate (612 mm)</text>
+  <rect x="180" y="100" width="12" height="80" rx="3" fill="#00AEEF"/>
+  <text x="240" y="145" font-family="Arial,sans-serif" font-size="10" fill="#0078A8">3.15 mm rod</text>
+  <rect x="320" y="50" width="120" height="32" rx="2" fill="#94a3b8"/>
+  <text x="380" y="96" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#4A6478">Heavy section (15 mm+)</text>
+  <rect x="320" y="108" width="16" height="80" rx="3" fill="#00AEEF"/>
+  <text x="380" y="155" font-family="Arial,sans-serif" font-size="10" fill="#0078A8">4 mm rod</text>
+  <rect x="60" y="200" width="360" height="90" rx="8" fill="#fff" stroke="#0090C8" stroke-width="1.5"/>
+  <text x="240" y="225" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" font-weight="700" fill="#0D3A52">Indian shop examples</text>
+  <text x="240" y="248" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="#4A6478">Grills &amp; gates ’ 2.53.15 mm · Truss &amp; columns ’ 3.154 mm</text>
+  <text x="240" y="268" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="#4A6478">Tank repair ’ match base metal · Vertical up ’ one size smaller</text>
+</svg>

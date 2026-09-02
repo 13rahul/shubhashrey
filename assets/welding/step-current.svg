@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 320" role="img" aria-label="Welding current setting diagram">
+  <rect width="480" height="320" fill="#f8fcfe"/>
+  <text x="240" y="28" text-anchor="middle" font-family="Arial,sans-serif" font-size="14" font-weight="700" fill="#0D3A52">CURRENT (AMPERAGE) EFFECT ON THE WELD POOL</text>
+  <rect x="30" y="50" width="130" height="180" rx="8" fill="#fff" stroke="#ef4444" stroke-width="2"/>
+  <text x="95" y="75" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" font-weight="700" fill="#dc2626">Too high</text>
+  <ellipse cx="95" cy="130" rx="45" ry="28" fill="#fca5a5" opacity="0.6"/>
+  <ellipse cx="110" cy="125" rx="35" ry="22" fill="#f87171" opacity="0.5"/>
+  <path d="M60 170 Q95 155 130 175" stroke="#dc2626" stroke-width="3" fill="none"/>
+  <text x="95" y="200" text-anchor="middle" font-family="Arial,sans-serif" font-size="9" fill="#4A6478">Large irregular pool</text>
+  <text x="95" y="215" text-anchor="middle" font-family="Arial,sans-serif" font-size="9" fill="#4A6478">Rod burns too fast</text>
+  <rect x="175" y="50" width="130" height="180" rx="8" fill="#fff" stroke="#16a34a" stroke-width="2"/>
+  <text x="240" y="75" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" font-weight="700" fill="#16a34a">Correct</text>
+  <ellipse cx="240" cy="130" rx="38" ry="22" fill="#86efac" opacity="0.5"/>
+  <path d="M205 165 Q240 150 275 165" stroke="#16a34a" stroke-width="3" fill="none"/>
+  <text x="240" y="200" text-anchor="middle" font-family="Arial,sans-serif" font-size="9" fill="#4A6478">Even pool, steady arc</text>
+  <text x="240" y="215" text-anchor="middle" font-family="Arial,sans-serif" font-size="9" fill="#4A6478">Uniform ripples behind</text>
+  <rect x="320" y="50" width="130" height="180" rx="8" fill="#fff" stroke="#f59e0b" stroke-width="2"/>
+  <text x="385" y="75" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" font-weight="700" fill="#d97706">Too low</text>
+  <ellipse cx="385" cy="135" rx="22" ry="14" fill="#fcd34d" opacity="0.5"/>
+  <path d="M355 175 Q385 190 415 175" stroke="#d97706" stroke-width="3" fill="none"/>
+  <text x="385" y="200" text-anchor="middle" font-family="Arial,sans-serif" font-size="9" fill="#4A6478">Small piled-up bead</text>
+  <text x="385" y="215" text-anchor="middle" font-family="Arial,sans-serif" font-size="9" fill="#4A6478">Poor fusion, sticking</text>
+  <text x="240" y="260" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="#0078A8">Start at manufacturer chart  adjust by sound &amp; pool shape on your transformer/inverter</text>
+  <text x="240" y="280" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="#4A6478">Rural sites with voltage drop: reduce arc length before cranking amps</text>
+</svg>
