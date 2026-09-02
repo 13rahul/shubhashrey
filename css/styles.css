@@ -1689,7 +1689,7 @@ p {
 
 .footer-grid {
   display: grid;
-  grid-template-columns: 1.35fr 1fr 1fr 1fr;
+  grid-template-columns: 1.2fr 1fr 1.1fr 1fr;
   gap: 2rem;
 }
 
@@ -2858,6 +2858,65 @@ p {
 
 @media (max-width: 640px) {
   .distributor-benefits {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Policy / resources pages */
+.policy-content {
+  max-width: 52rem;
+}
+
+.policy-content h2 {
+  margin-top: 1.75rem;
+  margin-bottom: 0.65rem;
+}
+
+.policy-list {
+  margin: 0 0 1.25rem;
+  padding-left: 1.25rem;
+  display: grid;
+  gap: 0.5rem;
+}
+
+.policy-cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.policy-cards article {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 1.25rem;
+  box-shadow: var(--shadow-sm);
+  border-top: 3px solid var(--brand);
+}
+
+.policy-cards h2,
+.policy-cards h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1.05rem;
+  color: var(--brand-dark);
+}
+
+.policy-cards p {
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+.policy-signoff {
+  margin-top: 2rem;
+  padding: 1rem 1.25rem;
+  background: rgba(0, 174, 239, 0.08);
+  border-left: 3px solid var(--brand);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+}
+
+@media (max-width: 640px) {
+  .policy-cards {
     grid-template-columns: 1fr;
   }
 }
