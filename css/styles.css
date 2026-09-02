@@ -2010,6 +2010,33 @@ p {
   color: var(--brand);
 }
 
+.footer-badges {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.75rem;
+  margin-top: 2rem;
+  padding-top: 1.75rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.footer-badges img {
+  height: 64px;
+  width: auto;
+  object-fit: contain;
+  background: #fff;
+  border-radius: var(--radius-sm);
+  padding: 0.35rem 0.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.footer-badges img[alt*="ISO"] {
+  height: 72px;
+  padding: 0.25rem;
+  border-radius: 50%;
+}
+
 /* Welding process guide */
 .page-hero--welding {
   background:
