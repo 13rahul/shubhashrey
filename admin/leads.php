@@ -17,6 +17,7 @@ function shubh_redirect_leads(array $extra = []): void
     $params = [
         'q' => $_GET['q'] ?? null,
         'status' => $_GET['status'] ?? null,
+        'label' => $_GET['label'] ?? null,
         'source' => $_GET['source'] ?? null,
         'state' => $_GET['state'] ?? null,
         'district' => $_GET['district'] ?? null,
@@ -98,6 +99,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 $q = trim((string) ($_GET['q'] ?? ''));
 $statusFilter = (string) ($_GET['status'] ?? 'all');
+$labelFilter = (string) ($_GET['label'] ?? 'all');
 $sourceFilter = (string) ($_GET['source'] ?? 'all');
 $stateFilter = (string) ($_GET['state'] ?? 'all');
 $districtFilter = (string) ($_GET['district'] ?? 'all');
@@ -117,17 +119,35 @@ if (isset($_GET['msg'])) {
 
 $all = shubh_db()->query('SELECT * FROM leads ORDER BY datetime(created_at) DESC, id DESC')->fetchAll();
 
-$counts = ['total' => count($all), 'new' => 0, 'contacted' => 0, 'qualified' => 0, 'won' => 0, 'lost' => 0];
+$counts = [
+    'total' => count($all),
+    'new' => 0,
+    'contacted' => 0,
+    'qualified' => 0,
+    'won' => 0,
+    'lost' => 0,
+    'inbound' => 0,
+    'prospect' => 0,
+];
 foreach ($all as $row) {
     $s = $row['status'] ?? 'new';
     if (isset($counts[$s])) {
         $counts[$s]++;
+    }
+    $lb = $row['lead_label'] ?? '';
+    if ($lb === 'Inbound') {
+        $counts['inbound']++;
+    } elseif ($lb === 'Prospect') {
+        $counts['prospect']++;
     }
 }
 
 $leads = $all;
 if ($statusFilter !== 'all') {
     $leads = array_values(array_filter($leads, static fn($l) => ($l['status'] ?? '') === $statusFilter));
+}
+if ($labelFilter !== 'all') {
+    $leads = array_values(array_filter($leads, static fn($l) => ($l['lead_label'] ?? '') === $labelFilter));
 }
 if ($sourceFilter !== 'all') {
     $leads = array_values(array_filter($leads, static fn($l) => ($l['source'] ?? '') === $sourceFilter));
@@ -147,6 +167,7 @@ if ($q !== '') {
         $hay = mb_strtolower(implode(' ', [
             $l['name'], $l['email'], $l['phone'], $l['company'], $l['city'],
             $l['district'], $l['state'], $l['midc'], $l['territory'], $l['message'], $l['notes'], $l['interest'],
+            $l['lead_label'] ?? '', $l['source'] ?? '',
         ]));
         return str_contains($hay, $needle);
     }));
@@ -192,10 +213,10 @@ if ($editId > 0) {
     }
 }
 
-$csvRows = [['ID', 'Status', 'Source', 'Name', 'Company', 'Phone', 'Email', 'City', 'District', 'State', 'MIDC', 'Territory', 'Business type', 'Interest', 'Message', 'Notes', 'Created']];
+$csvRows = [['ID', 'Label', 'Status', 'Source', 'Name', 'Company', 'Phone', 'Email', 'City', 'District', 'State', 'MIDC', 'Territory', 'Business type', 'Interest', 'Message', 'Notes', 'Created']];
 foreach ($leads as $l) {
     $csvRows[] = [
-        $l['id'], $l['status'], $l['source'], $l['name'], $l['company'], $l['phone'], $l['email'],
+        $l['id'], $l['lead_label'] ?? '', $l['status'], $l['source'], $l['name'], $l['company'], $l['phone'], $l['email'],
         $l['city'], $l['district'], $l['state'], $l['midc'], $l['territory'], $l['business_type'],
         $l['interest'], str_replace(["\r", "\n"], ' ', (string) $l['message']),
         str_replace(["\r", "\n"], ' ', (string) $l['notes']), $l['created_at'],
@@ -211,6 +232,7 @@ function shubh_filter_qs(array $overrides = []): string
     $base = [
         'q' => $_GET['q'] ?? '',
         'status' => $_GET['status'] ?? 'all',
+        'label' => $_GET['label'] ?? 'all',
         'source' => $_GET['source'] ?? 'all',
         'state' => $_GET['state'] ?? 'all',
         'district' => $_GET['district'] ?? 'all',
@@ -249,7 +271,7 @@ function shubh_filter_qs(array $overrides = []): string
         <img src="../assets/logo.png" alt="" width="42" height="42" />
         <div>
           <h1>Leads CRM</h1>
-          <p>Excel-style table — add, filter, edit all fields, notes</p>
+          <p>Inbound website forms + Bhosari prospects — filter by Lead label</p>
         </div>
       </div>
       <div class="admin-nav">
@@ -267,6 +289,8 @@ function shubh_filter_qs(array $overrides = []): string
 
     <div class="stats">
       <div class="stat"><strong><?= (int) $counts['total'] ?></strong><span>Total</span></div>
+      <div class="stat"><strong><?= (int) $counts['inbound'] ?></strong><span>Inbound</span></div>
+      <div class="stat"><strong><?= (int) $counts['prospect'] ?></strong><span>Prospect</span></div>
       <div class="stat"><strong><?= (int) $counts['new'] ?></strong><span>New</span></div>
       <div class="stat"><strong><?= (int) $counts['contacted'] ?></strong><span>Contacted</span></div>
       <div class="stat"><strong><?= (int) $counts['qualified'] ?></strong><span>Qualified</span></div>
@@ -284,6 +308,15 @@ function shubh_filter_qs(array $overrides = []): string
           <option value="all">All</option>
           <?php foreach ($statuses as $st): ?>
             <option value="<?= shubh_h($st) ?>" <?= $statusFilter === $st ? 'selected' : '' ?>><?= shubh_h(ucfirst($st)) ?></option>
+          <?php endforeach; ?>
+        </select>
+      </div>
+      <div class="field">
+        <label for="label">Lead label</label>
+        <select id="label" name="label">
+          <option value="all">All labels</option>
+          <?php foreach (shubh_lead_labels() as $lb): ?>
+            <option value="<?= shubh_h($lb) ?>" <?= $labelFilter === $lb ? 'selected' : '' ?>><?= shubh_h($lb) ?></option>
           <?php endforeach; ?>
         </select>
       </div>
@@ -335,6 +368,7 @@ function shubh_filter_qs(array $overrides = []): string
           <thead>
             <tr>
               <th>ID</th>
+              <th>Label</th>
               <th>Status</th>
               <th>Source</th>
               <th>Name</th>
@@ -354,14 +388,17 @@ function shubh_filter_qs(array $overrides = []): string
           </thead>
           <tbody>
             <?php if (!$leads): ?>
-              <tr><td colspan="16" class="empty">No leads match. Click <strong>+ Add lead</strong> or clear filters.</td></tr>
+              <tr><td colspan="17" class="empty">No leads match. Click <strong>+ Add lead</strong> or clear filters.</td></tr>
             <?php else: ?>
               <?php foreach ($leads as $lead):
                   $isEdit = $editId === (int) $lead['id'];
                   $created = $lead['created_at'] ? date('Y-m-d H:i', strtotime((string) $lead['created_at'])) : '';
+                  $label = (string) ($lead['lead_label'] ?? '');
+                  $labelClass = strtolower($label !== '' ? $label : 'manual');
               ?>
                 <tr class="<?= $isEdit ? 'is-selected' : '' ?>" id="row-<?= (int) $lead['id'] ?>">
                   <td><?= (int) $lead['id'] ?></td>
+                  <td><span class="badge badge-label-<?= shubh_h($labelClass) ?>"><?= shubh_h($label !== '' ? $label : '—') ?></span></td>
                   <td><span class="badge badge-<?= shubh_h($lead['status'] ?: 'new') ?>"><?= shubh_h($lead['status'] ?: 'new') ?></span></td>
                   <td><?= shubh_h($lead['source']) ?></td>
                   <td><?= shubh_h($lead['name']) ?></td>
@@ -400,6 +437,7 @@ function shubh_filter_qs(array $overrides = []): string
         <?php
         $blank = array_fill_keys(shubh_lead_field_keys(), '');
         $blank['source'] = 'manual';
+        $blank['lead_label'] = 'Manual';
         $blank['status'] = 'new';
         $blank['state'] = 'Maharashtra';
         render_lead_fields($blank, $statuses, $sources, $stateOptions, $midcOptions, 'add', $districtsByState);

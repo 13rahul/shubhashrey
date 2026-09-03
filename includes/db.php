@@ -58,6 +58,13 @@ function shubh_db_migrate(PDO $pdo): void
     if (!isset($cols['midc'])) {
         $pdo->exec("ALTER TABLE leads ADD COLUMN midc TEXT NOT NULL DEFAULT ''");
     }
+    if (!isset($cols['lead_label'])) {
+        $pdo->exec("ALTER TABLE leads ADD COLUMN lead_label TEXT NOT NULL DEFAULT ''");
+        // Backfill: website forms vs imported Bhosari prospects vs manual
+        $pdo->exec("UPDATE leads SET lead_label = 'Inbound' WHERE source IN ('contact', 'distributor') AND TRIM(lead_label) = ''");
+        $pdo->exec("UPDATE leads SET lead_label = 'Prospect' WHERE source = 'visit' AND TRIM(lead_label) = ''");
+        $pdo->exec("UPDATE leads SET lead_label = 'Manual' WHERE TRIM(lead_label) = ''");
+    }
 
     $pdo->exec('CREATE INDEX IF NOT EXISTS idx_leads_status ON leads(status)');
     $pdo->exec('CREATE INDEX IF NOT EXISTS idx_leads_source ON leads(source)');
@@ -65,6 +72,7 @@ function shubh_db_migrate(PDO $pdo): void
     $pdo->exec('CREATE INDEX IF NOT EXISTS idx_leads_state ON leads(state)');
     $pdo->exec('CREATE INDEX IF NOT EXISTS idx_leads_district ON leads(district)');
     $pdo->exec('CREATE INDEX IF NOT EXISTS idx_leads_midc ON leads(midc)');
+    $pdo->exec('CREATE INDEX IF NOT EXISTS idx_leads_lead_label ON leads(lead_label)');
 }
 
 /**
@@ -73,7 +81,7 @@ function shubh_db_migrate(PDO $pdo): void
 function shubh_lead_field_keys(): array
 {
     return [
-        'source', 'name', 'email', 'phone', 'company', 'city', 'district', 'state',
+        'source', 'lead_label', 'name', 'email', 'phone', 'company', 'city', 'district', 'state',
         'midc', 'territory', 'business_type', 'interest', 'message', 'status', 'notes',
     ];
 }
@@ -94,6 +102,16 @@ function shubh_lead_normalize(array $data): array
     if ($out['status'] === '' || !in_array($out['status'], shubh_lead_statuses(), true)) {
         $out['status'] = 'new';
     }
+    if ($out['lead_label'] === '' || !in_array($out['lead_label'], shubh_lead_labels(), true)) {
+        // Infer label from source when not provided
+        if (in_array($out['source'], ['contact', 'distributor'], true)) {
+            $out['lead_label'] = 'Inbound';
+        } elseif ($out['source'] === 'visit') {
+            $out['lead_label'] = 'Prospect';
+        } else {
+            $out['lead_label'] = 'Manual';
+        }
+    }
     return $out;
 }
 
@@ -106,15 +124,16 @@ function shubh_lead_create(array $data): int
     $now = date('c');
     $stmt = shubh_db()->prepare(
         'INSERT INTO leads (
-            source, name, email, phone, company, city, district, state, midc, territory,
+            source, lead_label, name, email, phone, company, city, district, state, midc, territory,
             business_type, interest, message, status, notes, created_at, updated_at
         ) VALUES (
-            :source, :name, :email, :phone, :company, :city, :district, :state, :midc, :territory,
+            :source, :lead_label, :name, :email, :phone, :company, :city, :district, :state, :midc, :territory,
             :business_type, :interest, :message, :status, :notes, :created_at, :updated_at
         )'
     );
     $stmt->execute([
         ':source' => $row['source'],
+        ':lead_label' => $row['lead_label'],
         ':name' => $row['name'],
         ':email' => $row['email'],
         ':phone' => $row['phone'],
@@ -147,6 +166,7 @@ function shubh_lead_update(int $id, array $data): void
     $stmt = shubh_db()->prepare(
         'UPDATE leads SET
             source = :source,
+            lead_label = :lead_label,
             name = :name,
             email = :email,
             phone = :phone,
@@ -166,6 +186,7 @@ function shubh_lead_update(int $id, array $data): void
     );
     $stmt->execute([
         ':source' => $row['source'],
+        ':lead_label' => $row['lead_label'],
         ':name' => $row['name'],
         ':email' => $row['email'],
         ':phone' => $row['phone'],
@@ -206,6 +227,16 @@ function shubh_lead_append_note(int $id, string $note): void
 function shubh_lead_statuses(): array
 {
     return ['new', 'contacted', 'qualified', 'won', 'lost'];
+}
+
+/**
+ * Separates website enquiries from outreach prospects and manual entries.
+ *
+ * @return list<string>
+ */
+function shubh_lead_labels(): array
+{
+    return ['Inbound', 'Prospect', 'Manual'];
 }
 
 /**
@@ -251,7 +282,7 @@ function shubh_district_suggestions(?string $state = null): array
  */
 function shubh_distinct_lead_values(string $column): array
 {
-    $allowed = ['state', 'district', 'midc', 'source', 'status', 'city'];
+    $allowed = ['state', 'district', 'midc', 'source', 'status', 'city', 'lead_label'];
     if (!in_array($column, $allowed, true)) {
         return [];
     }

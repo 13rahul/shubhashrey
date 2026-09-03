@@ -405,17 +405,31 @@ function initTestimonialSlider() {
 }
 
 async function saveLead(payload) {
-  try {
-    const res = await fetch("api/lead.php", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(payload),
-    });
-    const data = await res.json().catch(() => ({}));
-    return !!(res.ok && data && data.success);
-  } catch (_) {
-    return false;
+  const candidates = [
+    "api/lead.php",
+    "./api/lead.php",
+    "/Subhshrey-industries/api/lead.php",
+  ];
+  // Prefer path relative to current page folder
+  const base = window.location.pathname.replace(/[^/]+$/, "");
+  candidates.unshift(base + "api/lead.php");
+
+  for (const url of [...new Set(candidates)]) {
+    try {
+      const res = await fetch(url, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
+      const data = await res.json().catch(() => ({}));
+      if (res.ok && data && data.success) {
+        return true;
+      }
+    } catch (_) {
+      /* try next */
+    }
   }
+  return false;
 }
 
 function initContactForm() {
@@ -442,6 +456,7 @@ function initContactForm() {
 
     const saved = await saveLead({
       source: "contact",
+      lead_label: "Inbound",
       firstName,
       lastName,
       name: `${firstName} ${lastName}`.trim(),
@@ -499,6 +514,7 @@ function initDistributorForm() {
 
     const saved = await saveLead({
       source: "distributor",
+      lead_label: "Inbound",
       fullName,
       name: fullName,
       company,

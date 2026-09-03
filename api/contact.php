@@ -45,11 +45,13 @@ $leadId = null;
 try {
     $leadId = shubh_lead_create([
         'source' => 'contact',
+        'lead_label' => 'Inbound',
         'name' => trim($firstName . ' ' . $lastName),
         'email' => $email,
         'phone' => $phone,
         'message' => $message,
         'status' => 'new',
+        'notes' => 'Inbound lead — Contact Us form · ' . date('Y-m-d H:i'),
     ]);
 } catch (Throwable $e) {
     // Continue — mail/log still useful

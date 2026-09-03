@@ -71,9 +71,14 @@ if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
     exit;
 }
 
+$channelNote = $source === 'distributor'
+    ? 'Inbound lead — Become a Distributor form'
+    : 'Inbound lead — Contact Us form';
+
 try {
     $id = shubh_lead_create([
         'source' => $source,
+        'lead_label' => 'Inbound',
         'name' => $name,
         'email' => $email,
         'phone' => $phone,
@@ -87,12 +92,14 @@ try {
         'interest' => $interest,
         'message' => $message,
         'status' => 'new',
+        'notes' => $channelNote . ' · ' . date('Y-m-d H:i'),
     ]);
 
     echo json_encode([
         'success' => true,
-        'message' => 'Lead saved.',
+        'message' => 'Inbound lead saved.',
         'id' => $id,
+        'lead_label' => 'Inbound',
     ]);
 } catch (Throwable $e) {
     http_response_code(500);

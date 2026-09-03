@@ -1,5 +1,7 @@
 # Local form/order logs (created by PHP when mail() is unavailable)
 storage/*.txt
-storage/*.sqlite
 storage/*.sqlite-*
 config/admin.local.php
+
+# Track seed CRM DB so live deploys are not empty.
+# Do not ignore storage/crm.sqlite

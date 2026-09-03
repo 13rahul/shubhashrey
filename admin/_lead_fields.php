@@ -69,6 +69,21 @@ function render_lead_fields(
       </select>
     </div>
     <div class="field">
+      <label for="<?= $pid ?>_lead_label">Lead label</label>
+      <select id="<?= $pid ?>_lead_label" name="lead_label">
+        <?php
+          $labels = function_exists('shubh_lead_labels') ? shubh_lead_labels() : ['Inbound', 'Prospect', 'Manual'];
+          $curLabel = (string) ($lead['lead_label'] ?? '');
+          if ($curLabel === '') {
+              $curLabel = 'Manual';
+          }
+          foreach ($labels as $lb):
+        ?>
+          <option value="<?= shubh_h($lb) ?>" <?= $curLabel === $lb ? 'selected' : '' ?>><?= shubh_h($lb) ?></option>
+        <?php endforeach; ?>
+      </select>
+    </div>
+    <div class="field">
       <label for="<?= $pid ?>_source">Source</label>
       <select id="<?= $pid ?>_source" name="source">
         <?php foreach ($sources as $src): ?>

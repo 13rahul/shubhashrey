@@ -95,6 +95,7 @@ while (($cols = fgetcsv($fh)) !== false) {
 
     $payload = [
         'source' => 'visit',
+        'lead_label' => 'Prospect',
         'name' => $name,
         'email' => $email,
         'phone' => $phone,
