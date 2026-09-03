@@ -1929,24 +1929,28 @@ p {
   }
 }
 
-/* Floating WhatsApp FAB */
+/* Floating action buttons (right side) */
+.brochure-fab,
 .wa-fab {
   display: flex;
   position: fixed;
-  bottom: var(--space-5);
   right: var(--space-5);
   z-index: 90;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  box-shadow: var(--shadow-lg);
+  transition: transform var(--duration-fast) var(--ease-spring),
+    box-shadow var(--duration-fast);
+}
+
+.wa-fab {
+  bottom: var(--space-5);
   width: 3.25rem;
   height: 3.25rem;
   border-radius: var(--radius-full);
   background: #25d366;
   color: #fff;
-  align-items: center;
-  justify-content: center;
-  box-shadow: var(--shadow-lg);
-  text-decoration: none;
-  transition: transform var(--duration-fast) var(--ease-spring),
-    box-shadow var(--duration-fast);
 }
 
 .wa-fab:hover {
@@ -1959,6 +1963,57 @@ p {
   width: 1.6rem;
   height: 1.6rem;
   fill: currentColor;
+}
+
+.brochure-fab {
+  bottom: calc(var(--space-5) + 3.25rem + 0.75rem);
+  gap: 0.45rem;
+  min-height: 3.25rem;
+  padding: 0.65rem 1rem 0.65rem 0.75rem;
+  border-radius: var(--radius-full);
+  background: var(--brand-deep, #0078a8);
+  color: #fff;
+  font-family: var(--font-display);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.brochure-fab:hover {
+  transform: scale(1.05);
+  background: var(--brand-dark, #0090c8);
+  color: #fff;
+  box-shadow: 0 8px 28px rgba(0, 120, 168, 0.4);
+}
+
+.brochure-fab svg {
+  width: 1.35rem;
+  height: 1.35rem;
+  fill: currentColor;
+  flex-shrink: 0;
+}
+
+.brochure-fab__label {
+  white-space: nowrap;
+}
+
+@media (max-width: 480px) {
+  .brochure-fab__label {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+  }
+
+  .brochure-fab {
+    width: 3.25rem;
+    height: 3.25rem;
+    padding: 0;
+  }
 }
 
 .pack-photo,
@@ -2255,6 +2310,23 @@ p {
   background:
     linear-gradient(135deg, rgba(0, 120, 168, 0.92), rgba(0, 174, 239, 0.85)),
     url("../assets/industries/manufacturing.png") center / cover no-repeat;
+  color: #fff;
+}
+
+.page-hero--profile .eyebrow {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.page-hero--profile h1 {
+  color: #fff;
+}
+
+.page-hero--profile p {
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.page-hero--profile .cta-row {
+  margin-top: 1.25rem;
 }
 
 .section--compact {

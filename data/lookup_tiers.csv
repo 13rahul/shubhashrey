@@ -1,0 +1,20 @@
+industry_category,tier,processes_likely,electrode_likely_default,volume_signal_default,pitch_angle_template
+Heavy fabrication,1,SMAW;GMAW;Cutting,E6013;E7018;Cutting,High,High weld-metal use — Bharatweld E6013/E7018 packs for fab shop plus cutting electrodes for plate work
+Steel fabrication,1,SMAW;GMAW,E6013;E7018,High,Structural and plate fab — trial Bharatweld E7018 for strength joints and E6013 for general work
+Structural fabrication,1,SMAW;GMAW,E6013;E7018,High,Beams/columns/structures — consistent E6013/E7018 supply from Baramati MIDC
+Boiler/tank manufacturers,1,SMAW;GTAW,E7018;E6013;E308L,High,IBR/pressure work needs reliable E7018; SS tanks need E308L — Bharatweld industrial grades
+Heavy engineering,1,SMAW;GMAW;Hardfacing,E7018;E6013;Mn hardfacing,High,Equipment frames and repair — E7018 production welds plus Mn hardfacing for wear parts
+Machine/equipment manufacturers,1,SMAW;GMAW;GTAW,E7018;E6013;E308L,Med,Machine baseframes and SS parts — E7018 + E308L sample kit
+Industrial maintenance,1,SMAW;Cutting;Hardfacing,E6013;E7018;Cutting;Mn hardfacing,Med,Plant maintenance mix — general E6013, cutting electrodes, Mn hardfacing for rebuilds
+Sheet-metal fabrication,1,SMAW;GMAW,E6013,Med,Sheet and light plate — Bharatweld E6013 for clean bead and easy slag
+Auto-component manufacturers,2,SMAW;GMAW,E6013;E7018,Med,Fixtures/repair and mild-steel fab — E6013/E7018 for toolroom and maintenance welding
+Agricultural equipment,2,SMAW;GMAW;Hardfacing,E6013;E7018;Mn hardfacing,Med,Agri implements — E6013 production plus Mn hardfacing on wear edges
+Material-handling equipment,2,SMAW;GMAW,E6013;E7018,Med,Conveyors/trolleys/structures — steady E6013/E7018 consumption
+Crane manufacturers,2,SMAW;GMAW,E7018;E6013,High,Crane girders need quality E7018 — Bharatweld for structural welds
+Trailer/body builders,2,SMAW;GMAW,E6013;E7018,High,Chassis and body fab — high E6013/E7018 volume opportunity
+Foundries,2,SMAW;Hardfacing;Cutting,E6013;Mn hardfacing;Cutting,Low,Pattern/repair and hardfacing — maintenance electrodes and Mn grades
+General engineering,3,SMAW,E6013;E7018,Low,Job-shop welding — start with Bharatweld E6013 cartons
+Machine shops,3,SMAW,E6013,Low,Fixture and repair welding — small-pack E6013 entry
+Small workshops,3,SMAW,E6013,Low,Daily mild-steel jobs — affordable E6013 supply
+Metal furniture,3,SMAW,E6013,Low,Furniture frames — E6013 for clean finish welds
+Gate/grill manufacturers,3,SMAW,E6013,Low,Gates and grills — Bharatweld E6013 (easy slag, good appearance)

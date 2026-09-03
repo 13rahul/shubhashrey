@@ -1,0 +1,3 @@
+company_id,company_name,plot_address,pincode,industry_category,parked_reason,data_source,outreach_status,notes
+BHO-P001,Emcure Pharmaceuticals Ltd,"Bhosari MIDC, Pune - 411026",411026,Pharma (parked),Not core welding electrode buyer; maintenance-only angle later,Chamber directory (GCCIA),Parked,Do not include in Phase 1 Hot dial list
+BHO-P002,Kwality Paints,"Bhosari MIDC, Pune - 411026",411026,Paints (parked),Non-metal manufacturing; exclude from Phase 1,Chamber directory (GCCIA),Parked,Do not include in Phase 1 Hot dial list

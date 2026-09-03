@@ -15,7 +15,21 @@ document.addEventListener("DOMContentLoaded", () => {
   initContactForm();
   initDistributorForm();
   setActiveNav();
+  injectBrochureFab();
 });
+
+function injectBrochureFab() {
+  if (document.querySelector(".brochure-fab")) return;
+  const a = document.createElement("a");
+  a.className = "brochure-fab";
+  a.href = "assets/brochure/bharatweld-brochure.pdf";
+  a.setAttribute("download", "");
+  a.setAttribute("aria-label", "Download Bharatweld brochure PDF");
+  a.innerHTML =
+    '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm1 7V3.5L18.5 9H15zM12 19l-4-4h2.5V11h3v4H16l-4 4z"/></svg>' +
+    '<span class="brochure-fab__label">Brochure</span>';
+  document.body.appendChild(a);
+}
 
 function initNav() {
   const toggle = document.querySelector(".nav-toggle");
@@ -390,6 +404,20 @@ function initTestimonialSlider() {
   });
 }
 
+async function saveLead(payload) {
+  try {
+    const res = await fetch("api/lead.php", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(payload),
+    });
+    const data = await res.json().catch(() => ({}));
+    return !!(res.ok && data && data.success);
+  } catch (_) {
+    return false;
+  }
+}
+
 function initContactForm() {
   const form = document.getElementById("contact-form");
   if (!form) return;
@@ -397,7 +425,7 @@ function initContactForm() {
   const whatsappNumber =
     typeof WHATSAPP_ORDER_NUMBER !== "undefined" ? WHATSAPP_ORDER_NUMBER : "919168679621";
 
-  form.addEventListener("submit", (e) => {
+  form.addEventListener("submit", async (e) => {
     e.preventDefault();
     const status = document.getElementById("contact-status");
 
@@ -412,6 +440,16 @@ function initContactForm() {
     const phone = form.phone.value.trim();
     const message = form.message.value.trim();
 
+    const saved = await saveLead({
+      source: "contact",
+      firstName,
+      lastName,
+      name: `${firstName} ${lastName}`.trim(),
+      email,
+      phone,
+      message,
+    });
+
     let text =
       `*New enquiry — Bharatweld / Shubhshrey*\n` +
       `Name: ${firstName} ${lastName}\n` +
@@ -424,7 +462,9 @@ function initContactForm() {
     window.open(url, "_blank", "noopener,noreferrer");
 
     form.reset();
-    status.textContent = "WhatsApp opened with your message. Tap Send in WhatsApp to deliver it to us.";
+    status.textContent = saved
+      ? "Saved — WhatsApp opened with your message. Tap Send in WhatsApp to deliver it to us."
+      : "WhatsApp opened with your message. Tap Send in WhatsApp to deliver it to us.";
     status.className = "form-status is-success";
   });
 }
@@ -436,7 +476,7 @@ function initDistributorForm() {
   const whatsappNumber =
     typeof WHATSAPP_ORDER_NUMBER !== "undefined" ? WHATSAPP_ORDER_NUMBER : "919168679621";
 
-  form.addEventListener("submit", (e) => {
+  form.addEventListener("submit", async (e) => {
     e.preventDefault();
     const status = document.getElementById("distributor-status");
 
@@ -457,6 +497,23 @@ function initDistributorForm() {
     const interest = form.interest.value;
     const message = form.message.value.trim();
 
+    const saved = await saveLead({
+      source: "distributor",
+      fullName,
+      name: fullName,
+      company,
+      email,
+      phone,
+      city,
+      state,
+      area,
+      territory: area,
+      businessType,
+      experience,
+      interest,
+      message,
+    });
+
     let text =
       `*Distributor application — Bharatweld / Shubhshrey*\n\n` +
       `*Contact person:* ${fullName}\n` +
@@ -476,8 +533,9 @@ function initDistributorForm() {
     window.open(url, "_blank", "noopener,noreferrer");
 
     form.reset();
-    status.textContent =
-      "WhatsApp opened with your distributor application. Tap Send in WhatsApp to deliver it to us.";
+    status.textContent = saved
+      ? "Saved — WhatsApp opened with your distributor application. Tap Send in WhatsApp to deliver it."
+      : "WhatsApp opened with your distributor application. Tap Send in WhatsApp to deliver it to us.";
     status.className = "form-status is-success";
   });
 }

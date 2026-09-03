@@ -1,0 +1,309 @@
+midc_name,district,region,electrode_potential,sales_priority,typical_sectors,source
+Ahilyanagar,Ahilyanagar,North Maharashtra,High,1 — Primary territory,Heavy fab / auto / engineering / plant maintenance,MIDC EODB registry
+Jamkhed,Ahilyanagar,North Maharashtra,Medium,2 — Expand after Tier-1,General engineering / mixed manufacturing,MIDC EODB registry
+Newasa,Ahilyanagar,North Maharashtra,Medium,2 — Expand after Tier-1,General engineering / mixed manufacturing,MIDC EODB registry
+Rahuri,Ahilyanagar,North Maharashtra,Medium,2 — Expand after Tier-1,General engineering / mixed manufacturing,MIDC EODB registry
+Shrirampur,Ahilyanagar,North Maharashtra,Medium,2 — Expand after Tier-1,General engineering / mixed manufacturing,MIDC EODB registry
+Supa Parner,Ahilyanagar,North Maharashtra,High,1 — Primary territory,Heavy fab / auto / engineering / plant maintenance,MIDC EODB registry
+Akola,Akola,Vidarbha,Medium–Low,3 — Opportunistic,Mixed / smaller industrial base,MIDC EODB registry
+Akola (Central Government Growth Center),Akola,Vidarbha,Medium–Low,3 — Opportunistic,Mixed / smaller industrial base,MIDC EODB registry
+Akot (Mini),Akola,Vidarbha,Low,3 — Opportunistic,Small workshops / niche / light industry,MIDC EODB registry
+Balapur (Mini),Akola,Vidarbha,Low,3 — Opportunistic,Small workshops / niche / light industry,MIDC EODB registry
+Barshi Takli (Mini),Akola,Vidarbha,Low,3 — Opportunistic,Small workshops / niche / light industry,MIDC EODB registry
+Murtizapur,Akola,Vidarbha,Medium–Low,3 — Opportunistic,Mixed / smaller industrial base,MIDC EODB registry
+Patur (Mini),Akola,Vidarbha,Low,3 — Opportunistic,Small workshops / niche / light industry,MIDC EODB registry
+Telhara (Mini),Akola,Vidarbha,Low,3 — Opportunistic,Small workshops / niche / light industry,MIDC EODB registry
+Achalpur,Amravati,Vidarbha,Medium,2 — Expand after Tier-1,General engineering / mixed manufacturing,MIDC EODB registry
+Addl. Amravati (Textile Park),Amravati,Vidarbha,High,1 — Primary territory,Heavy fab / auto / engineering / plant maintenance,MIDC EODB registry
+Amravati,Amravati,Vidarbha,High,1 — Primary territory,Heavy fab / auto / engineering / plant maintenance,MIDC EODB registry
+Anjangaon (Mini),Amravati,Vidarbha,Low,3 — Opportunistic,Small workshops / niche / light industry,MIDC EODB registry
+Bhatkuli (Mini),Amravati,Vidarbha,Low,3 — Opportunistic,Small workshops / niche / light industry,MIDC EODB registry
+Chandur Railway (Mini),Amravati,Vidarbha,Low,3 — Opportunistic,Small workshops / niche / light industry,MIDC EODB registry
+Daryapur (Mini),Amravati,Vidarbha,Low,3 — Opportunistic,Small workshops / niche / light industry,MIDC EODB registry
+Dhamangaon,Amravati,Vidarbha,Medium,2 — Expand after Tier-1,General engineering / mixed manufacturing,MIDC EODB registry
+Dharni (Mini),Amravati,Vidarbha,Low,3 — Opportunistic,Small workshops / niche / light industry,MIDC EODB registry
+Morshi (Mini),Amravati,Vidarbha,Low,3 — Opportunistic,Small workshops / niche / light industry,MIDC EODB registry
+Nandgaon-Khandeshwar (Mini),Amravati,Vidarbha,Low,3 — Opportunistic,Small workshops / niche / light industry,MIDC EODB registry
+Tiwasa (Mini),Amravati,Vidarbha,Low,3 — Opportunistic,Small workshops / niche / light industry,MIDC EODB registry
+Warud (Mini),Amravati,Vidarbha,Low,3 — Opportunistic,Small workshops / niche / light industry,MIDC EODB registry
+Ashti (Mini),Beed,Marathwada,Low,3 — Opportunistic,Small workshops / niche / light industry,MIDC EODB registry
+Beed,Beed,Marathwada,Medium–Low,3 — Opportunistic,Mixed / smaller industrial base,MIDC EODB registry
+Dharur (Mini),Beed,Marathwada,Low,3 — Opportunistic,Small workshops / niche / light industry,MIDC EODB registry
+Majalgaon,Beed,Marathwada,Medium–Low,3 — Opportunistic,Mixed / smaller industrial base,MIDC EODB registry
+Patoda (Mini),Beed,Marathwada,Low,3 — Opportunistic,Small workshops / niche / light industry,MIDC EODB registry
+Bhandara,Bhandara,Vidarbha,Medium–Low,3 — Opportunistic,Mixed / smaller industrial base,MIDC EODB registry
+Lakhandur,Bhandara,Vidarbha,Medium–Low,3 — Opportunistic,Mixed / smaller industrial base,MIDC EODB registry
+Mohadi (Mini),Bhandara,Vidarbha,Low,3 — Opportunistic,Small workshops / niche / light industry,MIDC EODB registry
+Pauni (Mini),Bhandara,Vidarbha,Low,3 — Opportunistic,Small workshops / niche / light industry,MIDC EODB registry
+Tumsar (Mini),Bhandara,Vidarbha,Low,3 — Opportunistic,Small workshops / niche / light industry,MIDC EODB registry
+Buldhana (Mini),Buldhana,Vidarbha,Low,3 — Opportunistic,Small workshops / niche / light industry,MIDC EODB registry
+Chikhali,Buldhana,Vidarbha,Medium–Low,3 — Opportunistic,Mixed / smaller industrial base,MIDC EODB registry
+Deoulgaon Raja (Mini),Buldhana,Vidarbha,Low,3 — Opportunistic,Small workshops / niche / light industry,MIDC EODB registry
+Khamgaon,Buldhana,Vidarbha,Medium–Low,3 — Opportunistic,Mixed / smaller industrial base,MIDC EODB registry
+Lonar (Mini),Buldhana,Vidarbha,Low,3 — Opportunistic,Small workshops / niche / light industry,MIDC EODB registry
+Malkapur,Buldhana,Vidarbha,Medium–Low,3 — Opportunistic,Mixed / smaller industrial base,MIDC EODB registry
+Mehekar (Mini),Buldhana,Vidarbha,Low,3 — Opportunistic,Small workshops / niche / light industry,MIDC EODB registry
+Sangrampur (Mini),Buldhana,Vidarbha,Low,3 — Opportunistic,Small workshops / niche / light industry,MIDC EODB registry
+Addl. Chandrapur,Chandrapur,Vidarbha,High,1 — Primary territory,Heavy fab / auto / engineering / plant maintenance,MIDC EODB registry
+Bhadravati (Major),Chandrapur,Vidarbha,Medium,2 — Expand after Tier-1,General engineering / mixed manufacturing,MIDC EODB registry
+Bhadravati (Mini),Chandrapur,Vidarbha,Low,3 — Opportunistic,Small workshops / niche / light industry,MIDC EODB registry
+Chandrapur,Chandrapur,Vidarbha,High,1 — Primary territory,Heavy fab / auto / engineering / plant maintenance,MIDC EODB registry
+Chandrapur Tadali (CGGC),Chandrapur,Vidarbha,High,1 — Primary territory,Heavy fab / auto / engineering / plant maintenance,MIDC EODB registry
+Chimur (Mini),Chandrapur,Vidarbha,Low,3 — Opportunistic,Small workshops / niche / light industry,MIDC EODB registry
+Ghugus,Chandrapur,Vidarbha,High,1 — Primary territory,Heavy fab / auto / engineering / plant maintenance,MIDC EODB registry
+Gondpimpri (Mini),Chandrapur,Vidarbha,Low,3 — Opportunistic,Small workshops / niche / light industry,MIDC EODB registry
+Mul,Chandrapur,Vidarbha,Medium,2 — Expand after Tier-1,General engineering / mixed manufacturing,MIDC EODB registry
+Nagbhid,Chandrapur,Vidarbha,Medium,2 — Expand after Tier-1,General engineering / mixed manufacturing,MIDC EODB registry
+Rajura (Mini),Chandrapur,Vidarbha,Low,3 — Opportunistic,Small workshops / niche / light industry,MIDC EODB registry
+Sindewahi (Mini),Chandrapur,Vidarbha,Low,3 — Opportunistic,Small workshops / niche / light industry,MIDC EODB registry
+Warora,Chandrapur,Vidarbha,Medium,2 — Expand after Tier-1,General engineering / mixed manufacturing,MIDC EODB registry
+Ambad,Chhatrapati Sambhajinagar,Marathwada,Medium,2 — Expand after Tier-1,General engineering / mixed manufacturing,MIDC EODB registry
+Chhatrapati Sambhajinagar (Estate),Chhatrapati Sambhajinagar,Marathwada,Medium,2 — Expand after Tier-1,General engineering / mixed manufacturing,MIDC EODB registry
+Chikalthana,Chhatrapati Sambhajinagar,Marathwada,High,1 — Primary territory,Heavy fab / auto / engineering / plant maintenance,MIDC EODB registry
+Chikalthana MIDC,Chhatrapati Sambhajinagar,Marathwada,High,1 — Primary territory,Heavy fab / auto / engineering / plant maintenance,Sales alias
+Khultabad (Mini),Chhatrapati Sambhajinagar,Marathwada,Low,3 — Opportunistic,Small workshops / niche / light industry,MIDC EODB registry
+Paithan MIDC,Chhatrapati Sambhajinagar,Marathwada,High,1 — Primary territory,Heavy fab / auto / engineering / plant maintenance,Sales alias
+Shendra Five Star,Chhatrapati Sambhajinagar,Marathwada,High,1 — Primary territory,Heavy fab / auto / engineering / plant maintenance,MIDC EODB registry
+Shendra MIDC,Chhatrapati Sambhajinagar,Marathwada,High,1 — Primary territory,Heavy fab / auto / engineering / plant maintenance,Sales alias
+Shendra SEZ,Chhatrapati Sambhajinagar,Marathwada,High,1 — Primary territory,Heavy fab / auto / engineering / plant maintenance,Sales alias
+Vaijapur,Chhatrapati Sambhajinagar,Marathwada,Medium,2 — Expand after Tier-1,General engineering / mixed manufacturing,MIDC EODB registry
+Waluj,Chhatrapati Sambhajinagar,Marathwada,High,1 — Primary territory,Heavy fab / auto / engineering / plant maintenance,MIDC EODB registry
+Waluj MIDC,Chhatrapati Sambhajinagar,Marathwada,High,1 — Primary territory,Heavy fab / auto / engineering / plant maintenance,Sales alias
+Addl. Dharashiv,Dharashiv,Marathwada,Medium–Low,3 — Opportunistic,Mixed / smaller industrial base,MIDC EODB registry
+Bhoom (Mini),Dharashiv,Marathwada,Low,3 — Opportunistic,Small workshops / niche / light industry,MIDC EODB registry
+Dharashiv,Dharashiv,Marathwada,Medium–Low,3 — Opportunistic,Mixed / smaller industrial base,MIDC EODB registry
+Kalamb (Mini),Dharashiv,Marathwada,Low,3 — Opportunistic,Small workshops / niche / light industry,MIDC EODB registry
+Umarga,Dharashiv,Marathwada,Medium–Low,3 — Opportunistic,Mixed / smaller industrial base,MIDC EODB registry
+Addl. Dhule,Dhule,North Maharashtra,Medium–Low,3 — Opportunistic,Mixed / smaller industrial base,MIDC EODB registry
+Brahmanvel,Dhule,North Maharashtra,Medium–Low,3 — Opportunistic,Mixed / smaller industrial base,MIDC EODB registry
+Dhule,Dhule,North Maharashtra,High,1 — Primary territory,Heavy fab / auto / engineering / plant maintenance,MIDC EODB registry
+Nardana Ph-1,Dhule,North Maharashtra,High,1 — Primary territory,Heavy fab / auto / engineering / plant maintenance,MIDC EODB registry
+Nardana Ph-2,Dhule,North Maharashtra,High,1 — Primary territory,Heavy fab / auto / engineering / plant maintenance,MIDC EODB registry
+Shahade (Mini),Dhule,North Maharashtra,Low,3 — Opportunistic,Small workshops / niche / light industry,MIDC EODB registry
+Aheri (Mini),Gadchiroli,Vidarbha,Low,3 — Opportunistic,Small workshops / niche / light industry,MIDC EODB registry
+Dhanora,Gadchiroli,Vidarbha,Medium–Low,3 — Opportunistic,Mixed / smaller industrial base,MIDC EODB registry
+Gadchiroli,Gadchiroli,Vidarbha,Medium–Low,3 — Opportunistic,Mixed / smaller industrial base,MIDC EODB registry
+Kurkheda,Gadchiroli,Vidarbha,Medium–Low,3 — Opportunistic,Mixed / smaller industrial base,MIDC EODB registry
+Deori,Gondia,Vidarbha,Medium–Low,3 — Opportunistic,Mixed / smaller industrial base,MIDC EODB registry
+Gondia,Gondia,Vidarbha,Medium–Low,3 — Opportunistic,Mixed / smaller industrial base,MIDC EODB registry
+Goregaon (Mini),Gondia,Vidarbha,Low,3 — Opportunistic,Small workshops / niche / light industry,MIDC EODB registry
+Morgaon Arjuni (Mini),Gondia,Vidarbha,Low,3 — Opportunistic,Small workshops / niche / light industry,MIDC EODB registry
+Tiroda,Gondia,Vidarbha,Medium–Low,3 — Opportunistic,Mixed / smaller industrial base,MIDC EODB registry
+Basmat (Mini),Hingoli,Marathwada,Low,3 — Opportunistic,Small workshops / niche / light industry,MIDC EODB registry
+Hingoli,Hingoli,Marathwada,Medium–Low,3 — Opportunistic,Mixed / smaller industrial base,MIDC EODB registry
+Kalamnuri (Mini),Hingoli,Marathwada,Low,3 — Opportunistic,Small workshops / niche / light industry,MIDC EODB registry
+Addl. Jalgaon,Jalgaon,North Maharashtra,High,1 — Primary territory,Heavy fab / auto / engineering / plant maintenance,MIDC EODB registry
+Bhusaval,Jalgaon,North Maharashtra,Medium–Low,3 — Opportunistic,Mixed / smaller industrial base,MIDC EODB registry
+Chalisgaon,Jalgaon,North Maharashtra,Medium–Low,3 — Opportunistic,Mixed / smaller industrial base,MIDC EODB registry
+Jalgaon (Estate),Jalgaon,North Maharashtra,High,1 — Primary territory,Heavy fab / auto / engineering / plant maintenance,MIDC EODB registry
+Addl. Jalna Ph-1,Jalna,Marathwada,High,1 — Primary territory,Heavy fab / auto / engineering / plant maintenance,MIDC EODB registry
+Addl. Jalna Ph-2,Jalna,Marathwada,High,1 — Primary territory,Heavy fab / auto / engineering / plant maintenance,MIDC EODB registry
+Addl. Jalna Ph-3,Jalna,Marathwada,High,1 — Primary territory,Heavy fab / auto / engineering / plant maintenance,MIDC EODB registry
+Ambad (Mini),Jalna,Marathwada,Low,3 — Opportunistic,Small workshops / niche / light industry,MIDC EODB registry
+Bhokardan,Jalna,Marathwada,Medium,2 — Expand after Tier-1,General engineering / mixed manufacturing,MIDC EODB registry
+Jafrabad (Mini),Jalna,Marathwada,Low,3 — Opportunistic,Small workshops / niche / light industry,MIDC EODB registry
+Jalna (Estate),Jalna,Marathwada,High,1 — Primary territory,Heavy fab / auto / engineering / plant maintenance,MIDC EODB registry
+Partur,Jalna,Marathwada,Medium,2 — Expand after Tier-1,General engineering / mixed manufacturing,MIDC EODB registry
+Ajara,Kolhapur,Western Maharashtra,Medium,2 — Expand after Tier-1,General engineering / mixed manufacturing,MIDC EODB registry
+Gadhinglaj,Kolhapur,Western Maharashtra,Medium,2 — Expand after Tier-1,General engineering / mixed manufacturing,MIDC EODB registry
+Gokul-Shirgaon,Kolhapur,Western Maharashtra,High,1 — Primary territory,Heavy fab / auto / engineering / plant maintenance,MIDC EODB registry
+Halkarni,Kolhapur,Western Maharashtra,Medium,2 — Expand after Tier-1,General engineering / mixed manufacturing,MIDC EODB registry
+Kagal Hatkanangale Five Star,Kolhapur,Western Maharashtra,High,1 — Primary territory,Heavy fab / auto / engineering / plant maintenance,Sales alias
+Kagal-Hatkanangale Five Star,Kolhapur,Western Maharashtra,High,1 — Primary territory,Heavy fab / auto / engineering / plant maintenance,MIDC EODB registry
+Shiroli,Kolhapur,Western Maharashtra,High,1 — Primary territory,Heavy fab / auto / engineering / plant maintenance,MIDC EODB registry
+Shiroli MIDC (Kolhapur),Kolhapur,Western Maharashtra,High,1 — Primary territory,Heavy fab / auto / engineering / plant maintenance,Sales alias
+Addl. Latur,Latur,Marathwada,High,1 — Primary territory,Heavy fab / auto / engineering / plant maintenance,MIDC EODB registry
+Ahmedpur (Mini),Latur,Marathwada,Low,3 — Opportunistic,Small workshops / niche / light industry,MIDC EODB registry
+Ausa,Latur,Marathwada,Medium–Low,3 — Opportunistic,Mixed / smaller industrial base,MIDC EODB registry
+Latur,Latur,Marathwada,High,1 — Primary territory,Heavy fab / auto / engineering / plant maintenance,MIDC EODB registry
+Nilanga (Mini),Latur,Marathwada,Low,3 — Opportunistic,Small workshops / niche / light industry,MIDC EODB registry
+Marol,Mumbai City,Mumbai Metro,Medium–Low,3 — Opportunistic,Mixed / smaller industrial base,MIDC EODB registry
+Marol (Samruddhi Venture Park),Mumbai City,Mumbai Metro,Low,3 — Opportunistic,Small workshops / niche / light industry,MIDC EODB registry
+SEEPZ (SEZ),Mumbai City,Mumbai Metro,Medium–Low,3 — Opportunistic,Mixed / smaller industrial base,Sales alias
+Bhivapur (Mini),Nagpur,Vidarbha,Low,3 — Opportunistic,Small workshops / niche / light industry,MIDC EODB registry
+Butibori,Nagpur,Vidarbha,High,1 — Primary territory,Heavy fab / auto / engineering / plant maintenance,MIDC EODB registry
+Butibori Five Star,Nagpur,Vidarbha,High,1 — Primary territory,Heavy fab / auto / engineering / plant maintenance,MIDC EODB registry
+Butibori MIDC,Nagpur,Vidarbha,High,1 — Primary territory,Heavy fab / auto / engineering / plant maintenance,Sales alias
+Butibori Ph-2,Nagpur,Vidarbha,High,1 — Primary territory,Heavy fab / auto / engineering / plant maintenance,MIDC EODB registry
+Hingna,Nagpur,Vidarbha,High,1 — Primary territory,Heavy fab / auto / engineering / plant maintenance,MIDC EODB registry
+Hingna MIDC (Nagpur),Nagpur,Vidarbha,High,1 — Primary territory,Heavy fab / auto / engineering / plant maintenance,Sales alias
+Kalmeshwar,Nagpur,Vidarbha,High,1 — Primary territory,Heavy fab / auto / engineering / plant maintenance,MIDC EODB registry
+Kamti Kanhan,Nagpur,Vidarbha,Medium,2 — Expand after Tier-1,General engineering / mixed manufacturing,MIDC EODB registry
+Katol,Nagpur,Vidarbha,Medium,2 — Expand after Tier-1,General engineering / mixed manufacturing,MIDC EODB registry
+Kuhi (Mini),Nagpur,Vidarbha,Low,3 — Opportunistic,Small workshops / niche / light industry,MIDC EODB registry
+Narkhed (Mini),Nagpur,Vidarbha,Low,3 — Opportunistic,Small workshops / niche / light industry,MIDC EODB registry
+Parshivni (Mini),Nagpur,Vidarbha,Low,3 — Opportunistic,Small workshops / niche / light industry,MIDC EODB registry
+Saoner,Nagpur,Vidarbha,Medium,2 — Expand after Tier-1,General engineering / mixed manufacturing,MIDC EODB registry
+Umred,Nagpur,Vidarbha,Medium,2 — Expand after Tier-1,General engineering / mixed manufacturing,MIDC EODB registry
+Bhokar,Nanded,Marathwada,Medium–Low,3 — Opportunistic,Mixed / smaller industrial base,MIDC EODB registry
+Deglur,Nanded,Marathwada,Medium–Low,3 — Opportunistic,Mixed / smaller industrial base,MIDC EODB registry
+Kandhar (Mini),Nanded,Marathwada,Low,3 — Opportunistic,Small workshops / niche / light industry,MIDC EODB registry
+Kinwat,Nanded,Marathwada,Medium–Low,3 — Opportunistic,Mixed / smaller industrial base,MIDC EODB registry
+Krushnur (SEZ) (Pharma),Nanded,Marathwada,Medium–Low,3 — Opportunistic,Mixed / smaller industrial base,MIDC EODB registry
+Mudkhed,Nanded,Marathwada,Medium–Low,3 — Opportunistic,Mixed / smaller industrial base,MIDC EODB registry
+Nanded,Nanded,Marathwada,High,1 — Primary territory,Heavy fab / auto / engineering / plant maintenance,MIDC EODB registry
+Addl. Nandurbar (Bhaler),Nandurbar,North Maharashtra,Medium–Low,3 — Opportunistic,Mixed / smaller industrial base,Sales alias
+Navapur,Nandurbar,North Maharashtra,Medium–Low,3 — Opportunistic,Mixed / smaller industrial base,MIDC EODB registry
+Addl. Dindori,Nashik,North Maharashtra,High,1 — Primary territory,Heavy fab / auto / engineering / plant maintenance,MIDC EODB registry
+Addl. Sinnar (SEZ),Nashik,North Maharashtra,High,1 — Primary territory,Heavy fab / auto / engineering / plant maintenance,MIDC EODB registry
+Ambad MIDC (Nashik),Nashik,North Maharashtra,High,1 — Primary territory,Heavy fab / auto / engineering / plant maintenance,Sales alias
+Dindori,Nashik,North Maharashtra,High,1 — Primary territory,Heavy fab / auto / engineering / plant maintenance,MIDC EODB registry
+Malegaon (Textile Park),Nashik,North Maharashtra,Medium,2 — Expand after Tier-1,General engineering / mixed manufacturing,MIDC EODB registry
+Nashik (IT Park),Nashik,North Maharashtra,Low,3 — Opportunistic,Small workshops / niche / light industry,MIDC EODB registry
+Nashik-Ambad,Nashik,North Maharashtra,High,1 — Primary territory,Heavy fab / auto / engineering / plant maintenance,MIDC EODB registry
+Nashik-Satpur,Nashik,North Maharashtra,High,1 — Primary territory,Heavy fab / auto / engineering / plant maintenance,MIDC EODB registry
+Peth,Nashik,North Maharashtra,Medium,2 — Expand after Tier-1,General engineering / mixed manufacturing,MIDC EODB registry
+Sinnar,Nashik,North Maharashtra,High,1 — Primary territory,Heavy fab / auto / engineering / plant maintenance,MIDC EODB registry
+Sinnar Ph-1,Nashik,North Maharashtra,High,1 — Primary territory,Heavy fab / auto / engineering / plant maintenance,Sales alias
+Sinnar Ph-2,Nashik,North Maharashtra,High,1 — Primary territory,Heavy fab / auto / engineering / plant maintenance,Sales alias
+Sinnar Ph-3,Nashik,North Maharashtra,High,1 — Primary territory,Heavy fab / auto / engineering / plant maintenance,Sales alias
+Sinnar Ph-4,Nashik,North Maharashtra,High,1 — Primary territory,Heavy fab / auto / engineering / plant maintenance,Sales alias
+Surgana,Nashik,North Maharashtra,Medium,2 — Expand after Tier-1,General engineering / mixed manufacturing,MIDC EODB registry
+Vinchur,Nashik,North Maharashtra,High,1 — Primary territory,Heavy fab / auto / engineering / plant maintenance,MIDC EODB registry
+Yeola,Nashik,North Maharashtra,Medium,2 — Expand after Tier-1,General engineering / mixed manufacturing,MIDC EODB registry
+Boisar MIDC,Palghar,Mumbai Metro,High,1 — Primary territory,Heavy fab / auto / engineering / plant maintenance,Sales alias
+Tarapur,Palghar,Mumbai Metro,High,1 — Primary territory,Heavy fab / auto / engineering / plant maintenance,MIDC EODB registry
+Tarapur MIDC,Palghar,Mumbai Metro,High,1 — Primary territory,Heavy fab / auto / engineering / plant maintenance,Sales alias
+Gangakhed (Mini),Parbhani,Marathwada,Low,3 — Opportunistic,Small workshops / niche / light industry,MIDC EODB registry
+Jintur,Parbhani,Marathwada,Medium–Low,3 — Opportunistic,Mixed / smaller industrial base,MIDC EODB registry
+Parbhani,Parbhani,Marathwada,Medium–Low,3 — Opportunistic,Mixed / smaller industrial base,MIDC EODB registry
+Addl. Kurkumbh (Patas),Pune,Pune,High,1 — Primary territory,Heavy fab / auto / engineering / plant maintenance,MIDC EODB registry
+Baramati,Pune,Pune,High,1 — Primary territory,Heavy fab / auto / engineering / plant maintenance,MIDC EODB registry
+Baramati MIDC,Pune,Pune,High,1 — Primary territory,Heavy fab / auto / engineering / plant maintenance,Sales alias
+Baramati Ph-2,Pune,Pune,High,1 — Primary territory,Heavy fab / auto / engineering / plant maintenance,Sales alias
+Bhigwan,Pune,Pune,Medium,2 — Expand after Tier-1,General engineering / mixed manufacturing,MIDC EODB registry
+Bhosari MIDC,Pune,Pune,High,1 — Primary territory,Heavy fab / auto / engineering / plant maintenance,Sales alias
+Chakan MIDC,Pune,Pune,High,1 — Primary territory,Heavy fab / auto / engineering / plant maintenance,Sales alias
+Chakan Ph-1,Pune,Pune,High,1 — Primary territory,Heavy fab / auto / engineering / plant maintenance,MIDC EODB registry
+Chakan Ph-2,Pune,Pune,High,1 — Primary territory,Heavy fab / auto / engineering / plant maintenance,MIDC EODB registry
+Chakan Ph-3,Pune,Pune,High,1 — Primary territory,Heavy fab / auto / engineering / plant maintenance,MIDC EODB registry
+Chakan Ph-4,Pune,Pune,High,1 — Primary territory,Heavy fab / auto / engineering / plant maintenance,MIDC EODB registry
+Chakan Ph-5,Pune,Pune,High,1 — Primary territory,Heavy fab / auto / engineering / plant maintenance,Sales alias
+Chinchwad MIDC,Pune,Pune,High,1 — Primary territory,Heavy fab / auto / engineering / plant maintenance,Sales alias
+Hinjawadi Ph-1,Pune,Pune,Medium,2 — Expand after Tier-1,General engineering / mixed manufacturing,Sales alias
+Hinjawadi Ph-2,Pune,Pune,Medium,2 — Expand after Tier-1,General engineering / mixed manufacturing,Sales alias
+Hinjawadi Ph-3,Pune,Pune,Medium,2 — Expand after Tier-1,General engineering / mixed manufacturing,Sales alias
+Hinjawadi Ph-4,Pune,Pune,Medium,2 — Expand after Tier-1,General engineering / mixed manufacturing,Sales alias
+Indapur,Pune,Pune,High,1 — Primary territory,Heavy fab / auto / engineering / plant maintenance,MIDC EODB registry
+Jejuri,Pune,Pune,High,1 — Primary territory,Heavy fab / auto / engineering / plant maintenance,MIDC EODB registry
+Kharadi Knowledge Park,Pune,Pune,Low,3 — Opportunistic,Small workshops / niche / light industry,MIDC EODB registry
+Khed SEZ (KEIPL),Pune,Pune,Medium,2 — Expand after Tier-1,General engineering / mixed manufacturing,Sales alias
+Kurkumbh,Pune,Pune,High,1 — Primary territory,Heavy fab / auto / engineering / plant maintenance,MIDC EODB registry
+Kurkumbh MIDC,Pune,Pune,High,1 — Primary territory,Heavy fab / auto / engineering / plant maintenance,Sales alias
+Pandare,Pune,Pune,High,1 — Primary territory,Heavy fab / auto / engineering / plant maintenance,MIDC EODB registry
+Pimpri MIDC,Pune,Pune,High,1 — Primary territory,Heavy fab / auto / engineering / plant maintenance,Sales alias
+Pimpri-Chinchwad,Pune,Pune,High,1 — Primary territory,Heavy fab / auto / engineering / plant maintenance,MIDC EODB registry
+Pimpri-Chinchwad MIDC,Pune,Pune,High,1 — Primary territory,Heavy fab / auto / engineering / plant maintenance,Sales alias
+Rajiv Gandhi Infotech Park (Hinjawadi) Ph-1,Pune,Pune,Medium,2 — Expand after Tier-1,General engineering / mixed manufacturing,MIDC EODB registry
+Rajiv Gandhi Infotech Park (Hinjawadi) Ph-2,Pune,Pune,Medium,2 — Expand after Tier-1,General engineering / mixed manufacturing,MIDC EODB registry
+Rajiv Gandhi Infotech Park (Hinjawadi) Ph-3,Pune,Pune,Medium,2 — Expand after Tier-1,General engineering / mixed manufacturing,MIDC EODB registry
+Ranjangaon,Pune,Pune,High,1 — Primary territory,Heavy fab / auto / engineering / plant maintenance,MIDC EODB registry
+Ranjangaon MIDC,Pune,Pune,High,1 — Primary territory,Heavy fab / auto / engineering / plant maintenance,Sales alias
+Ranjangaon Ph-1,Pune,Pune,High,1 — Primary territory,Heavy fab / auto / engineering / plant maintenance,Sales alias
+Ranjangaon Ph-3,Pune,Pune,High,1 — Primary territory,Heavy fab / auto / engineering / plant maintenance,Sales alias
+Talawade Software Park,Pune,Pune,Low,3 — Opportunistic,Small workshops / niche / light industry,MIDC EODB registry
+Talegaon,Pune,Pune,High,1 — Primary territory,Heavy fab / auto / engineering / plant maintenance,MIDC EODB registry
+Talegaon Floriculture Park,Pune,Pune,Low,3 — Opportunistic,Small workshops / niche / light industry,MIDC EODB registry
+Talegaon MIDC,Pune,Pune,High,1 — Primary territory,Heavy fab / auto / engineering / plant maintenance,Sales alias
+Addl. Mahad,Raigad,Konkan / Raigad,High,1 — Primary territory,Heavy fab / auto / engineering / plant maintenance,MIDC EODB registry
+Addl. Patalganga,Raigad,Konkan / Raigad,High,1 — Primary territory,Heavy fab / auto / engineering / plant maintenance,MIDC EODB registry
+Mahad,Raigad,Konkan / Raigad,High,1 — Primary territory,Heavy fab / auto / engineering / plant maintenance,MIDC EODB registry
+Mahad MIDC,Raigad,Konkan / Raigad,High,1 — Primary territory,Heavy fab / auto / engineering / plant maintenance,Sales alias
+Nagothane,Raigad,Konkan / Raigad,High,1 — Primary territory,Heavy fab / auto / engineering / plant maintenance,MIDC EODB registry
+Patalganga,Raigad,Konkan / Raigad,High,1 — Primary territory,Heavy fab / auto / engineering / plant maintenance,MIDC EODB registry
+Patalganga Borivali,Raigad,Konkan / Raigad,High,1 — Primary territory,Heavy fab / auto / engineering / plant maintenance,Sales alias
+Patalganga MIDC,Raigad,Konkan / Raigad,High,1 — Primary territory,Heavy fab / auto / engineering / plant maintenance,Sales alias
+Roha,Raigad,Konkan / Raigad,High,1 — Primary territory,Heavy fab / auto / engineering / plant maintenance,MIDC EODB registry
+Roha MIDC,Raigad,Konkan / Raigad,High,1 — Primary territory,Heavy fab / auto / engineering / plant maintenance,Sales alias
+Taloja,Raigad,Konkan / Raigad,High,1 — Primary territory,Heavy fab / auto / engineering / plant maintenance,MIDC EODB registry
+Taloja MIDC,Raigad,Konkan / Raigad,High,1 — Primary territory,Heavy fab / auto / engineering / plant maintenance,Sales alias
+Taloja Ph-2,Raigad,Konkan / Raigad,High,1 — Primary territory,Heavy fab / auto / engineering / plant maintenance,Sales alias
+Usar,Raigad,Konkan / Raigad,Medium,2 — Expand after Tier-1,General engineering / mixed manufacturing,MIDC EODB registry
+Vile Bhagad MIDC,Raigad,Konkan / Raigad,High,1 — Primary territory,Heavy fab / auto / engineering / plant maintenance,Sales alias
+Vile-Bhagad,Raigad,Konkan / Raigad,High,1 — Primary territory,Heavy fab / auto / engineering / plant maintenance,MIDC EODB registry
+Dabhol,Ratnagiri,Konkan,Medium,2 — Expand after Tier-1,General engineering / mixed manufacturing,MIDC EODB registry
+Dapoli,Ratnagiri,Konkan,Medium,2 — Expand after Tier-1,General engineering / mixed manufacturing,MIDC EODB registry
+Gane-Khadpoli,Ratnagiri,Konkan,Medium,2 — Expand after Tier-1,General engineering / mixed manufacturing,MIDC EODB registry
+Kherdi-Chiplun,Ratnagiri,Konkan,Medium,2 — Expand after Tier-1,General engineering / mixed manufacturing,MIDC EODB registry
+Lote Parshuram MIDC,Ratnagiri,Konkan,High,1 — Primary territory,Heavy fab / auto / engineering / plant maintenance,Sales alias
+Lote-Parshuram,Ratnagiri,Konkan,High,1 — Primary territory,Heavy fab / auto / engineering / plant maintenance,MIDC EODB registry
+Ratnagiri-Mirjole,Ratnagiri,Konkan,Medium,2 — Expand after Tier-1,General engineering / mixed manufacturing,MIDC EODB registry
+Sadavali,Ratnagiri,Konkan,Medium,2 — Expand after Tier-1,General engineering / mixed manufacturing,MIDC EODB registry
+Sangameshwar (Mini),Ratnagiri,Konkan,Low,3 — Opportunistic,Small workshops / niche / light industry,MIDC EODB registry
+Addl. Palus (Wine Park),Sangli,Western Maharashtra,Low,3 — Opportunistic,Small workshops / niche / light industry,MIDC EODB registry
+Islampur,Sangli,Western Maharashtra,High,1 — Primary territory,Heavy fab / auto / engineering / plant maintenance,MIDC EODB registry
+Jath (Mini),Sangli,Western Maharashtra,Low,3 — Opportunistic,Small workshops / niche / light industry,MIDC EODB registry
+Kadegaon (Mini),Sangli,Western Maharashtra,Low,3 — Opportunistic,Small workshops / niche / light industry,MIDC EODB registry
+Kavathe-Mahankal,Sangli,Western Maharashtra,Medium,2 — Expand after Tier-1,General engineering / mixed manufacturing,MIDC EODB registry
+Palus (Mini),Sangli,Western Maharashtra,Low,3 — Opportunistic,Small workshops / niche / light industry,MIDC EODB registry
+Sangli-Miraj,Sangli,Western Maharashtra,High,1 — Primary territory,Heavy fab / auto / engineering / plant maintenance,MIDC EODB registry
+Sangli-Miraj-Kupwad MIDC,Sangli,Western Maharashtra,High,1 — Primary territory,Heavy fab / auto / engineering / plant maintenance,Sales alias
+Shalgaon-Bombalewadi,Sangli,Western Maharashtra,Medium,2 — Expand after Tier-1,General engineering / mixed manufacturing,MIDC EODB registry
+Shirala,Sangli,Western Maharashtra,Medium,2 — Expand after Tier-1,General engineering / mixed manufacturing,MIDC EODB registry
+Vita,Sangli,Western Maharashtra,Medium,2 — Expand after Tier-1,General engineering / mixed manufacturing,MIDC EODB registry
+Addl. Phaltan,Satara,Western Maharashtra,Medium,2 — Expand after Tier-1,General engineering / mixed manufacturing,MIDC EODB registry
+Karad,Satara,Western Maharashtra,High,1 — Primary territory,Heavy fab / auto / engineering / plant maintenance,MIDC EODB registry
+Karad MIDC,Satara,Western Maharashtra,High,1 — Primary territory,Heavy fab / auto / engineering / plant maintenance,Sales alias
+Khandala Ph-1,Satara,Western Maharashtra,High,1 — Primary territory,Heavy fab / auto / engineering / plant maintenance,Sales alias
+Khandala Ph-2,Satara,Western Maharashtra,High,1 — Primary territory,Heavy fab / auto / engineering / plant maintenance,Sales alias
+Khandala Ph-3,Satara,Western Maharashtra,High,1 — Primary territory,Heavy fab / auto / engineering / plant maintenance,Sales alias
+Koregaon,Satara,Western Maharashtra,Medium,2 — Expand after Tier-1,General engineering / mixed manufacturing,MIDC EODB registry
+Lonand,Satara,Western Maharashtra,High,1 — Primary territory,Heavy fab / auto / engineering / plant maintenance,MIDC EODB registry
+Mhaswad,Satara,Western Maharashtra,Medium,2 — Expand after Tier-1,General engineering / mixed manufacturing,MIDC EODB registry
+Patan,Satara,Western Maharashtra,Medium,2 — Expand after Tier-1,General engineering / mixed manufacturing,MIDC EODB registry
+Phaltan,Satara,Western Maharashtra,Medium,2 — Expand after Tier-1,General engineering / mixed manufacturing,MIDC EODB registry
+Phaltan (SEZ),Satara,Western Maharashtra,Medium,2 — Expand after Tier-1,General engineering / mixed manufacturing,MIDC EODB registry
+Phaltan MIDC,Satara,Western Maharashtra,Medium,2 — Expand after Tier-1,General engineering / mixed manufacturing,Sales alias
+Satara,Satara,Western Maharashtra,High,1 — Primary territory,Heavy fab / auto / engineering / plant maintenance,MIDC EODB registry
+Satara MIDC,Satara,Western Maharashtra,High,1 — Primary territory,Heavy fab / auto / engineering / plant maintenance,Sales alias
+Wai,Satara,Western Maharashtra,Medium,2 — Expand after Tier-1,General engineering / mixed manufacturing,MIDC EODB registry
+Kudal,Sindhudurg,Konkan,Medium–Low,3 — Opportunistic,Mixed / smaller industrial base,MIDC EODB registry
+Barshi,Solapur,Western Maharashtra,Medium,2 — Expand after Tier-1,General engineering / mixed manufacturing,MIDC EODB registry
+Chincholi,Solapur,Western Maharashtra,High,1 — Primary territory,Heavy fab / auto / engineering / plant maintenance,MIDC EODB registry
+Karmala,Solapur,Western Maharashtra,Medium,2 — Expand after Tier-1,General engineering / mixed manufacturing,MIDC EODB registry
+Kurduwadi,Solapur,Western Maharashtra,Medium,2 — Expand after Tier-1,General engineering / mixed manufacturing,MIDC EODB registry
+Mangalwedha,Solapur,Western Maharashtra,Medium,2 — Expand after Tier-1,General engineering / mixed manufacturing,MIDC EODB registry
+Solapur,Solapur,Western Maharashtra,High,1 — Primary territory,Heavy fab / auto / engineering / plant maintenance,MIDC EODB registry
+Solapur MIDC,Solapur,Western Maharashtra,High,1 — Primary territory,Heavy fab / auto / engineering / plant maintenance,Sales alias
+Tembhurni,Solapur,Western Maharashtra,Medium,2 — Expand after Tier-1,General engineering / mixed manufacturing,MIDC EODB registry
+Addl. Ambernath,Thane,Mumbai Metro,High,1 — Primary territory,Heavy fab / auto / engineering / plant maintenance,MIDC EODB registry
+Addl. Ambernath Pale Ph-3,Thane,Mumbai Metro,High,1 — Primary territory,Heavy fab / auto / engineering / plant maintenance,MIDC EODB registry
+Addl. Murbad,Thane,Mumbai Metro,Medium,2 — Expand after Tier-1,General engineering / mixed manufacturing,MIDC EODB registry
+Airoli MIDC,Thane,Mumbai Metro,High,1 — Primary territory,Heavy fab / auto / engineering / plant maintenance,Sales alias
+Ambernath,Thane,Mumbai Metro,High,1 — Primary territory,Heavy fab / auto / engineering / plant maintenance,MIDC EODB registry
+Ambernath MIDC,Thane,Mumbai Metro,High,1 — Primary territory,Heavy fab / auto / engineering / plant maintenance,Sales alias
+Badlapur,Thane,Mumbai Metro,Medium,2 — Expand after Tier-1,General engineering / mixed manufacturing,MIDC EODB registry
+Dombivli,Thane,Mumbai Metro,High,1 — Primary territory,Heavy fab / auto / engineering / plant maintenance,MIDC EODB registry
+Dombivli MIDC,Thane,Mumbai Metro,High,1 — Primary territory,Heavy fab / auto / engineering / plant maintenance,Sales alias
+Kalyan-Bhiwandi,Thane,Mumbai Metro,Medium,2 — Expand after Tier-1,General engineering / mixed manufacturing,MIDC EODB registry
+Mahape MIDC,Thane,Mumbai Metro,High,1 — Primary territory,Heavy fab / auto / engineering / plant maintenance,Sales alias
+Mira,Thane,Mumbai Metro,Medium,2 — Expand after Tier-1,General engineering / mixed manufacturing,MIDC EODB registry
+Murbad,Thane,Mumbai Metro,Medium,2 — Expand after Tier-1,General engineering / mixed manufacturing,MIDC EODB registry
+Rabale MIDC,Thane,Mumbai Metro,High,1 — Primary territory,Heavy fab / auto / engineering / plant maintenance,Sales alias
+T.T.C.,Thane,Mumbai Metro,High,1 — Primary territory,Heavy fab / auto / engineering / plant maintenance,MIDC EODB registry
+Thane,Thane,Mumbai Metro,Medium,2 — Expand after Tier-1,General engineering / mixed manufacturing,MIDC EODB registry
+TTC MIDC (Trans Thane Creek),Thane,Mumbai Metro,High,1 — Primary territory,Heavy fab / auto / engineering / plant maintenance,Sales alias
+Wagle Estate,Thane,Mumbai Metro,High,1 — Primary territory,Heavy fab / auto / engineering / plant maintenance,Sales alias
+Deoli,Wardha,Vidarbha,Medium–Low,3 — Opportunistic,Mixed / smaller industrial base,MIDC EODB registry
+Hinganghat (Mini),Wardha,Vidarbha,Low,3 — Opportunistic,Small workshops / niche / light industry,MIDC EODB registry
+Karanja (Mini),Wardha,Vidarbha,Low,3 — Opportunistic,Small workshops / niche / light industry,MIDC EODB registry
+Samudrapur (Mini),Wardha,Vidarbha,Low,3 — Opportunistic,Small workshops / niche / light industry,MIDC EODB registry
+Wardha,Wardha,Vidarbha,Medium–Low,3 — Opportunistic,Mixed / smaller industrial base,MIDC EODB registry
+Malegaon (Mini),Washim,Vidarbha,Low,3 — Opportunistic,Small workshops / niche / light industry,MIDC EODB registry
+Mangrulpir (Mini),Washim,Vidarbha,Low,3 — Opportunistic,Small workshops / niche / light industry,MIDC EODB registry
+Manora (Mini),Washim,Vidarbha,Low,3 — Opportunistic,Small workshops / niche / light industry,MIDC EODB registry
+Risod (Mini),Washim,Vidarbha,Low,3 — Opportunistic,Small workshops / niche / light industry,MIDC EODB registry
+Washim,Washim,Vidarbha,Medium–Low,3 — Opportunistic,Mixed / smaller industrial base,MIDC EODB registry
+Addl. Yavatmal,Yavatmal,Vidarbha,Medium–Low,3 — Opportunistic,Mixed / smaller industrial base,MIDC EODB registry
+Darwha (Mini),Yavatmal,Vidarbha,Low,3 — Opportunistic,Small workshops / niche / light industry,MIDC EODB registry
+Digras (Mini),Yavatmal,Vidarbha,Low,3 — Opportunistic,Small workshops / niche / light industry,MIDC EODB registry
+Ghatanji (Mini),Yavatmal,Vidarbha,Low,3 — Opportunistic,Small workshops / niche / light industry,MIDC EODB registry
+Kelapur Pandharkawada,Yavatmal,Vidarbha,Medium–Low,3 — Opportunistic,Mixed / smaller industrial base,MIDC EODB registry
+Mahagaon (Mini),Yavatmal,Vidarbha,Low,3 — Opportunistic,Small workshops / niche / light industry,MIDC EODB registry
+Maregaon (Mini),Yavatmal,Vidarbha,Low,3 — Opportunistic,Small workshops / niche / light industry,MIDC EODB registry
+Pusad,Yavatmal,Vidarbha,Medium–Low,3 — Opportunistic,Mixed / smaller industrial base,MIDC EODB registry
+Umarkhed (Mini),Yavatmal,Vidarbha,Low,3 — Opportunistic,Small workshops / niche / light industry,MIDC EODB registry
+Wani,Yavatmal,Vidarbha,Medium–Low,3 — Opportunistic,Mixed / smaller industrial base,MIDC EODB registry
+Yavatmal,Yavatmal,Vidarbha,Medium–Low,3 — Opportunistic,Mixed / smaller industrial base,MIDC EODB registry
+Non-MIDC Industrial Estate,,,Varies,Case-by-case,Any industrial buyer outside MIDC,Sales alias
+Other / Outside MIDC,,,Varies,Case-by-case,Any industrial buyer outside MIDC,Sales alias

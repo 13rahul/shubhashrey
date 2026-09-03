@@ -1,0 +1,107 @@
+/* Spreadsheet CRM extras */
+.admin-shell--wide { max-width: 1400px; }
+
+.filter-bar {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 0.75rem;
+  align-items: end;
+  margin-bottom: 1rem;
+}
+
+.filter-actions {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.sheet-wrap { overflow: hidden; }
+
+.sheet-scroll {
+  overflow: auto;
+  max-height: min(70vh, 720px);
+}
+
+table.sheet {
+  width: max-content;
+  min-width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  font-size: 0.86rem;
+}
+
+table.sheet th,
+table.sheet td {
+  border-bottom: 1px solid var(--line);
+  border-right: 1px solid rgba(0, 174, 239, 0.08);
+  padding: 0.55rem 0.65rem;
+  white-space: nowrap;
+  vertical-align: middle;
+  max-width: 220px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+table.sheet th {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  background: #e8f6fc;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: var(--muted);
+  font-weight: 700;
+}
+
+table.sheet tr:nth-child(even) td { background: #fbfdff; }
+table.sheet tr:hover td { background: rgba(0, 174, 239, 0.06); }
+table.sheet tr.is-selected td {
+  background: rgba(0, 174, 239, 0.12);
+  box-shadow: inset 3px 0 0 var(--brand);
+}
+
+.notes-cell { max-width: 180px; color: var(--muted); }
+.actions-cell { white-space: nowrap; }
+
+.form-grid-crm {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 0.85rem;
+}
+
+.form-grid-crm .field--full { grid-column: 1 / -1; }
+.form-grid-crm .field input,
+.form-grid-crm .field select,
+.form-grid-crm .field textarea { min-width: 0; width: 100%; }
+
+.form-actions { grid-column: 1 / -1; margin-top: 0.25rem; }
+
+.panel { margin-top: 1.25rem; }
+.panel-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+.panel-head h2 {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+}
+
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(13, 58, 82, 0.45);
+  display: grid;
+  place-items: center;
+  padding: 1rem;
+  z-index: 50;
+}
+.modal[hidden] { display: none !important; }
+.modal-card { width: min(480px, 100%); }
+
+.empty { text-align: center; padding: 2rem !important; color: var(--muted); white-space: normal !important; }

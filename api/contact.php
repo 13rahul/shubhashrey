@@ -1,4 +1,9 @@
 <?php
+/**
+ * Legacy contact endpoint — now also saves to CRM SQLite, then emails/logs.
+ */
+declare(strict_types=1);
+
 header('Content-Type: application/json; charset=utf-8');
 
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
@@ -7,8 +12,10 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     exit;
 }
 
+require_once dirname(__DIR__) . '/includes/bootstrap.php';
+
 $raw = file_get_contents('php://input');
-$data = json_decode($raw, true);
+$data = json_decode($raw ?: '', true);
 
 if (!is_array($data)) {
     http_response_code(400);
@@ -16,11 +23,11 @@ if (!is_array($data)) {
     exit;
 }
 
-$firstName = trim((string)($data['firstName'] ?? ''));
-$lastName  = trim((string)($data['lastName'] ?? ''));
-$email     = trim((string)($data['email'] ?? ''));
-$phone     = trim((string)($data['phone'] ?? ''));
-$message   = trim((string)($data['message'] ?? ''));
+$firstName = trim((string) ($data['firstName'] ?? ''));
+$lastName = trim((string) ($data['lastName'] ?? ''));
+$email = trim((string) ($data['email'] ?? ''));
+$phone = trim((string) ($data['phone'] ?? ''));
+$message = trim((string) ($data['message'] ?? ''));
 
 if ($firstName === '' || $lastName === '' || $email === '' || $message === '') {
     http_response_code(422);
@@ -32,6 +39,20 @@ if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
     http_response_code(422);
     echo json_encode(['success' => false, 'message' => 'Please enter a valid email address.']);
     exit;
+}
+
+$leadId = null;
+try {
+    $leadId = shubh_lead_create([
+        'source' => 'contact',
+        'name' => trim($firstName . ' ' . $lastName),
+        'email' => $email,
+        'phone' => $phone,
+        'message' => $message,
+        'status' => 'new',
+    ]);
+} catch (Throwable $e) {
+    // Continue — mail/log still useful
 }
 
 $to = 'contact@shubhshrey.com';
@@ -52,7 +73,6 @@ $headers = [
 $sent = @mail($to, $subject, $body, implode("\r\n", $headers));
 
 if (!$sent) {
-    // Log locally so XAMPP setups without SMTP still capture messages
     $logDir = __DIR__ . '/../storage';
     if (!is_dir($logDir)) {
         @mkdir($logDir, 0755, true);
@@ -64,9 +84,14 @@ if (!$sent) {
     echo json_encode([
         'success' => true,
         'message' => 'Message saved. We will follow up soon.',
+        'leadId' => $leadId,
         'note' => 'Mail transport unavailable locally; message logged to storage/contact-log.txt',
     ]);
     exit;
 }
 
-echo json_encode(['success' => true, 'message' => 'Message sent.']);
+echo json_encode([
+    'success' => true,
+    'message' => 'Message sent.',
+    'leadId' => $leadId,
+]);
