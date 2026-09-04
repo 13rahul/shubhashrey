@@ -266,8 +266,8 @@ def draw_about(pdf: Brochure):
     pdf.set_font("Body", "", 10)
     pdf.set_text_color(*INK)
     directors = [
-        ("Sourabh Bothara", "Director", "Saurabh@shubhashrey.com"),
-        ("Nikhil Sancheti", "Director", "Nikhil@Shubhashrey.com"),
+        ("Sourabh Bothara", "Director", "saurabh@shubhshrey.com"),
+        ("Nikhil Sancheti", "Director", "nikhil@shubhshrey.com"),
     ]
     y = pdf.get_y()
     for i, (name, role, email) in enumerate(directors):
