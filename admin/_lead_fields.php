@@ -139,7 +139,7 @@ function render_lead_fields(
     </div>
     <div class="field field--full">
       <label for="<?= $pid ?>_interest">Interest / electrode need</label>
-      <input id="<?= $pid ?>_interest" name="interest" value="<?= $v('interest') ?>" placeholder="E6013, E7018, distributor…" />
+      <input id="<?= $pid ?>_interest" name="interest" value="<?= $v('interest') ?>" placeholder="E6013, E7018, distributor..." />
     </div>
     <div class="field field--full">
       <label for="<?= $pid ?>_message">Message / enquiry</label>
@@ -147,7 +147,7 @@ function render_lead_fields(
     </div>
     <div class="field field--full">
       <label for="<?= $pid ?>_notes">Notes (full)</label>
-      <textarea id="<?= $pid ?>_notes" name="notes" rows="4" placeholder="Full notes history — or use + Note to append"><?= $v('notes') ?></textarea>
+      <textarea id="<?= $pid ?>_notes" name="notes" rows="4" placeholder="Full notes history - or use + Note to append"><?= $v('notes') ?></textarea>
     </div>
     <?php
 }

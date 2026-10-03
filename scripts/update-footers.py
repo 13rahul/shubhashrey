@@ -24,8 +24,8 @@ for path in ROOT.glob("*.html"):
         print("SKIP", path.name)
         continue
 
-    text = text.replace("Bharatweld \x97 Proudly", "Bharatweld — Proudly")
-    text = text.replace("Bharatweld â Proudly", "Bharatweld — Proudly")
+    text = text.replace("Bharatweld \x97 Proudly", "Bharatweld - Proudly")
+    text = text.replace("Bharatweld â Proudly", "Bharatweld - Proudly")
     new_text, n = FOOTER_RE.subn(FOOTER, text, count=1)
     if n:
         new_text = re.sub(

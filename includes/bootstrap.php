@@ -19,6 +19,11 @@ define('SHUBH_ROOT', dirname(__DIR__));
 define('SHUBH_STORAGE', SHUBH_ROOT . '/storage');
 define('SHUBH_CONFIG', SHUBH_ROOT . '/config/admin.php');
 
+// Prefer UTF-8 for CRM / API responses (avoids garbled punctuation)
+if (function_exists('mb_internal_encoding')) {
+    mb_internal_encoding('UTF-8');
+}
+
 function shubh_config(): array
 {
     static $config;

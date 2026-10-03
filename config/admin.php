@@ -1,6 +1,6 @@
 <?php
 /**
- * Admin CRM config — change password after first login via admin UI or by updating this hash.
+ * Admin CRM config - change password after first login via admin UI or by updating this hash.
  * Default login: admin@shubhshrey.com / ChangeMe@2026
  */
 declare(strict_types=1);

@@ -49,7 +49,7 @@ $config = shubh_config();
         <img src="../assets/logo.png" alt="" width="42" height="42" />
         <div>
           <h1>Admin login</h1>
-          <p class="sub" style="margin:0">Leads CRM — Bharatweld / Shubhshrey</p>
+          <p class="sub" style="margin:0">Leads CRM - Bharatweld / Shubhshrey</p>
         </div>
       </div>
 

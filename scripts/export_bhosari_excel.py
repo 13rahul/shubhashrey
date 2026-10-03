@@ -39,25 +39,25 @@ def main():
 
     # README first
     ws = wb.create_sheet("README", 0)
-    ws["A1"] = "Bhosari MIDC Prospects — Bharatweld / Shubhshrey Industries"
+    ws["A1"] = "Bhosari MIDC Prospects - Bharatweld / Shubhshrey Industries"
     ws["A1"].font = Font(bold=True, size=14, color="1F4E79")
     instructions = [
         "",
         "How to use",
         "1. Start on Hot_List (or filter Prospects: priority_label=Hot AND outreach_status=Not contacted).",
-        "2. Prefer verification_status=Phone-ok (green) — website-confirmed contacts.",
+        "2. Prefer verification_status=Phone-ok (green) - website-confirmed contacts.",
         "3. Key columns for dialing: company_name, plant_name, products_services, plot_address, phone_primary, email.",
         "4. For directory-sourced numbers, open google_maps_url, confirm unit still exists, then call.",
-        "5. Pitch: boilers/fab → E7018+E6013; sheet/gates → E6013; maintenance/foundry → cutting + Mn hardfacing.",
+        "5. Pitch: boilers/fab -> E7018+E6013; sheet/gates -> E6013; maintenance/foundry -> cutting + Mn hardfacing.",
         "6. Log every touch on Outreach_Log and update outreach_status on Prospects.",
         "",
         "Tabs",
-        "Prospects — Phase 1 master (100 companies) with plant + products/services enrichment",
-        "Hot_List — priority_label=Hot only",
-        "Deferred — candidates beyond the frozen 100",
-        "Parked — non-fit industries",
-        "Lookup_Tiers — industry → electrode → pitch mapping",
-        "Outreach_Log — call/WhatsApp/meeting log template",
+        "Prospects - Phase 1 master (100 companies) with plant + products/services enrichment",
+        "Hot_List - priority_label=Hot only",
+        "Deferred - candidates beyond the frozen 100",
+        "Parked - non-fit industries",
+        "Lookup_Tiers - industry -> electrode -> pitch mapping",
+        "Outreach_Log - call/WhatsApp/meeting log template",
         "",
         "Note: Older directory phones may be stale. Re-verify before bulk WhatsApp.",
         "Enriched 2026-09-03: SNEHA, Jaisons, MILKON, Sankalp Steeltech, MACHINESPACE, Super-Tech J-251/252.",

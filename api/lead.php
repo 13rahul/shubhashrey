@@ -58,7 +58,7 @@ if ($experience !== '') {
     $message = ($message !== '' ? $message . "\n\n" : '') . 'Experience: ' . $experience;
 }
 
-// Website forms can omit email for rare cases — keep validation for public API
+// Website forms can omit email for rare cases - keep validation for public API
 if ($name === '' || $email === '' || $message === '') {
     http_response_code(422);
     echo json_encode(['success' => false, 'message' => 'Name, email, and message are required.']);
@@ -72,8 +72,8 @@ if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
 }
 
 $channelNote = $source === 'distributor'
-    ? 'Inbound lead — Become a Distributor form'
-    : 'Inbound lead — Contact Us form';
+    ? 'Inbound lead - Become a Distributor form'
+    : 'Inbound lead - Contact Us form';
 
 try {
     $id = shubh_lead_create([
@@ -92,7 +92,7 @@ try {
         'interest' => $interest,
         'message' => $message,
         'status' => 'new',
-        'notes' => $channelNote . ' · ' . date('Y-m-d H:i'),
+        'notes' => $channelNote . ' | ' . date('Y-m-d H:i'),
     ]);
 
     echo json_encode([

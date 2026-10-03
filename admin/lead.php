@@ -94,7 +94,7 @@ $midcFallbackJson = json_encode(shubh_midc_fallback_options(), JSON_UNESCAPED_UN
         <img src="../assets/logo.png" alt="" width="42" height="42" />
         <div>
           <h1><?= shubh_h($lead['name']) ?></h1>
-          <p>Lead #<?= (int) $lead['id'] ?> · edit all fields</p>
+          <p>Lead #<?= (int) $lead['id'] ?> | edit all fields</p>
         </div>
       </div>
       <div class="admin-nav">

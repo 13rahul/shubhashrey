@@ -14,7 +14,7 @@ const PRODUCT_CATEGORIES = [
   {
     id: "cutting",
     title: "Cutting & Gouging Electrodes",
-    subtitle: "Metal removal — not joining",
+    subtitle: "Metal removal - not joining",
     description: "Cutting, piercing, gouging, and defect removal without oxy-fuel equipment.",
   },
   {
@@ -35,7 +35,7 @@ const PRODUCTS = [
     categoryGroup: "mild-steel",
     tagline: "General-purpose rutile electrode for mild steel fabrication",
     description:
-      "Bharatweld E6013 is a rutile-coated general-purpose electrode for mild steel. Smooth arc, easy slag removal, and a clean bead — ideal for gates, grills, sheet metal, and everyday workshop welding across India.",
+      "Bharatweld E6013 is a rutile-coated general-purpose electrode for mild steel. Smooth arc, easy slag removal, and a clean bead - ideal for gates, grills, sheet metal, and everyday workshop welding across India.",
     price: 1900,
     unit: "",
     image: "assets/products/e-6013.png?v=3",
@@ -116,7 +116,7 @@ const PRODUCTS = [
     categoryGroup: "cutting",
     tagline: "Captain-Cut electrodes for metal cutting and gouging",
     description:
-      "Bharatweld Captain-Cut cutting electrodes are for metal severing, piercing, gouging, and weld removal on mild steel, cast iron, and non-ferrous metals — a practical tool for maintenance crews and fabrication shops.",
+      "Bharatweld Captain-Cut cutting electrodes are for metal severing, piercing, gouging, and weld removal on mild steel, cast iron, and non-ferrous metals - a practical tool for maintenance crews and fabrication shops.",
     price: 2500,
     unit: "",
     image: "assets/products/cutting.png?v=3",
@@ -166,7 +166,7 @@ const PRODUCTS = [
 const COMPANY_VALUES = [
   {
     title: "Quality",
-    text: "Consistent electrode performance, batch after batch — from raw materials to dispatch under ISO 9001:2015 processes.",
+    text: "Consistent electrode performance, batch after batch - from raw materials to dispatch under ISO 9001:2015 processes.",
   },
   {
     title: "Innovation",
@@ -182,7 +182,7 @@ const COMPANY_VALUES = [
   },
   {
     title: "Responsibility to Society",
-    text: "Supporting Indian industry and manufacturing locally under Make in India — Proudly Indian For Indians.",
+    text: "Supporting Indian industry and manufacturing locally under Make in India - Proudly Indian For Indians.",
   },
   {
     title: "Dealers & Vendors as Partners",
@@ -196,7 +196,7 @@ const INDUSTRIES = [
     title: "General fabrication",
     grades: "E6013 Welding Electrodes",
     summary:
-      "Sheet metal, gates, grills, furniture, and light steel structures — easy arc, smooth finish, easy slag removal.",
+      "Sheet metal, gates, grills, furniture, and light steel structures - easy arc, smooth finish, easy slag removal.",
     image: "assets/products/e-6013.png?v=3",
   },
   {

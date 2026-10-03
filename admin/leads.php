@@ -271,7 +271,7 @@ function shubh_filter_qs(array $overrides = []): string
         <img src="../assets/logo.png" alt="" width="42" height="42" />
         <div>
           <h1>Leads CRM</h1>
-          <p>Inbound website forms + Bhosari prospects — filter by Lead label</p>
+          <p>Inbound website forms + Bhosari prospects - filter by Lead label</p>
         </div>
       </div>
       <div class="admin-nav">
@@ -300,7 +300,7 @@ function shubh_filter_qs(array $overrides = []): string
     <form class="filter-bar card card-pad" method="get" action="leads.php">
       <div class="field">
         <label for="q">Search</label>
-        <input id="q" name="q" type="search" value="<?= shubh_h($q) ?>" placeholder="Name, phone, company, MIDC…" />
+        <input id="q" name="q" type="search" value="<?= shubh_h($q) ?>" placeholder="Name, phone, company, MIDC..." />
       </div>
       <div class="field">
         <label for="status">Status</label>
@@ -398,7 +398,7 @@ function shubh_filter_qs(array $overrides = []): string
               ?>
                 <tr class="<?= $isEdit ? 'is-selected' : '' ?>" id="row-<?= (int) $lead['id'] ?>">
                   <td><?= (int) $lead['id'] ?></td>
-                  <td><span class="badge badge-label-<?= shubh_h($labelClass) ?>"><?= shubh_h($label !== '' ? $label : '—') ?></span></td>
+                  <td><span class="badge badge-label-<?= shubh_h($labelClass) ?>"><?= shubh_h($label !== '' ? $label : '-') ?></span></td>
                   <td><span class="badge badge-<?= shubh_h($lead['status'] ?: 'new') ?>"><?= shubh_h($lead['status'] ?: 'new') ?></span></td>
                   <td><?= shubh_h($lead['source']) ?></td>
                   <td><?= shubh_h($lead['name']) ?></td>
@@ -411,7 +411,7 @@ function shubh_filter_qs(array $overrides = []): string
                   <td><?= shubh_h($lead['midc']) ?></td>
                   <td><?= shubh_h($lead['territory']) ?></td>
                   <td><?= shubh_h($lead['interest']) ?></td>
-                  <td class="notes-cell" title="<?= shubh_h($lead['notes']) ?>"><?= shubh_h(mb_strimwidth((string) $lead['notes'], 0, 48, '…')) ?></td>
+                  <td class="notes-cell" title="<?= shubh_h($lead['notes']) ?>"><?= shubh_h(mb_strimwidth((string) $lead['notes'], 0, 48, '...')) ?></td>
                   <td class="muted"><?= shubh_h($created) ?></td>
                   <td class="actions-cell">
                     <a class="btn btn--ghost btn--sm" href="leads.php<?= shubh_h(shubh_filter_qs(['edit' => (string) $lead['id']])) ?>#editor">Edit</a>
@@ -452,7 +452,7 @@ function shubh_filter_qs(array $overrides = []): string
     <div class="panel card card-pad" id="editor" <?= $editing ? '' : 'hidden' ?>>
       <?php if ($editing): ?>
         <div class="panel-head">
-          <h2>Edit lead #<?= (int) $editing['id'] ?> — <?= shubh_h($editing['name']) ?></h2>
+          <h2>Edit lead #<?= (int) $editing['id'] ?> - <?= shubh_h($editing['name']) ?></h2>
           <a class="btn btn--ghost btn--sm" href="leads.php<?= shubh_h(shubh_filter_qs(['edit' => null])) ?>">Close</a>
         </div>
         <form method="post" class="form-grid-crm">
@@ -472,7 +472,7 @@ function shubh_filter_qs(array $overrides = []): string
           <input type="hidden" name="id" value="<?= (int) $editing['id'] ?>" />
           <div class="field">
             <label for="note_append">Add note</label>
-            <textarea id="note_append" name="note" rows="2" placeholder="Call outcome, next follow-up…" required></textarea>
+            <textarea id="note_append" name="note" rows="2" placeholder="Call outcome, next follow-up..." required></textarea>
           </div>
           <button class="btn btn--ghost btn--sm" type="submit" style="margin-top:.5rem">Append note</button>
         </form>
@@ -500,7 +500,7 @@ function shubh_filter_qs(array $overrides = []): string
           <input type="hidden" name="id" id="note-lead-id" value="" />
           <div class="field">
             <label for="note_modal_text">Note</label>
-            <textarea id="note_modal_text" name="note" rows="4" required placeholder="Call outcome, next follow-up…"></textarea>
+            <textarea id="note_modal_text" name="note" rows="4" required placeholder="Call outcome, next follow-up..."></textarea>
           </div>
           <button class="btn btn--primary" type="submit" style="margin-top:.75rem">Save note</button>
         </form>
@@ -549,7 +549,7 @@ function shubh_filter_qs(array $overrides = []): string
         btn.addEventListener('click', () => {
           document.getElementById('note-lead-id').value = btn.getAttribute('data-note-for');
           document.getElementById('note-modal-title').textContent =
-            'Add note — ' + (btn.getAttribute('data-note-name') || 'Lead');
+            'Add note - ' + (btn.getAttribute('data-note-name') || 'Lead');
           noteModal.hidden = false;
           document.getElementById('note_modal_text').focus();
         });

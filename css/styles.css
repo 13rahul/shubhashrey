@@ -1,4 +1,4 @@
-/* Shubhshrey Industries — Bharatweld packaging brand */
+/* Shubhshrey Industries - Bharatweld packaging brand */
 :root {
   --brand: #00aeef;
   --brand-dark: #0090c8;
@@ -34,8 +34,9 @@
   --shadow-lg: 0 18px 40px rgba(0, 120, 168, 0.16);
   --shadow: var(--shadow-md);
 
-  --font-display: "Sora", sans-serif;
-  --font-body: "Source Sans 3", sans-serif;
+  /* Fallbacks cover punctuation glyphs (em dash, arrows) if web fonts subset them out */
+  --font-display: "Sora", "Segoe UI", system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
+  --font-body: "Source Sans 3", "Segoe UI", system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
 
   --text-xs: 0.78rem;
   --text-sm: 0.88rem;
@@ -929,7 +930,7 @@ p {
 }
 
 .pack-traits li::before {
-  content: "★";
+  content: "*";
   color: var(--brand);
   font-size: 0.75rem;
   line-height: 1.5;
@@ -1252,7 +1253,7 @@ p {
 }
 
 .testimonial-slide p::before {
-  content: "“";
+  content: """;
   color: var(--brand);
   font-size: 1.75rem;
   line-height: 0;

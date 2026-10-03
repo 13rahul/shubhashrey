@@ -138,7 +138,7 @@ function renderNavMega() {
             )
             .join("")}
         </ul>
-        <a class="nav-mega__cat-link" href="shop.html#category-${cat.id}">Browse ${cat.title.toLowerCase()} →</a>
+        <a class="nav-mega__cat-link" href="shop.html#category-${cat.id}">Browse ${cat.title.toLowerCase()} -></a>
       </div>
     `;
   }).join("");
@@ -152,7 +152,7 @@ function renderNavMega() {
       <div class="nav-mega__inner">
         <div class="nav-mega__cols">${panelCols}</div>
         <div class="nav-mega__footer">
-          <a class="nav-mega__all" href="shop.html">View full product catalogue →</a>
+          <a class="nav-mega__all" href="shop.html">View full product catalogue -></a>
           <a class="nav-mega__guide" href="welding-process.html">Welding process guide</a>
         </div>
       </div>
@@ -267,13 +267,13 @@ function renderProductPage() {
   root.innerHTML = `
     <div class="product-detail">
       <div class="product-detail__media reveal">
-        <img src="${product.image}" alt="${product.name} — Bharatweld welding electrodes with packaging" width="1200" height="900" />
+        <img src="${product.image}" alt="${product.name} - Bharatweld welding electrodes with packaging" width="1200" height="900" />
       </div>
       <div class="product-detail__info reveal">
         <p class="eyebrow">${product.category}</p>
         <h1>${product.name}</h1>
         <p class="product-detail__tagline">${product.tagline || ""}</p>
-        <p class="product-detail__sku">SKU: ${product.sku} · AWS ${product.aws || "—"}</p>
+        <p class="product-detail__sku">SKU: ${product.sku} | AWS ${product.aws || "-"}</p>
         <p>${product.description}</p>
         <div class="cta-row">
           <button type="button" class="btn btn--primary" data-buy-now="${product.id}">Buy now</button>
@@ -281,11 +281,11 @@ function renderProductPage() {
         </div>
         <table class="spec-table">
           <tbody>
-            <tr><th>AWS classification</th><td>${product.aws || "—"}</td></tr>
-            <tr><th>Coating type</th><td>${product.coating || "—"}</td></tr>
-            <tr><th>Welding positions</th><td>${product.positions || "—"}</td></tr>
-            <tr><th>Current / polarity</th><td>${product.polarity || product.current || "—"}</td></tr>
-            <tr><th>Diameters</th><td>${product.diameters || "—"}</td></tr>
+            <tr><th>AWS classification</th><td>${product.aws || "-"}</td></tr>
+            <tr><th>Coating type</th><td>${product.coating || "-"}</td></tr>
+            <tr><th>Welding positions</th><td>${product.positions || "-"}</td></tr>
+            <tr><th>Current / polarity</th><td>${product.polarity || product.current || "-"}</td></tr>
+            <tr><th>Diameters</th><td>${product.diameters || "-"}</td></tr>
             <tr><th>Industries</th><td>${(product.industries || []).join(", ")}</td></tr>
             <tr><th>Applications</th><td>${(product.applications || []).join("; ")}</td></tr>
           </tbody>
@@ -298,7 +298,7 @@ function renderProductPage() {
           </div>`
             : ""
         }
-        <p><a href="shop.html#category-${product.categoryGroup}" class="back-link">← Back to ${product.category}</a></p>
+        <p><a href="shop.html#category-${product.categoryGroup}" class="back-link"><- Back to ${product.category}</a></p>
       </div>
     </div>
   `;
@@ -466,7 +466,7 @@ function initContactForm() {
     });
 
     let text =
-      `*New enquiry — Bharatweld / Shubhshrey*\n` +
+      `*New enquiry - Bharatweld / Shubhshrey*\n` +
       `Name: ${firstName} ${lastName}\n` +
       `Email: ${email}\n`;
 
@@ -478,7 +478,7 @@ function initContactForm() {
 
     form.reset();
     status.textContent = saved
-      ? "Saved — WhatsApp opened with your message. Tap Send in WhatsApp to deliver it to us."
+      ? "Saved - WhatsApp opened with your message. Tap Send in WhatsApp to deliver it to us."
       : "WhatsApp opened with your message. Tap Send in WhatsApp to deliver it to us.";
     status.className = "form-status is-success";
   });
@@ -531,7 +531,7 @@ function initDistributorForm() {
     });
 
     let text =
-      `*Distributor application — Bharatweld / Shubhshrey*\n\n` +
+      `*Distributor application - Bharatweld / Shubhshrey*\n\n` +
       `*Contact person:* ${fullName}\n` +
       `*Company:* ${company}\n` +
       `*Email:* ${email}\n` +
@@ -550,7 +550,7 @@ function initDistributorForm() {
 
     form.reset();
     status.textContent = saved
-      ? "Saved — WhatsApp opened with your distributor application. Tap Send in WhatsApp to deliver it."
+      ? "Saved - WhatsApp opened with your distributor application. Tap Send in WhatsApp to deliver it."
       : "WhatsApp opened with your distributor application. Tap Send in WhatsApp to deliver it to us.";
     status.className = "form-status is-success";
   });

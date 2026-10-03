@@ -1,5 +1,5 @@
 /**
- * Cascade State → District → MIDC in admin forms and filters.
+ * Cascade State -> District -> MIDC in admin forms and filters.
  * Expects window.SHUBH_DISTRICTS_BY_STATE and window.SHUBH_MIDCS_BY_STATE_DISTRICT.
  */
 (function () {

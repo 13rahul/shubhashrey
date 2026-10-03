@@ -83,7 +83,7 @@ function renderProductCard(product, { featured = false } = {}) {
   return `
     <article class="product-item reveal" data-product-id="${product.id}" data-category="${product.categoryGroup}">
       <a class="product-item__media" href="product.html?id=${product.id}">
-        <img src="${product.image}" alt="${product.name} — Bharatweld" width="480" height="360" loading="lazy" />
+        <img src="${product.image}" alt="${product.name} - Bharatweld" width="480" height="360" loading="lazy" />
       </a>
       <div class="product-item__body">
         <p class="product-item__cat">${product.category}</p>
@@ -232,7 +232,7 @@ function renderCheckoutSummary() {
         .map(
           (line) => `
         <li>
-          <span>${line.product.name} × ${line.qty}</span>
+          <span>${line.product.name} x ${line.qty}</span>
         </li>
       `
         )

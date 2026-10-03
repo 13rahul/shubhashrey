@@ -1,6 +1,6 @@
 <?php
 /**
- * Legacy contact endpoint — now also saves to CRM SQLite, then emails/logs.
+ * Legacy contact endpoint - now also saves to CRM SQLite, then emails/logs.
  */
 declare(strict_types=1);
 
@@ -51,10 +51,10 @@ try {
         'phone' => $phone,
         'message' => $message,
         'status' => 'new',
-        'notes' => 'Inbound lead — Contact Us form · ' . date('Y-m-d H:i'),
+        'notes' => 'Inbound lead - Contact Us form | ' . date('Y-m-d H:i'),
     ]);
 } catch (Throwable $e) {
-    // Continue — mail/log still useful
+    // Continue - mail/log still useful
 }
 
 $to = 'contact@shubhshrey.com';

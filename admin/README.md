@@ -1,6 +1,6 @@
 # Shubhshrey Admin CRM
 
-Lean leads admin inspired by College Discovery’s `/admin/leads` triage (filters, status, notes, WhatsApp, CSV) and Slayly’s PHP session login.
+Lean leads admin inspired by College Discovery's `/admin/leads` triage (filters, status, notes, WhatsApp, CSV) and Slayly's PHP session login.
 
 ## URL
 
@@ -37,11 +37,11 @@ URL: `http://localhost/Subhshrey-industries/admin/login.php`
 
 ## Files
 
-- `admin/` — login, leads list, lead detail, CSS
-- `includes/` — bootstrap, auth, SQLite, CSRF
-- `config/admin.php` — credentials (protected by `.htaccess`)
-- `storage/crm.sqlite` — auto-created (gitignored)
-- `api/lead.php` — public create-lead endpoint
+- `admin/` - login, leads list, lead detail, CSS
+- `includes/` - bootstrap, auth, SQLite, CSRF
+- `config/admin.php` - credentials (protected by `.htaccess`)
+- `storage/crm.sqlite` - auto-created (gitignored)
+- `api/lead.php` - public create-lead endpoint
 
 ## Security notes
 

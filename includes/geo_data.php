@@ -113,7 +113,7 @@ function shubh_state_districts_map(): array
         'Telangana' => [
             'Adilabad', 'Bhadradri Kothagudem', 'Hanamkonda', 'Hyderabad', 'Jagtial', 'Jangaon',
             'Jayashankar Bhupalpally', 'Jogulamba Gadwal', 'Kamareddy', 'Karimnagar', 'Khammam',
-            'Kumuram Bheem', 'Mahabubabad', 'Mahabubnagar', 'Mancherial', 'Medak', 'Medchal–Malkajgiri',
+            'Kumuram Bheem', 'Mahabubabad', 'Mahabubnagar', 'Mancherial', 'Medak', 'Medchal-Malkajgiri',
             'Mulugu', 'Nagarkurnool', 'Nalgonda', 'Narayanpet', 'Nirmal', 'Nizamabad', 'Peddapalli',
             'Rajanna Sircilla', 'Rangareddy', 'Sangareddy', 'Siddipet', 'Suryapet', 'Vikarabad',
             'Wanaparthy', 'Warangal', 'Yadadri Bhuvanagiri',
@@ -692,7 +692,7 @@ function shubh_maharashtra_midcs_by_district(): array
 }
 
 /**
- * Nested map for cascading dropdowns: state → district → MIDC names.
+ * Nested map for cascading dropdowns: state -> district -> MIDC names.
  *
  * @return array<string, array<string, list<string>>>
  */

@@ -2,7 +2,7 @@
 """Build Maharashtra MIDC master list for CRM + sales Excel.
 
 Source of industrial area names: MIDC EODB 'Plot List With Trees' registry
-(https://eodb.midcindia.org/TypeofTrees.aspx) — district-wise industrial areas.
+(https://eodb.midcindia.org/TypeofTrees.aspx) - district-wise industrial areas.
 Plus common sales aliases used in outreach (Bhosari, TTC pockets, etc.).
 
 Outputs:
@@ -416,7 +416,7 @@ REGION = {
     "Yavatmal": "Vidarbha",
 }
 
-# Names / patterns → High electrode demand (fab, auto, heavy eng, chemical plant)
+# Names / patterns -> High electrode demand (fab, auto, heavy eng, chemical plant)
 HIGH_EXACT = {
     "Pimpri-Chinchwad",
     "Bhosari MIDC",
@@ -562,11 +562,11 @@ def classify(name: str, district: str) -> tuple[str, str, str]:
     if name in HIGH_EXACT:
         return (
             "High",
-            "1 — Primary territory",
+            "1 - Primary territory",
             "Heavy fab / auto / engineering / plant maintenance",
         )
     if any(p in name for p in LOW_PATTERNS):
-        return "Low", "3 — Opportunistic", "Small workshops / niche / light industry"
+        return "Low", "3 - Opportunistic", "Small workshops / niche / light industry"
     if district in {
         "Pune",
         "Thane",
@@ -585,8 +585,8 @@ def classify(name: str, district: str) -> tuple[str, str, str]:
         "Chandrapur",
         "Ratnagiri",
     }:
-        return "Medium", "2 — Expand after Tier-1", "General engineering / mixed manufacturing"
-    return "Medium–Low", "3 — Opportunistic", "Mixed / smaller industrial base"
+        return "Medium", "2 - Expand after Tier-1", "General engineering / mixed manufacturing"
+    return "Medium-Low", "3 - Opportunistic", "Mixed / smaller industrial base"
 
 
 def php_escape(s: str) -> str:
@@ -657,7 +657,7 @@ def write_excel(rows: list[dict]) -> Path | None:
     # README
     ws = wb.active
     ws.title = "README"
-    ws["A1"] = "Maharashtra MIDC — Welding Electrode Target Map"
+    ws["A1"] = "Maharashtra MIDC - Welding Electrode Target Map"
     ws["A1"].font = Font(bold=True, size=14)
     notes = [
         "",
@@ -670,11 +670,11 @@ def write_excel(rows: list[dict]) -> Path | None:
         "(fab / heavy eng / auto / plant maintenance), not plot count alone.",
         "",
         "Suggested sales order (Pune first):",
-        "  Bhosari / Pimpri-Chinchwad → Chakan → Talegaon → Ranjangaon → Baramati → Jejuri",
-        "Then Mumbai/Raigad: Taloja → Ambernath → Patalganga → Mahad → Nagothane",
-        "Then Nashik: Satpur → Ambad → Sinnar → Dindori",
-        "Then Aurangabad belt: Waluj → Chikalthana → Shendra",
-        "Then Nagpur: Hingna → Butibori",
+        "  Bhosari / Pimpri-Chinchwad -> Chakan -> Talegaon -> Ranjangaon -> Baramati -> Jejuri",
+        "Then Mumbai/Raigad: Taloja -> Ambernath -> Patalganga -> Mahad -> Nagothane",
+        "Then Nashik: Satpur -> Ambad -> Sinnar -> Dindori",
+        "Then Aurangabad belt: Waluj -> Chikalthana -> Shendra",
+        "Then Nagpur: Hingna -> Butibori",
         "",
         "Rebuild: python scripts/build_maharashtra_midcs.py",
     ]
@@ -741,7 +741,7 @@ def write_excel(rows: list[dict]) -> Path | None:
         c = by_dist[dist]
         total = sum(c.values())
         high = c.get("High", 0)
-        med = c.get("Medium", 0) + c.get("Medium–Low", 0)
+        med = c.get("Medium", 0) + c.get("Medium-Low", 0)
         low = total - high - med
         sum_ws.cell(i, 1, dist)
         sum_ws.cell(i, 2, REGION.get(dist, ""))
@@ -799,7 +799,7 @@ def main() -> None:
     if xlsx_path:
         print(f"Wrote {xlsx_path}")
     else:
-        print("openpyxl missing — CSV only; pip install openpyxl for Excel")
+        print("openpyxl missing - CSV only; pip install openpyxl for Excel")
     print(f"Updated {GEO_PHP}")
 
 
