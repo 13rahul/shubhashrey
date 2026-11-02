@@ -25,15 +25,7 @@ After login, use **Change admin password** at the bottom of the leads page.
 - Filters: search, status, source, **state** (all India), **district** (cascading by state), **MIDC** (filtered by state/district)
 - Geo master lists in `includes/geo_data.php` (36 MH districts, full India states/districts map, MIDC industrial areas)
 - Import Bhosari prospect CSV into CRM: `php scripts/import_bhosari_to_crm.php --replace-tests`
-
-## Default login (change immediately)
-
-| Field | Value |
-|-------|--------|
-| Email | `admin@shubhshrey.com` |
-| Password | `ChangeMe@2026` |
-
-URL: `http://localhost/Subhshrey-industries/admin/login.php`
+- Smoke checks: `python scripts/_crm_smoke_check.py` and `php scripts/_crm_php_smoke.php`
 
 ## Files
 

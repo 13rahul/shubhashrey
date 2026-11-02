@@ -220,7 +220,7 @@ function renderIndustriesGrid() {
   const root = document.getElementById("industries-grid");
   if (!root || typeof INDUSTRIES === "undefined") return;
 
-  root.innerHTML = INDUSTRIES.map(
+  const cards = INDUSTRIES.map(
     (item) => `
     <article class="industry-item reveal">
       <a class="industry-item__media" href="industries.html#${item.id}">
@@ -234,7 +234,20 @@ function renderIndustriesGrid() {
       </div>
     </article>
   `
-  ).join("");
+  );
+
+  cards.push(`
+    <article class="industry-item industry-item--cta reveal">
+      <div class="industry-item__body">
+        <p class="product-item__cat">Full range</p>
+        <h3>See every application</h3>
+        <p>Browse grade-by-grade guidance for fabrication, structural, stainless, cutting, and hardfacing work.</p>
+        <a class="btn btn--primary btn--sm" href="industries.html">Explore industries</a>
+      </div>
+    </article>
+  `);
+
+  root.innerHTML = cards.join("");
 
   initReveals();
 }

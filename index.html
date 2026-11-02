@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/styles.css?v=17" />
+  <link rel="stylesheet" href="css/styles.css?v=20" />
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to Content</a>
@@ -24,7 +24,7 @@
         <span></span><span></span><span></span>
       </button>
       <nav class="site-nav" id="site-nav" aria-label="Primary">
-        <a href="index.html">Home</a>
+        <a href="index.html" aria-current="page">Home</a>
         <div class="nav-mega" data-nav-mega></div>
         <a href="industries.html">Industries</a>
         <a href="about.html">Company Profile</a>
@@ -100,8 +100,10 @@
               <img src="assets/industries/construction.png?v=2" alt="Indian worker in orange jacket and goggles welding structural steel at a construction site" width="640" height="360" loading="lazy" />
             </div>
             <div class="serve-card__body">
+              <p class="serve-card__tag">Structural</p>
               <h3>Construction &amp; Infrastructure</h3>
               <p>Structural steel, bridges, building frames, and on-site fabrication.</p>
+              <a class="serve-card__link" href="industries.html">View applications</a>
             </div>
           </article>
           <article class="serve-card reveal">
@@ -109,8 +111,10 @@
               <img src="assets/industries/manufacturing.png?v=2" alt="Indian fabricator in orange jacket and goggles welding in a workshop" width="640" height="360" loading="lazy" />
             </div>
             <div class="serve-card__body">
+              <p class="serve-card__tag">Workshop</p>
               <h3>Manufacturing &amp; Fabrication</h3>
               <p>Gates, grills, furniture, sheet metal, and general workshop welding.</p>
+              <a class="serve-card__link" href="industries.html">View applications</a>
             </div>
           </article>
           <article class="serve-card reveal">
@@ -118,8 +122,10 @@
               <img src="assets/industries/agriculture.png?v=2" alt="Indian mechanic in orange jacket and goggles repairing farm equipment" width="640" height="360" loading="lazy" />
             </div>
             <div class="serve-card__body">
+              <p class="serve-card__tag">Field repair</p>
               <h3>Agriculture &amp; Farm Equipment</h3>
               <p>Tractor parts, implements, and field repair on rural job sites.</p>
+              <a class="serve-card__link" href="industries.html">View applications</a>
             </div>
           </article>
           <article class="serve-card reveal">
@@ -127,8 +133,10 @@
               <img src="assets/industries/maintenance.png?v=2" alt="Indian technician in orange jacket and goggles doing workshop metal repair" width="640" height="360" loading="lazy" />
             </div>
             <div class="serve-card__body">
+              <p class="serve-card__tag">Service</p>
               <h3>Maintenance &amp; Repair</h3>
               <p>Cutting, gouging, and restoration work in service workshops.</p>
+              <a class="serve-card__link" href="industries.html">View applications</a>
             </div>
           </article>
         </div>
@@ -143,7 +151,7 @@
           <p>From gates and grills to structural steel and shipyard production - the right Bharatweld grade for the job.</p>
         </div>
         <div class="industry-grid" id="industries-grid"></div>
-        <div class="cta-row reveal" style="margin-top:2rem">
+        <div class="cta-row cta-row--section reveal">
           <a class="btn btn--ghost" href="industries.html">See all industries</a>
         </div>
       </div>
@@ -157,7 +165,7 @@
           <p>E6013, E7018, E308L, Cutting Electrodes, and Manganese Electrodes - as manufactured and packed by Shubhshrey Industries.</p>
         </div>
         <div class="product-grid" id="featured-products"></div>
-        <div class="cta-row reveal" style="margin-top:2rem">
+        <div class="cta-row cta-row--section reveal">
           <a class="btn btn--primary" href="shop.html">View full shop</a>
         </div>
       </div>
@@ -212,12 +220,14 @@
       </div>
     </section>
 
-    <section class="section section--teal" id="distributor-cta">
+    <section class="section section--cta" id="distributor-cta">
       <div class="container">
-        <div class="section__head reveal">
-          <p class="eyebrow">Dealers &amp; distributors</p>
-          <h2>Become our distributor</h2>
-          <p>Partner with Bharatweld across India  quality electrodes, reliable supply from MIDC Baramati, and long-term dealer relationships.</p>
+        <div class="cta-panel reveal">
+          <div class="cta-panel__copy">
+            <p class="eyebrow">Dealers &amp; distributors</p>
+            <h2>Become our distributor</h2>
+            <p>Partner with Bharatweld across India - quality electrodes, reliable supply from MIDC Baramati, and long-term dealer relationships.</p>
+          </div>
           <div class="cta-row">
             <a class="btn btn--primary" href="distributor.html">Apply on WhatsApp</a>
             <a class="btn btn--ghost" href="contact.html">Contact us</a>
@@ -227,7 +237,7 @@
     </section>
   </main>
 
-      <footer class="site-footer">
+  <footer class="site-footer">
     <div class="container footer-grid">
       <div class="footer-brand">
         <img src="assets/logo.png" alt="" width="56" height="56" />
@@ -293,7 +303,7 @@
   </script>
   <script src="js/products.js?v=8"></script>
   <script src="js/cart.js?v=4"></script>
-  <script src="js/main.js?v=9"></script>
+  <script src="js/main.js?v=10"></script>
 </body>
 </html>
 
