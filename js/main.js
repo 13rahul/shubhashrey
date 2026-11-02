@@ -1,3 +1,5 @@
+initSitePreloader();
+
 document.addEventListener("DOMContentLoaded", () => {
   renderNavMega();
   initNav();
@@ -17,6 +19,82 @@ document.addEventListener("DOMContentLoaded", () => {
   setActiveNav();
   injectBrochureFab();
 });
+
+function initSitePreloader() {
+  const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const root = document.documentElement;
+  const preloader = document.getElementById("site-preloader");
+  const fill = preloader?.querySelector(".site-preloader__bar-fill");
+  const pctEl = preloader?.querySelector("[data-preloader-pct]");
+
+  const finish = () => {
+    root.classList.remove("is-preload");
+    if (!preloader) return;
+    preloader.classList.add("is-done");
+    preloader.setAttribute("aria-busy", "false");
+    preloader.setAttribute("aria-hidden", "true");
+    window.setTimeout(() => {
+      preloader.remove();
+    }, 600);
+  };
+
+  // Skip animation when returning within the same tab session
+  try {
+    if (sessionStorage.getItem("shubh_preloader_seen") === "1") {
+      finish();
+      return;
+    }
+  } catch (_) {
+    /* private mode */
+  }
+
+  if (!preloader) {
+    root.classList.remove("is-preload");
+    return;
+  }
+
+  let progress = 0;
+  let loaded = document.readyState === "complete";
+  const started = performance.now();
+  const minMs = reducedMotion ? 120 : 900;
+  const maxMs = 4200;
+
+  const setProgress = (value) => {
+    progress = Math.max(progress, Math.min(100, value));
+    if (fill) fill.style.width = `${progress}%`;
+    if (pctEl) pctEl.textContent = String(Math.round(progress));
+  };
+
+  setProgress(8);
+
+  const tick = window.setInterval(() => {
+    if (loaded) return;
+    const next = progress + (progress < 70 ? 2.2 : progress < 90 ? 0.8 : 0.2);
+    setProgress(Math.min(next, 92));
+  }, 90);
+
+  const done = () => {
+    loaded = true;
+    window.clearInterval(tick);
+    setProgress(100);
+    const wait = Math.max(0, minMs - (performance.now() - started));
+    window.setTimeout(() => {
+      try {
+        sessionStorage.setItem("shubh_preloader_seen", "1");
+      } catch (_) {
+        /* ignore */
+      }
+      finish();
+    }, reducedMotion ? 0 : wait + 180);
+  };
+
+  if (loaded) {
+    done();
+  } else {
+    window.addEventListener("load", done, { once: true });
+    window.setTimeout(done, maxMs);
+  }
+}
 
 function injectBrochureFab() {
   if (document.querySelector(".brochure-fab")) return;
