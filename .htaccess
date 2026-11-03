@@ -16,3 +16,20 @@ AddDefaultCharset UTF-8
     Header set Content-Type "application/javascript; charset=UTF-8"
   </FilesMatch>
 </IfModule>
+
+# Clean product URLs + legacy redirects
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+
+  # Old: /product.html?id=e-6013  →  /products/e-6013
+  RewriteCond %{QUERY_STRING} (^|&)id=([a-z0-9-]+)(&|$) [NC]
+  RewriteRule ^product\.html$ /products/%2? [R=301,L]
+
+  # Hide .html extension: /products/e-6013.html → /products/e-6013
+  RewriteCond %{THE_REQUEST} \s/+products/([a-z0-9-]+)\.html[\s?] [NC]
+  RewriteRule ^products/([a-z0-9-]+)\.html$ /products/$1 [R=301,L]
+
+  # Serve clean URL: /products/e-6013 → products/e-6013.html
+  RewriteRule ^products/([a-z0-9-]+)/?$ products/$1.html [L]
+</IfModule>

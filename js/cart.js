@@ -82,16 +82,16 @@ function renderProductCard(product, { featured = false } = {}) {
   const aws = product.aws ? `<span class="product-item__aws">${product.aws}</span>` : "";
   return `
     <article class="product-item reveal" data-product-id="${product.id}" data-category="${product.categoryGroup}">
-      <a class="product-item__media" href="product.html?id=${product.id}">
+      <a class="product-item__media" href="${productUrl(product.id)}">
         <img src="${product.image}" alt="${product.name} - Bharatweld" width="480" height="360" loading="lazy" />
       </a>
       <div class="product-item__body">
         <p class="product-item__cat">${product.category}</p>
-        <h3 class="product-item__name"><a href="product.html?id=${product.id}">${product.name}</a></h3>
+        <h3 class="product-item__name"><a href="${productUrl(product.id)}">${product.name}</a></h3>
         ${aws}
         <p class="product-item__desc">${product.tagline || product.description}</p>
         <div class="product-item__meta">
-          <a class="btn btn--ghost btn--sm" href="product.html?id=${product.id}">View details</a>
+          <a class="btn btn--ghost btn--sm" href="${productUrl(product.id)}">View details</a>
           <button type="button" class="btn btn--primary btn--sm" data-buy-now="${product.id}">
             Buy now
           </button>
@@ -103,7 +103,7 @@ function renderProductCard(product, { featured = false } = {}) {
 
 function buyNow(productId, qty = 1) {
   addToCart(productId, qty);
-  window.location.href = "checkout.html";
+  window.location.href = "/checkout.html";
 }
 
 function bindBuyNowButtons(root = document) {

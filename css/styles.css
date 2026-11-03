@@ -3306,20 +3306,77 @@ p {
   margin: -0.25rem 0 0.75rem;
 }
 
+.product-breadcrumb {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.4rem 0.55rem;
+  margin: 0 0 1.5rem;
+  font-size: 0.88rem;
+  color: var(--muted);
+}
+
+.product-breadcrumb a {
+  color: var(--teal);
+  text-decoration: none;
+}
+
+.product-breadcrumb a:hover {
+  text-decoration: underline;
+}
+
+.product-detail__subhead {
+  font-size: 1.05rem;
+  margin: 1.35rem 0 0.55rem;
+}
+
+.product-benefits,
+.product-applications {
+  margin: 0 0 1rem;
+  padding-left: 1.2rem;
+}
+
+.product-benefits li,
+.product-applications li {
+  margin: 0.35rem 0;
+}
+
+.product-detail__trust {
+  margin-top: 1.25rem;
+  font-size: 0.92rem;
+  color: var(--muted);
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
 .product-related {
-  margin-top: 1.5rem;
-  padding-top: 1rem;
+  margin-top: 2.5rem;
+  padding-top: 1.5rem;
   border-top: 1px solid var(--line);
 }
 
 .product-related h2 {
-  font-size: 1rem;
-  margin-bottom: 0.5rem;
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
 }
 
 .product-related ul {
   margin: 0;
   padding-left: 1.1rem;
+}
+
+.product-grid--related {
+  margin-top: 0.5rem;
 }
 
 /* Company values */

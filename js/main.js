@@ -10,6 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
   renderShopGrid();
   renderIndustriesGrid();
   renderProductPage();
+  if (typeof bindBuyNowButtons === "function") bindBuyNowButtons(document);
   renderCartPage();
   initReveals();
   initTestimonialSlider();
@@ -100,7 +101,7 @@ function injectBrochureFab() {
   if (document.querySelector(".brochure-fab")) return;
   const a = document.createElement("a");
   a.className = "brochure-fab";
-  a.href = "assets/brochure/bharatweld-brochure.pdf";
+  a.href = "/assets/brochure/bharatweld-brochure.pdf";
   a.setAttribute("download", "");
   a.setAttribute("aria-label", "Download Bharatweld brochure PDF");
   a.innerHTML =
@@ -190,7 +191,11 @@ function setActiveNav() {
     }
   });
 
-  if (path === "shop.html" || path === "product.html") {
+  if (
+    path === "shop.html" ||
+    path === "product.html" ||
+    window.location.pathname.includes("/products/")
+  ) {
     const megaToggle = document.querySelector(".nav-mega__toggle");
     if (megaToggle) megaToggle.setAttribute("aria-current", "page");
   }
@@ -212,11 +217,11 @@ function renderNavMega() {
           ${products
             .map(
               (p) =>
-                `<li><a href="product.html?id=${p.id}">${p.name}</a></li>`
+                `<li><a href="${productUrl(p.id)}">${p.name}</a></li>`
             )
             .join("")}
         </ul>
-        <a class="nav-mega__cat-link" href="shop.html#category-${cat.id}">Browse ${cat.title.toLowerCase()} -></a>
+        <a class="nav-mega__cat-link" href="/shop.html#category-${cat.id}">Browse ${cat.title.toLowerCase()} -></a>
       </div>
     `;
   }).join("");
@@ -230,8 +235,8 @@ function renderNavMega() {
       <div class="nav-mega__inner">
         <div class="nav-mega__cols">${panelCols}</div>
         <div class="nav-mega__footer">
-          <a class="nav-mega__all" href="shop.html">View full product catalogue -></a>
-          <a class="nav-mega__guide" href="welding-process.html">Welding process guide</a>
+          <a class="nav-mega__all" href="/shop.html">View full product catalogue -></a>
+          <a class="nav-mega__guide" href="/welding-process.html">Welding process guide</a>
         </div>
       </div>
     </div>
@@ -331,71 +336,24 @@ function renderIndustriesGrid() {
 }
 
 function renderProductPage() {
+  /* Product pages are static HTML under /products/{id}. Legacy ?id= redirects via .htaccess. */
   const root = document.getElementById("product-detail");
   if (!root) return;
 
   const params = new URLSearchParams(window.location.search);
   const id = params.get("id");
-  const product = id ? getProductById(id) : null;
-
-  if (!product) {
-    root.innerHTML = `
-      <div class="empty-state">
-        <h2>Product not found</h2>
-        <p>Browse the full Bharatweld electrode range.</p>
-        <a class="btn btn--primary" href="shop.html">Go to shop</a>
-      </div>
-    `;
+  if (id && getProductById(id)) {
+    window.location.replace(productUrl(id));
     return;
   }
 
-  document.title = `${product.name} | Bharatweld | Shubhshrey Industries`;
-
-  const related = PRODUCTS.filter(
-    (p) => p.categoryGroup === product.categoryGroup && p.id !== product.id
-  );
-
   root.innerHTML = `
-    <div class="product-detail">
-      <div class="product-detail__media reveal">
-        <img src="${product.image}" alt="${product.name} - Bharatweld welding electrodes with packaging" width="1200" height="900" />
+      <div class="empty-state">
+        <h2>Browse Bharatweld electrodes</h2>
+        <p>Product pages now use clean URLs. Open the catalogue to choose a grade.</p>
+        <a class="btn btn--primary" href="/shop.html">Go to shop</a>
       </div>
-      <div class="product-detail__info reveal">
-        <p class="eyebrow">${product.category}</p>
-        <h1>${product.name}</h1>
-        <p class="product-detail__tagline">${product.tagline || ""}</p>
-        <p class="product-detail__sku">SKU: ${product.sku} | AWS ${product.aws || "-"}</p>
-        <p>${product.description}</p>
-        <div class="cta-row">
-          <button type="button" class="btn btn--primary" data-buy-now="${product.id}">Buy now</button>
-          <a class="btn btn--ghost" href="contact.html">Enquire</a>
-        </div>
-        <table class="spec-table">
-          <tbody>
-            <tr><th>AWS classification</th><td>${product.aws || "-"}</td></tr>
-            <tr><th>Coating type</th><td>${product.coating || "-"}</td></tr>
-            <tr><th>Welding positions</th><td>${product.positions || "-"}</td></tr>
-            <tr><th>Current / polarity</th><td>${product.polarity || product.current || "-"}</td></tr>
-            <tr><th>Diameters</th><td>${product.diameters || "-"}</td></tr>
-            <tr><th>Industries</th><td>${(product.industries || []).join(", ")}</td></tr>
-            <tr><th>Applications</th><td>${(product.applications || []).join("; ")}</td></tr>
-          </tbody>
-        </table>
-        ${
-          related.length
-            ? `<div class="product-related">
-            <h2>Related products</h2>
-            <ul>${related.map((p) => `<li><a href="product.html?id=${p.id}">${p.name}</a></li>`).join("")}</ul>
-          </div>`
-            : ""
-        }
-        <p><a href="shop.html#category-${product.categoryGroup}" class="back-link"><- Back to ${product.category}</a></p>
-      </div>
-    </div>
-  `;
-
-  bindBuyNowButtons(root);
-  initReveals();
+    `;
 }
 
 function initTestimonialSlider() {
