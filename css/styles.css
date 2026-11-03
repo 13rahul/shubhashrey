@@ -2550,10 +2550,10 @@ p {
   height: 64px;
   width: auto;
   object-fit: contain;
-  background: transparent;
+  background: transparent !important;
   border-radius: 0;
   padding: 0;
-  box-shadow: none;
+  box-shadow: none !important;
 }
 
 .footer-badges img.footer-badge--mark {
@@ -2562,6 +2562,9 @@ p {
 
 .footer-badges img.footer-badge--mii {
   height: 58px;
+  background: transparent !important;
+  box-shadow: none !important;
+  mix-blend-mode: normal;
 }
 
 /* Welding process guide */
