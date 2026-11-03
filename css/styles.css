@@ -2348,6 +2348,10 @@ p {
   .footer-badges img.footer-badge--mii {
     height: 46px;
   }
+
+  .footer-badges img.footer-badge--msme {
+    height: 40px;
+  }
 }
 
 @media (max-width: 640px) {
@@ -2565,6 +2569,12 @@ p {
   background: transparent !important;
   box-shadow: none !important;
   mix-blend-mode: normal;
+}
+
+.footer-badges img.footer-badge--msme {
+  height: 52px;
+  background: transparent !important;
+  box-shadow: none !important;
 }
 
 /* Welding process guide */
