@@ -2344,6 +2344,10 @@ p {
   .footer-badges img.footer-badge--mark {
     height: 64px;
   }
+
+  .footer-badges img.footer-badge--mii {
+    height: 46px;
+  }
 }
 
 @media (max-width: 640px) {
@@ -2546,18 +2550,18 @@ p {
   height: 64px;
   width: auto;
   object-fit: contain;
-  background: #fff;
-  border-radius: var(--radius-sm);
-  padding: 0.35rem 0.5rem;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  background: transparent;
+  border-radius: 0;
+  padding: 0;
+  box-shadow: none;
 }
 
 .footer-badges img.footer-badge--mark {
   height: 78px;
-  background: transparent;
-  box-shadow: none;
-  padding: 0;
-  border-radius: 0;
+}
+
+.footer-badges img.footer-badge--mii {
+  height: 58px;
 }
 
 /* Welding process guide */
