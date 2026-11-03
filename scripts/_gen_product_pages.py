@@ -8,10 +8,10 @@ from urllib.parse import quote
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "products"
 SITE = "https://shubhshrey.com"
-CSS_V = "29"
-JS_MAIN = "12"
-JS_PRODUCTS = "9"
-JS_CART = "5"
+CSS_V = "30"
+JS_MAIN = "13"
+JS_PRODUCTS = "10"
+JS_CART = "6"
 
 PRODUCTS = [
     {
@@ -39,11 +39,18 @@ PRODUCTS = [
         ],
         "price": 1900,
         "image": "e-6013.png",
+        "rods": "e-6013-rods-only.png",
+        "compare": "e-7018",
         "aws": "E6013",
         "coating": "Rutile",
         "positions": "All positions (especially flat & horizontal)",
         "polarity": "AC or DC either polarity",
         "diameters": "2.5 mm, 3.15 mm, 4 mm",
+        "amps": [
+            {"d": "2.5 mm", "range": "60–90 A", "tip": "Sheet metal, thin gates — keep a short arc."},
+            {"d": "3.15 mm", "range": "90–130 A", "tip": "Most common workshop diameter for fabrication."},
+            {"d": "4.0 mm", "range": "130–180 A", "tip": "Heavier plate and higher deposit rate."},
+        ],
         "industries": ["General fabrication", "Furniture", "Construction", "Repair shops"],
         "applications": [
             "Sheet metal welding",
@@ -77,11 +84,18 @@ PRODUCTS = [
         ],
         "price": 3000,
         "image": "e-7018.png",
+        "rods": "e-7018-rods-only.png",
+        "compare": "e-6013",
         "aws": "E7018 / E7018-1",
         "coating": "Low hydrogen",
         "positions": "All positions",
         "polarity": "AC or DC+ (DCEP)",
         "diameters": "2.5 mm, 3.15 mm, 4 mm",
+        "amps": [
+            {"d": "2.5 mm", "range": "70–100 A", "tip": "Thinner structural members; store dry."},
+            {"d": "3.15 mm", "range": "100–140 A", "tip": "Standard structural and machinery joints."},
+            {"d": "4.0 mm", "range": "140–190 A", "tip": "Heavy sections — keep electrodes dry."},
+        ],
         "industries": ["Heavy construction", "Mining", "Oil and gas", "Shipbuilding"],
         "applications": [
             "High-tensile steel",
@@ -115,11 +129,16 @@ PRODUCTS = [
         ],
         "price": 5000,
         "image": "e-308l.png",
+        "rods": "e-308l-rods-only.png",
         "aws": "E308L-16",
         "coating": "Extra low carbon stainless",
         "positions": "All positions",
         "polarity": "AC or DC+",
         "diameters": "2.5 mm, 3.15 mm",
+        "amps": [
+            {"d": "2.5 mm", "range": "50–80 A", "tip": "Thin stainless sheet — control heat input."},
+            {"d": "3.15 mm", "range": "80–110 A", "tip": "Equipment and general stainless fab."},
+        ],
         "industries": ["Food processing", "Chemical", "Pharmaceutical", "Architectural stainless"],
         "applications": [
             "AISI 304L and 308L stainless",
@@ -153,11 +172,16 @@ PRODUCTS = [
         ],
         "price": 2500,
         "image": "cutting.png",
+        "rods": "cutting-rods-only.png",
         "aws": "Cutting / gouging type",
         "coating": "Special cutting flux",
         "positions": "Flat, vertical (cutting applications)",
         "polarity": "AC or DC",
         "diameters": "4 mm, 5 mm",
+        "amps": [
+            {"d": "4.0 mm", "range": "200–300 A", "tip": "Push through plate; keep a long arc for cutting."},
+            {"d": "5.0 mm", "range": "250–350 A", "tip": "Faster severing on thicker sections."},
+        ],
         "industries": ["Maintenance", "Demolition", "Foundries", "General fabrication"],
         "applications": [
             "Metal cutting and severing",
@@ -191,11 +215,16 @@ PRODUCTS = [
         ],
         "price": 20000,
         "image": "manganese.png",
+        "rods": "manganese-rods-only.png",
         "aws": "High manganese hardfacing",
         "coating": "Hardfacing flux",
         "positions": "Flat, horizontal (overlay passes)",
         "polarity": "AC or DC+",
         "diameters": "3.15 mm, 4 mm",
+        "amps": [
+            {"d": "3.15 mm", "range": "100–140 A", "tip": "Build-up passes on worn edges."},
+            {"d": "4.0 mm", "range": "140–180 A", "tip": "Higher deposit for crushers and rails."},
+        ],
         "industries": ["Mining", "Quarrying", "Railways", "Heavy industry"],
         "applications": [
             "Crusher and mill parts",
@@ -297,6 +326,75 @@ def related_for(p: dict) -> list[dict]:
     return [x for x in PRODUCTS if x["categoryGroup"] == p["categoryGroup"] and x["id"] != p["id"]]
 
 
+def amp_picker_html(p: dict) -> str:
+    amps = p.get("amps") or []
+    if not amps:
+        return ""
+    chips = []
+    for i, a in enumerate(amps):
+        active = " is-active" if i == 0 else ""
+        chips.append(
+            f'<button type="button" class="amp-picker__chip{active}" data-amp '
+            f'data-amp-range="{esc(a["range"])}" data-amp-tip="{esc(a["tip"])}">{esc(a["d"])}</button>'
+        )
+    first = amps[0]
+    return f"""
+            <div class="amp-picker" data-amp-picker>
+              <h2 class="product-detail__subhead">Suggested current by diameter</h2>
+              <p>Pick a diameter to see a typical amperage window for Bharatweld {esc(p["shortName"])}.</p>
+              <div class="amp-picker__chips">
+                {"".join(chips)}
+              </div>
+              <p class="amp-picker__readout"><strong data-amp-range>{esc(first["range"])}</strong></p>
+              <p class="amp-picker__tip" data-amp-tip>{esc(first["tip"])}</p>
+            </div>"""
+
+
+def compare_html(p: dict) -> str:
+    other_id = p.get("compare")
+    if not other_id:
+        return ""
+    other = next((x for x in PRODUCTS if x["id"] == other_id), None)
+    if not other:
+        return ""
+    return f"""
+            <div class="product-compare">
+              <h2 class="product-detail__subhead">E6013 vs E7018 — quick pick</h2>
+              <table>
+                <thead>
+                  <tr><th>Factor</th><th>{esc(p["shortName"])}</th><th>{esc(other["shortName"])}</th></tr>
+                </thead>
+                <tbody>
+                  <tr><th scope="row">Coating</th><td>{esc(p["coating"])}</td><td>{esc(other["coating"])}</td></tr>
+                  <tr><th scope="row">Best for</th><td>{esc(p["tagline"])}</td><td>{esc(other["tagline"])}</td></tr>
+                  <tr><th scope="row">Hydrogen</th><td>{"Low" if "Low" in p["coating"] else "Standard rutile"}</td><td>{"Low" if "Low" in other["coating"] else "Standard rutile"}</td></tr>
+                </tbody>
+              </table>
+              <p><a href="/products/{other["id"]}">Compare with {esc(other["name"])} →</a></p>
+            </div>"""
+
+
+def gallery_html(p: dict, img_path: str) -> str:
+    rods = p.get("rods")
+    main_alt = f"{p['name']} — Bharatweld welding electrodes packaging"
+    if not rods:
+        return f'<img src="{img_path}" alt="{esc(main_alt)}" width="1200" height="900" itemprop="image" />'
+    rods_path = f"../assets/products/{rods}?v=3"
+    rods_alt = f"{p['shortName']} electrode rods — Bharatweld"
+    return f"""
+            <div data-product-gallery>
+              <img src="{img_path}" alt="{esc(main_alt)}" width="1200" height="900" itemprop="image" data-gallery-main />
+              <div class="product-gallery">
+                <button type="button" class="is-active" data-gallery-thumb data-src="{img_path}" data-alt="{esc(main_alt)}">
+                  <img src="{img_path}" alt="" width="240" height="180" loading="lazy" />
+                </button>
+                <button type="button" data-gallery-thumb data-src="{rods_path}" data-alt="{esc(rods_alt)}">
+                  <img src="{rods_path}" alt="" width="240" height="180" loading="lazy" />
+                </button>
+              </div>
+            </div>"""
+
+
 def render_page(p: dict) -> str:
     url = f"{SITE}/products/{p['id']}"
     img_url = f"{SITE}/assets/products/{p['image']}"
@@ -307,6 +405,9 @@ def render_page(p: dict) -> str:
     benefits = "".join(f"        <li>{esc(b)}</li>\n" for b in p["benefits"])
     apps = "".join(f"          <li>{esc(a)}</li>\n" for a in p["applications"])
     inds = ", ".join(esc(i) for i in p["industries"])
+    amp_block = amp_picker_html(p)
+    compare_block = compare_html(p)
+    gallery_block = gallery_html(p, img_path)
     related_html = ""
     if related:
         cards = []
@@ -436,7 +537,7 @@ def render_page(p: dict) -> str:
 
         <article class="product-detail" itemscope itemtype="https://schema.org/Product">
           <div class="product-detail__media">
-            <img src="{img_path}" alt="{esc(p['name'])} — Bharatweld welding electrodes packaging" width="1200" height="900" itemprop="image" />
+{gallery_block}
           </div>
           <div class="product-detail__info">
             <p class="eyebrow">{esc(p['category'])}</p>
@@ -454,7 +555,8 @@ def render_page(p: dict) -> str:
               <a class="btn btn--ghost" href="{wa}" target="_blank" rel="noopener noreferrer">WhatsApp quote</a>
               <a class="btn btn--ghost" href="../contact.html">Enquire</a>
             </div>
-
+{amp_block}
+{compare_block}
             <table class="spec-table">
               <caption class="visually-hidden">{esc(p['name'])} specifications</caption>
               <tbody>

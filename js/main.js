@@ -8,7 +8,12 @@ document.addEventListener("DOMContentLoaded", () => {
   updateCartBadge();
   renderFeaturedProducts();
   renderShopGrid();
+  if (typeof initGradeChooser === "function") initGradeChooser();
   renderIndustriesGrid();
+  initGradeStage();
+  initEraseReveal();
+  initAmpPickers();
+  initProductGalleries();
   renderProductPage();
   if (typeof bindBuyNowButtons === "function") bindBuyNowButtons(document);
   renderCartPage();
@@ -17,6 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initCheckoutForm();
   initContactForm();
   initDistributorForm();
+  initDistributorBrief();
   setActiveNav();
   injectBrochureFab();
 });
@@ -333,6 +339,161 @@ function renderIndustriesGrid() {
   root.innerHTML = cards.join("");
 
   initReveals();
+}
+
+const GRADE_STAGE_COPY = {
+  "e-6013": {
+    why: "General-purpose rutile electrode for everyday fabrication — smooth arc, easy slag, clean bead.",
+  },
+  "e-7018": {
+    why: "Low-hydrogen strength for structural frames, bridges, and crack-sensitive heavy steel.",
+  },
+  "e-308l": {
+    why: "Extra-low carbon stainless for 304/308 food, chemical, and architectural work.",
+  },
+  cutting: {
+    why: "Captain-Cut for severing, piercing, and gouging without oxy-fuel gear.",
+  },
+  manganese: {
+    why: "High-manganese overlays for crushers, rails, and heavy abrasion + impact.",
+  },
+};
+
+function initGradeStage() {
+  const root = document.querySelector("[data-grade-stage]");
+  if (!root || typeof getProductById !== "function") return;
+
+  const jobs = root.querySelectorAll("[data-grade-job]");
+  const img = root.querySelector("[data-grade-img]");
+  const cat = root.querySelector("[data-grade-cat]");
+  const name = root.querySelector("[data-grade-name]");
+  const why = root.querySelector("[data-grade-why]");
+  const link = root.querySelector("[data-grade-link]");
+
+  const activate = (id) => {
+    const product = getProductById(id);
+    if (!product) return;
+    jobs.forEach((btn) => {
+      const on = btn.getAttribute("data-grade-job") === id;
+      btn.classList.toggle("is-active", on);
+      btn.setAttribute("aria-selected", on ? "true" : "false");
+    });
+    if (img) {
+      img.src = product.image;
+      img.alt = `${product.name} — Bharatweld packaging`;
+    }
+    if (cat) cat.textContent = product.category;
+    if (name) name.textContent = product.name;
+    if (why) why.textContent = GRADE_STAGE_COPY[id]?.why || product.tagline || product.description;
+    if (link) {
+      link.href = productUrl(id);
+      link.textContent = `View ${product.shortName}`;
+    }
+  };
+
+  jobs.forEach((btn) => {
+    const id = btn.getAttribute("data-grade-job");
+    btn.addEventListener("mouseenter", () => activate(id));
+    btn.addEventListener("focus", () => activate(id));
+    btn.addEventListener("click", () => activate(id));
+  });
+}
+
+function initEraseReveal() {
+  const nodes = document.querySelectorAll("[data-erase]");
+  if (!nodes.length) return;
+  const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if (reduced) {
+    nodes.forEach((el) => el.classList.add("is-on"));
+    return;
+  }
+  const io = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-on");
+          io.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.45 }
+  );
+  nodes.forEach((el) => io.observe(el));
+}
+
+function initAmpPickers() {
+  document.querySelectorAll("[data-amp-picker]").forEach((root) => {
+    const chips = root.querySelectorAll("[data-amp]");
+    const rangeEl = root.querySelector("[data-amp-range]");
+    const tipEl = root.querySelector("[data-amp-tip]");
+    const setActive = (chip) => {
+      chips.forEach((c) => c.classList.toggle("is-active", c === chip));
+      if (rangeEl) rangeEl.textContent = chip.getAttribute("data-amp-range") || "";
+      if (tipEl) tipEl.textContent = chip.getAttribute("data-amp-tip") || "";
+    };
+    chips.forEach((chip) => chip.addEventListener("click", () => setActive(chip)));
+    if (chips[0]) setActive(chips[0]);
+  });
+}
+
+function initProductGalleries() {
+  document.querySelectorAll("[data-product-gallery]").forEach((root) => {
+    const main = root.querySelector("[data-gallery-main]");
+    const thumbs = root.querySelectorAll("[data-gallery-thumb]");
+    thumbs.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        thumbs.forEach((t) => t.classList.toggle("is-active", t === btn));
+        const src = btn.getAttribute("data-src");
+        const alt = btn.getAttribute("data-alt") || "";
+        if (main && src) {
+          main.src = src;
+          main.alt = alt;
+        }
+      });
+    });
+  });
+}
+
+function initDistributorBrief() {
+  const form = document.getElementById("distributor-form");
+  const brief = document.querySelector("[data-distributor-brief]");
+  if (!form || !brief) return;
+
+  const steps = [...brief.querySelectorAll("[data-brief-step]")];
+  const dots = [...brief.querySelectorAll("[data-brief-dot]")];
+  let index = 0;
+
+  const show = (i) => {
+    index = Math.max(0, Math.min(steps.length - 1, i));
+    steps.forEach((step, n) => {
+      step.hidden = n !== index;
+    });
+    dots.forEach((dot, n) => {
+      dot.classList.toggle("is-active", n === index);
+      dot.classList.toggle("is-done", n < index);
+    });
+  };
+
+  brief.querySelectorAll("[data-brief-next]").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const step = steps[index];
+      const required = step?.querySelectorAll("[required]");
+      let ok = true;
+      required?.forEach((field) => {
+        if (!field.checkValidity()) {
+          field.reportValidity();
+          ok = false;
+        }
+      });
+      if (ok) show(index + 1);
+    });
+  });
+
+  brief.querySelectorAll("[data-brief-prev]").forEach((btn) => {
+    btn.addEventListener("click", () => show(index - 1));
+  });
+
+  show(0);
 }
 
 function renderProductPage() {

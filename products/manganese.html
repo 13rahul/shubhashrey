@@ -24,7 +24,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="../css/styles.css?v=29" />
+  <link rel="stylesheet" href="../css/styles.css?v=30" />
   <script id="preloader-boot">try{if(sessionStorage.getItem('shubh_preloader_seen')==='1')document.documentElement.classList.remove('is-preload')}catch(e){}</script>
   <style id="preloader-critical">html.is-preload,html.is-preload body{overflow:hidden}html:not(.is-preload) .site-preloader{display:none!important}.site-preloader{position:fixed;inset:0;z-index:10000;display:grid;place-items:center;padding:1.5rem;background:linear-gradient(165deg,#06354a 0%,#0a4d68 42%,#0078a8 100%);color:#fff}.site-preloader__inner{display:flex;flex-direction:column;align-items:center;text-align:center;gap:.75rem;width:min(100%,20rem)}.site-preloader__mark{position:relative;width:7.25rem;height:7.25rem;display:grid;place-items:center}.site-preloader__mark img{width:4.75rem;height:4.75rem;object-fit:contain;border-radius:50%;background:#fff;padding:.35rem}.site-preloader__brand{margin:0;font:700 clamp(1.55rem,4vw,2rem)/1.1 Sora,Segoe UI,sans-serif}.site-preloader__tag{margin:0;font-size:.78rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.78)}.site-preloader__bar{width:100%;height:3px;margin-top:1rem;border-radius:999px;background:rgba(255,255,255,.18);overflow:hidden}.site-preloader__bar-fill{display:block;height:100%;width:0;background:#00aeef}.site-preloader__pct{margin:0;font-size:.88rem;letter-spacing:.08em;color:rgba(255,255,255,.72)}.site-preloader.is-done{opacity:0;visibility:hidden;pointer-events:none}</style>
   <script type="application/ld+json">
@@ -115,7 +115,18 @@
 
         <article class="product-detail" itemscope itemtype="https://schema.org/Product">
           <div class="product-detail__media">
-            <img src="../assets/products/manganese.png?v=3" alt="Manganese Hardfacing Electrodes — Bharatweld welding electrodes packaging" width="1200" height="900" itemprop="image" />
+
+            <div data-product-gallery>
+              <img src="../assets/products/manganese.png?v=3" alt="Manganese Hardfacing Electrodes — Bharatweld welding electrodes packaging" width="1200" height="900" itemprop="image" data-gallery-main />
+              <div class="product-gallery">
+                <button type="button" class="is-active" data-gallery-thumb data-src="../assets/products/manganese.png?v=3" data-alt="Manganese Hardfacing Electrodes — Bharatweld welding electrodes packaging">
+                  <img src="../assets/products/manganese.png?v=3" alt="" width="240" height="180" loading="lazy" />
+                </button>
+                <button type="button" data-gallery-thumb data-src="../assets/products/manganese-rods-only.png?v=3" data-alt="Manganese electrode rods — Bharatweld">
+                  <img src="../assets/products/manganese-rods-only.png?v=3" alt="" width="240" height="180" loading="lazy" />
+                </button>
+              </div>
+            </div>
           </div>
           <div class="product-detail__info">
             <p class="eyebrow">Hardfacing &amp; Wear Resistant Electrodes</p>
@@ -136,6 +147,16 @@
               <button type="button" class="btn btn--primary" data-buy-now="manganese">Buy now</button>
               <a class="btn btn--ghost" href="https://wa.me/919168679621?text=Hello%2C%20I%20need%20a%20quote%20for%20Bharatweld%20Manganese%20%28BW-MN%29." target="_blank" rel="noopener noreferrer">WhatsApp quote</a>
               <a class="btn btn--ghost" href="../contact.html">Enquire</a>
+            </div>
+
+            <div class="amp-picker" data-amp-picker>
+              <h2 class="product-detail__subhead">Suggested current by diameter</h2>
+              <p>Pick a diameter to see a typical amperage window for Bharatweld Manganese.</p>
+              <div class="amp-picker__chips">
+                <button type="button" class="amp-picker__chip is-active" data-amp data-amp-range="100–140 A" data-amp-tip="Build-up passes on worn edges.">3.15 mm</button><button type="button" class="amp-picker__chip" data-amp data-amp-range="140–180 A" data-amp-tip="Higher deposit for crushers and rails.">4.0 mm</button>
+              </div>
+              <p class="amp-picker__readout"><strong data-amp-range>100–140 A</strong></p>
+              <p class="amp-picker__tip" data-amp-tip>Build-up passes on worn edges.</p>
             </div>
 
             <table class="spec-table">
@@ -231,8 +252,8 @@
   </a>
 
   <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
-  <script src="../js/products.js?v=9"></script>
-  <script src="../js/cart.js?v=5"></script>
-  <script src="../js/main.js?v=12"></script>
+  <script src="../js/products.js?v=10"></script>
+  <script src="../js/cart.js?v=6"></script>
+  <script src="../js/main.js?v=13"></script>
 </body>
 </html>

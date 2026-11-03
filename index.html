@@ -11,7 +11,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/styles.css?v=29" />
+  <link rel="stylesheet" href="css/styles.css?v=30" />
     <script id="preloader-boot">try{if(sessionStorage.getItem('shubh_preloader_seen')==='1')document.documentElement.classList.remove('is-preload')}catch(e){}</script>
   <style id="preloader-critical">html.is-preload,html.is-preload body{overflow:hidden}html:not(.is-preload) .site-preloader{display:none!important}.site-preloader{position:fixed;inset:0;z-index:10000;display:grid;place-items:center;padding:1.5rem;background:linear-gradient(165deg,#06354a 0%,#0a4d68 42%,#0078a8 100%);color:#fff}.site-preloader__inner{display:flex;flex-direction:column;align-items:center;text-align:center;gap:.75rem;width:min(100%,20rem)}.site-preloader__mark{position:relative;width:7.25rem;height:7.25rem;display:grid;place-items:center}.site-preloader__mark img{width:4.75rem;height:4.75rem;object-fit:contain;border-radius:50%;background:#fff;padding:.35rem}.site-preloader__brand{margin:0;font:700 clamp(1.55rem,4vw,2rem)/1.1 Sora,Segoe UI,sans-serif}.site-preloader__tag{margin:0;font-size:.78rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.78)}.site-preloader__bar{width:100%;height:3px;margin-top:1rem;border-radius:999px;background:rgba(255,255,255,.18);overflow:hidden}.site-preloader__bar-fill{display:block;height:100%;width:0;background:#00aeef}.site-preloader__pct{margin:0;font-size:.88rem;letter-spacing:.08em;color:rgba(255,255,255,.72)}.site-preloader.is-done{opacity:0;visibility:hidden;pointer-events:none}</style>
 </head>
@@ -27,6 +27,7 @@
       </div>
       <p class="site-preloader__brand">Bharatweld</p>
       <p class="site-preloader__tag">Shubhshrey Industries</p>
+      <div class="site-preloader__bead" aria-hidden="true"><span class="site-preloader__bead-line"></span></div>
       <div class="site-preloader__bar" aria-hidden="true"><span class="site-preloader__bar-fill"></span></div>
       <p class="site-preloader__pct"><span data-preloader-pct>0</span>%</p>
     </div>
@@ -107,72 +108,76 @@
       </div>
     </section>
 
-    <section class="section section--pattern" id="industries-we-serve">
+    <section class="section section--teal erase-section" id="brand-beat" aria-label="Brand story">
+      <div class="container erase reveal" data-erase>
+        <p class="eyebrow">The clean bead</p>
+        <p class="erase__old" aria-hidden="true">Just another electrode brand</p>
+        <p class="erase__new">Proudly Indian for Indians — a clean bead you can trust.</p>
+      </div>
+    </section>
+
+    <section class="section section--pattern" id="which-electrode">
       <div class="container">
-        <div class="section__head section__head--center reveal">
-          <p class="eyebrow">Industries we serve</p>
-          <h2>Trusted across Indian industry</h2>
-          <p>Bharatweld electrodes power everyday welding work - from construction sites and fabrication shops to farm fields and repair workshops across India.</p>
+        <div class="section__head reveal">
+          <p class="eyebrow">Pick the right rod</p>
+          <h2>Which electrode for the job?</h2>
+          <p>Hover or tap a job — see the Bharatweld grade that fits, then open the product page.</p>
         </div>
-        <div class="serve-grid serve-grid--4">
-          <article class="serve-card reveal">
-            <div class="serve-card__media">
-              <img src="assets/industries/construction.png?v=2" alt="Indian worker in orange jacket and goggles welding structural steel at a construction site" width="640" height="360" loading="lazy" />
+        <div class="grade-stage" data-grade-stage>
+          <div class="grade-stage__jobs" role="tablist" aria-label="Welding jobs">
+            <button type="button" class="grade-stage__job is-active" role="tab" aria-selected="true" data-grade-job="e-6013">Gates, grills &amp; sheet metal</button>
+            <button type="button" class="grade-stage__job" role="tab" aria-selected="false" data-grade-job="e-7018">Structural &amp; heavy steel</button>
+            <button type="button" class="grade-stage__job" role="tab" aria-selected="false" data-grade-job="e-308l">Stainless fabrication</button>
+            <button type="button" class="grade-stage__job" role="tab" aria-selected="false" data-grade-job="cutting">Cutting &amp; gouging</button>
+            <button type="button" class="grade-stage__job" role="tab" aria-selected="false" data-grade-job="manganese">Hardfacing &amp; wear</button>
+          </div>
+          <div class="grade-stage__panel" data-grade-panel>
+            <div class="grade-stage__media">
+              <img data-grade-img src="assets/products/e-6013.png?v=3" alt="Bharatweld E6013 packaging" width="640" height="480" />
+              <span class="grade-stage__bead" aria-hidden="true"></span>
             </div>
-            <div class="serve-card__body">
-              <p class="serve-card__tag">Structural</p>
-              <h3>Construction &amp; Infrastructure</h3>
-              <p>Structural steel, bridges, building frames, and on-site fabrication.</p>
-              <a class="serve-card__link" href="industries.html">View applications</a>
+            <div class="grade-stage__copy">
+              <p class="eyebrow" data-grade-cat>Mild Steel Welding Electrodes</p>
+              <h3 data-grade-name>E6013 Welding Electrodes</h3>
+              <p data-grade-why>General-purpose rutile electrode for everyday fabrication — smooth arc, easy slag, clean bead.</p>
+              <div class="cta-row">
+                <a class="btn btn--primary" data-grade-link href="/products/e-6013">View E6013</a>
+                <a class="btn btn--ghost" href="industries.html">All industries</a>
+              </div>
             </div>
-          </article>
-          <article class="serve-card reveal">
-            <div class="serve-card__media">
-              <img src="assets/industries/manufacturing.png?v=2" alt="Indian fabricator in orange jacket and goggles welding in a workshop" width="640" height="360" loading="lazy" />
-            </div>
-            <div class="serve-card__body">
-              <p class="serve-card__tag">Workshop</p>
-              <h3>Manufacturing &amp; Fabrication</h3>
-              <p>Gates, grills, furniture, sheet metal, and general workshop welding.</p>
-              <a class="serve-card__link" href="industries.html">View applications</a>
-            </div>
-          </article>
-          <article class="serve-card reveal">
-            <div class="serve-card__media">
-              <img src="assets/industries/agriculture.png?v=2" alt="Indian mechanic in orange jacket and goggles repairing farm equipment" width="640" height="360" loading="lazy" />
-            </div>
-            <div class="serve-card__body">
-              <p class="serve-card__tag">Field repair</p>
-              <h3>Agriculture &amp; Farm Equipment</h3>
-              <p>Tractor parts, implements, and field repair on rural job sites.</p>
-              <a class="serve-card__link" href="industries.html">View applications</a>
-            </div>
-          </article>
-          <article class="serve-card reveal">
-            <div class="serve-card__media">
-              <img src="assets/industries/maintenance.png?v=2" alt="Indian technician in orange jacket and goggles doing workshop metal repair" width="640" height="360" loading="lazy" />
-            </div>
-            <div class="serve-card__body">
-              <p class="serve-card__tag">Service</p>
-              <h3>Maintenance &amp; Repair</h3>
-              <p>Cutting, gouging, and restoration work in service workshops.</p>
-              <a class="serve-card__link" href="industries.html">View applications</a>
-            </div>
-          </article>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="section section--teal" id="industries">
+    <section class="section section--warm" id="proof-strip" aria-label="From plant to pack">
       <div class="container">
         <div class="section__head reveal">
-          <p class="eyebrow">Industries &amp; applications</p>
-          <h2>Built for real workshop work</h2>
-          <p>From gates and grills to structural steel and shipyard production - the right Bharatweld grade for the job.</p>
+          <p class="eyebrow">Made in Baramati</p>
+          <h2>From plant floor to pack</h2>
+          <p>One manufacturing story — quality, packing, and dispatch under ISO 9001:2015.</p>
         </div>
-        <div class="industry-grid" id="industries-grid"></div>
-        <div class="cta-row cta-row--section reveal">
-          <a class="btn btn--ghost" href="industries.html">See all industries</a>
+        <div class="proof-strip reveal" data-proof-strip>
+          <article class="proof-strip__card">
+            <img src="assets/industries/manufacturing.png?v=2" alt="Workshop fabrication" width="480" height="320" loading="lazy" />
+            <h3>Workshop craft</h3>
+            <p>Electrodes built for Indian fabrication conditions.</p>
+          </article>
+          <article class="proof-strip__card">
+            <img src="assets/industries/construction.png?v=2" alt="Structural welding site" width="480" height="320" loading="lazy" />
+            <h3>Site-ready grades</h3>
+            <p>Structural and maintenance rods for real job sites.</p>
+          </article>
+          <article class="proof-strip__card">
+            <img src="assets/products/e-6013.png?v=3" alt="Bharatweld packaging" width="480" height="320" loading="lazy" />
+            <h3>Packed to protect</h3>
+            <p>Clean packaging so rods arrive ready to weld.</p>
+          </article>
+          <article class="proof-strip__card">
+            <img src="assets/industries/maintenance.png?v=2" alt="Maintenance welding" width="480" height="320" loading="lazy" />
+            <h3>Reliable dispatch</h3>
+            <p>Supply from MIDC Baramati across India.</p>
+          </article>
         </div>
       </div>
     </section>
@@ -323,9 +328,9 @@
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
   </script>
-  <script src="js/products.js?v=9"></script>
-  <script src="js/cart.js?v=5"></script>
-  <script src="js/main.js?v=12"></script>
+  <script src="js/products.js?v=10"></script>
+  <script src="js/cart.js?v=6"></script>
+  <script src="js/main.js?v=13"></script>
 </body>
 </html>
 

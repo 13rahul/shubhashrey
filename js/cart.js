@@ -310,6 +310,52 @@ function initCheckoutForm() {
   });
 }
 
+function initGradeChooser() {
+  const root = document.querySelector("[data-grade-chooser]");
+  if (!root) return;
+
+  const state = { metal: null, job: null, position: null };
+  const result = root.querySelector("[data-chooser-result]");
+  const title = root.querySelector("[data-chooser-title]");
+  const blurb = root.querySelector("[data-chooser-blurb]");
+  const link = root.querySelector("[data-chooser-link]");
+
+  const recommend = () => {
+    let id = "e-6013";
+    if (state.metal === "stainless") id = "e-308l";
+    else if (state.job === "cut") id = "cutting";
+    else if (state.job === "wear") id = "manganese";
+    else if (state.job === "structural" || state.metal === "hs") id = "e-7018";
+    else if (state.job === "sheet") id = "e-6013";
+
+    const product = typeof getProductById === "function" ? getProductById(id) : null;
+    if (!product || !result) return;
+    result.hidden = false;
+    if (title) title.textContent = product.name;
+    if (blurb) {
+      blurb.textContent =
+        product.tagline ||
+        "Based on your answers, this Bharatweld grade is the best starting point.";
+    }
+    if (link) {
+      link.href = typeof productUrl === "function" ? productUrl(id) : `/products/${id}`;
+      link.textContent = `View ${product.shortName} details`;
+    }
+  };
+
+  root.querySelectorAll("[data-chooser-group]").forEach((group) => {
+    const key = group.getAttribute("data-chooser-group");
+    group.querySelectorAll("[data-chooser-val]").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        group.querySelectorAll("[data-chooser-val]").forEach((b) => b.classList.remove("is-active"));
+        btn.classList.add("is-active");
+        state[key] = btn.getAttribute("data-chooser-val");
+        if (state.metal && state.job && state.position) recommend();
+      });
+    });
+  });
+}
+
 function renderShopGrid() {
   const catRoot = document.getElementById("shop-categories");
   const sectionsRoot = document.getElementById("shop-sections");

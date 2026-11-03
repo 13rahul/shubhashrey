@@ -22,7 +22,7 @@
 
   <link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet" />
 
-  <link rel="stylesheet" href="css/styles.css?v=29" />
+  <link rel="stylesheet" href="css/styles.css?v=30" />
 
     <script id="preloader-boot">try{if(sessionStorage.getItem('shubh_preloader_seen')==='1')document.documentElement.classList.remove('is-preload')}catch(e){}</script>
   <style id="preloader-critical">html.is-preload,html.is-preload body{overflow:hidden}html:not(.is-preload) .site-preloader{display:none!important}.site-preloader{position:fixed;inset:0;z-index:10000;display:grid;place-items:center;padding:1.5rem;background:linear-gradient(165deg,#06354a 0%,#0a4d68 42%,#0078a8 100%);color:#fff}.site-preloader__inner{display:flex;flex-direction:column;align-items:center;text-align:center;gap:.75rem;width:min(100%,20rem)}.site-preloader__mark{position:relative;width:7.25rem;height:7.25rem;display:grid;place-items:center}.site-preloader__mark img{width:4.75rem;height:4.75rem;object-fit:contain;border-radius:50%;background:#fff;padding:.35rem}.site-preloader__brand{margin:0;font:700 clamp(1.55rem,4vw,2rem)/1.1 Sora,Segoe UI,sans-serif}.site-preloader__tag{margin:0;font-size:.78rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.78)}.site-preloader__bar{width:100%;height:3px;margin-top:1rem;border-radius:999px;background:rgba(255,255,255,.18);overflow:hidden}.site-preloader__bar-fill{display:block;height:100%;width:0;background:#00aeef}.site-preloader__pct{margin:0;font-size:.88rem;letter-spacing:.08em;color:rgba(255,255,255,.72)}.site-preloader.is-done{opacity:0;visibility:hidden;pointer-events:none}</style>
@@ -154,140 +154,103 @@
 
       <div class="container contact-layout">
 
-        <form id="distributor-form" class="checkout-panel" novalidate>
-
-          <h2 class="form-panel-title">Distributor application</h2>
-
-          <p class="form-panel-lead">Tell us about your business. We will review and get back to you on WhatsApp.</p>
-
-          <div class="form-grid">
-
-            <div class="form-field">
-
-              <label for="fullName">Contact person <span class="req">*</span></label>
-
-              <input id="fullName" name="fullName" type="text" required autocomplete="name" />
-
-            </div>
-
-            <div class="form-field">
-
-              <label for="company">Company / firm name <span class="req">*</span></label>
-
-              <input id="company" name="company" type="text" required autocomplete="organization" />
-
-            </div>
-
-            <div class="form-field">
-
-              <label for="email">Email <span class="req">*</span></label>
-
-              <input id="email" name="email" type="email" required autocomplete="email" />
-
-            </div>
-
-            <div class="form-field">
-
-              <label for="phone">WhatsApp / phone <span class="req">*</span></label>
-
-              <input id="phone" name="phone" type="tel" required autocomplete="tel" />
-
-            </div>
-
-            <div class="form-field">
-
-              <label for="city">City <span class="req">*</span></label>
-
-              <input id="city" name="city" type="text" required autocomplete="address-level2" />
-
-            </div>
-
-            <div class="form-field">
-
-              <label for="state">State <span class="req">*</span></label>
-
-              <input id="state" name="state" type="text" required autocomplete="address-level1" />
-
-            </div>
-
-            <div class="form-field form-field--full">
-
-              <label for="area">Preferred distribution area / territory <span class="req">*</span></label>
-
-              <input id="area" name="area" type="text" required placeholder="e.g. Pune district, Western Maharashtra" />
-
-            </div>
-
-            <div class="form-field">
-
-              <label for="businessType">Business type <span class="req">*</span></label>
-
-              <select id="businessType" name="businessType" required>
-
-                <option value="">Select...</option>
-
-                <option value="Distributor">Distributor</option>
-
-                <option value="Dealer / retailer">Dealer / retailer</option>
-
-                <option value="Wholesaler">Wholesaler</option>
-
-                <option value="Hardware / welding shop">Hardware / welding shop</option>
-
-                <option value="Other">Other</option>
-
-              </select>
-
-            </div>
-
-            <div class="form-field">
-
-              <label for="experience">Years in welding / hardware trade</label>
-
-              <input id="experience" name="experience" type="text" placeholder="e.g. 5 years" />
-
-            </div>
-
-            <div class="form-field form-field--full">
-
-              <label for="interest">Products of interest</label>
-
-              <select id="interest" name="interest">
-
-                <option value="Full Bharatweld range">Full Bharatweld range</option>
-
-                <option value="Mild steel electrodes (E6013 / E7018)">Mild steel electrodes (E6013 / E7018)</option>
-
-                <option value="Stainless electrodes (E308L)">Stainless electrodes (E308L)</option>
-
-                <option value="Cutting electrodes">Cutting electrodes</option>
-
-                <option value="Hardfacing / manganese">Hardfacing / manganese</option>
-
-              </select>
-
-            </div>
-
-            <div class="form-field form-field--full">
-
-              <label for="message">Tell us about your business <span class="req">*</span></label>
-
-              <textarea id="message" name="message" rows="5" required placeholder="Current brands you deal in, monthly volume, warehouse capacity, why you want to partner with Bharatweld..."></textarea>
-
-            </div>
-
+        <form id="distributor-form" class="checkout-panel distributor-brief" data-distributor-brief novalidate>
+          <h2 class="form-panel-title">Start as a Bharatweld distributor</h2>
+          <p class="form-panel-lead">Three short steps — then we open WhatsApp with your application ready.</p>
+          <div class="distributor-brief__progress" aria-hidden="true">
+            <span class="distributor-brief__dot is-active" data-brief-dot></span>
+            <span class="distributor-brief__dot" data-brief-dot></span>
+            <span class="distributor-brief__dot" data-brief-dot></span>
           </div>
 
-          <div class="cta-row">
+          <div class="distributor-brief__step" data-brief-step>
+            <h3>1. Contact &amp; company</h3>
+            <div class="form-grid">
+              <div class="form-field">
+                <label for="fullName">Contact person <span class="req">*</span></label>
+                <input id="fullName" name="fullName" type="text" required autocomplete="name" />
+              </div>
+              <div class="form-field">
+                <label for="company">Company / firm name <span class="req">*</span></label>
+                <input id="company" name="company" type="text" required autocomplete="organization" />
+              </div>
+              <div class="form-field">
+                <label for="email">Email <span class="req">*</span></label>
+                <input id="email" name="email" type="email" required autocomplete="email" />
+              </div>
+              <div class="form-field">
+                <label for="phone">WhatsApp / phone <span class="req">*</span></label>
+                <input id="phone" name="phone" type="tel" required autocomplete="tel" />
+              </div>
+            </div>
+            <div class="distributor-brief__nav">
+              <button type="button" class="btn btn--primary" data-brief-next>Next: Territory</button>
+            </div>
+          </div>
 
-            <button class="btn btn--primary" type="submit">Send application on WhatsApp</button>
+          <div class="distributor-brief__step" data-brief-step hidden>
+            <h3>2. Territory &amp; business type</h3>
+            <div class="form-grid">
+              <div class="form-field">
+                <label for="city">City <span class="req">*</span></label>
+                <input id="city" name="city" type="text" required autocomplete="address-level2" />
+              </div>
+              <div class="form-field">
+                <label for="state">State <span class="req">*</span></label>
+                <input id="state" name="state" type="text" required autocomplete="address-level1" />
+              </div>
+              <div class="form-field form-field--full">
+                <label for="area">Preferred distribution area / territory <span class="req">*</span></label>
+                <input id="area" name="area" type="text" required placeholder="e.g. Pune district, Western Maharashtra" />
+              </div>
+              <div class="form-field">
+                <label for="businessType">Business type <span class="req">*</span></label>
+                <select id="businessType" name="businessType" required>
+                  <option value="">Select...</option>
+                  <option value="Distributor">Distributor</option>
+                  <option value="Dealer / retailer">Dealer / retailer</option>
+                  <option value="Wholesaler">Wholesaler</option>
+                  <option value="Hardware / welding shop">Hardware / welding shop</option>
+                  <option value="Other">Other</option>
+                </select>
+              </div>
+              <div class="form-field">
+                <label for="experience">Years in welding / hardware trade</label>
+                <input id="experience" name="experience" type="text" placeholder="e.g. 5 years" />
+              </div>
+            </div>
+            <div class="distributor-brief__nav">
+              <button type="button" class="btn btn--ghost" data-brief-prev>Back</button>
+              <button type="button" class="btn btn--primary" data-brief-next>Next: Volume &amp; interest</button>
+            </div>
+          </div>
 
-            <a class="btn btn--ghost" href="contact.html">General enquiry</a>
-
+          <div class="distributor-brief__step" data-brief-step hidden>
+            <h3>3. Products &amp; volume story</h3>
+            <div class="form-grid">
+              <div class="form-field form-field--full">
+                <label for="interest">Products of interest</label>
+                <select id="interest" name="interest">
+                  <option value="Full Bharatweld range">Full Bharatweld range</option>
+                  <option value="Mild steel electrodes (E6013 / E7018)">Mild steel electrodes (E6013 / E7018)</option>
+                  <option value="Stainless electrodes (E308L)">Stainless electrodes (E308L)</option>
+                  <option value="Cutting electrodes">Cutting electrodes</option>
+                  <option value="Hardfacing / manganese">Hardfacing / manganese</option>
+                </select>
+              </div>
+              <div class="form-field form-field--full">
+                <label for="message">Tell us about your business <span class="req">*</span></label>
+                <textarea id="message" name="message" rows="5" required placeholder="Current brands you deal in, monthly volume, warehouse capacity, why you want to partner with Bharatweld..."></textarea>
+              </div>
+            </div>
+            <div class="distributor-brief__nav">
+              <button type="button" class="btn btn--ghost" data-brief-prev>Back</button>
+              <button class="btn btn--primary" type="submit">Send application on WhatsApp</button>
+              <a class="btn btn--ghost" href="contact.html">General enquiry</a>
+            </div>
           </div>
 
           <p id="distributor-status" class="form-status" role="status" aria-live="polite"></p>
-
         </form>
 
         <aside class="contact-aside">
@@ -399,11 +362,11 @@
 
   </script>
 
-  <script src="js/products.js?v=9"></script>
+  <script src="js/products.js?v=10"></script>
 
-  <script src="js/cart.js?v=5"></script>
+  <script src="js/cart.js?v=6"></script>
 
-  <script src="js/main.js?v=12"></script>
+  <script src="js/main.js?v=13"></script>
 
 </body>
 

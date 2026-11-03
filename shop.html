@@ -22,7 +22,7 @@
 
   <link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet" />
 
-  <link rel="stylesheet" href="css/styles.css?v=29" />
+  <link rel="stylesheet" href="css/styles.css?v=30" />
 
     <script id="preloader-boot">try{if(sessionStorage.getItem('shubh_preloader_seen')==='1')document.documentElement.classList.remove('is-preload')}catch(e){}</script>
   <style id="preloader-critical">html.is-preload,html.is-preload body{overflow:hidden}html:not(.is-preload) .site-preloader{display:none!important}.site-preloader{position:fixed;inset:0;z-index:10000;display:grid;place-items:center;padding:1.5rem;background:linear-gradient(165deg,#06354a 0%,#0a4d68 42%,#0078a8 100%);color:#fff}.site-preloader__inner{display:flex;flex-direction:column;align-items:center;text-align:center;gap:.75rem;width:min(100%,20rem)}.site-preloader__mark{position:relative;width:7.25rem;height:7.25rem;display:grid;place-items:center}.site-preloader__mark img{width:4.75rem;height:4.75rem;object-fit:contain;border-radius:50%;background:#fff;padding:.35rem}.site-preloader__brand{margin:0;font:700 clamp(1.55rem,4vw,2rem)/1.1 Sora,Segoe UI,sans-serif}.site-preloader__tag{margin:0;font-size:.78rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.78)}.site-preloader__bar{width:100%;height:3px;margin-top:1rem;border-radius:999px;background:rgba(255,255,255,.18);overflow:hidden}.site-preloader__bar-fill{display:block;height:100%;width:0;background:#00aeef}.site-preloader__pct{margin:0;font-size:.88rem;letter-spacing:.08em;color:rgba(255,255,255,.72)}.site-preloader.is-done{opacity:0;visibility:hidden;pointer-events:none}</style>
@@ -113,13 +113,47 @@
 
 
     <section class="section section--compact">
-
       <div class="container">
-
+        <div class="grade-chooser reveal" data-grade-chooser>
+          <p class="eyebrow">Quick guide</p>
+          <h2>Not sure which electrode?</h2>
+          <p>Answer three questions — we will recommend a Bharatweld grade. Category filters below still work as usual.</p>
+          <div class="grade-chooser__steps">
+            <div data-chooser-group="metal">
+              <p class="grade-chooser__q">1. What metal are you welding?</p>
+              <div class="grade-chooser__opts">
+                <button type="button" class="grade-chooser__opt" data-chooser-val="ms">Mild steel</button>
+                <button type="button" class="grade-chooser__opt" data-chooser-val="hs">High-strength / structural steel</button>
+                <button type="button" class="grade-chooser__opt" data-chooser-val="stainless">Stainless (304 / 308)</button>
+              </div>
+            </div>
+            <div data-chooser-group="job">
+              <p class="grade-chooser__q">2. What is the job?</p>
+              <div class="grade-chooser__opts">
+                <button type="button" class="grade-chooser__opt" data-chooser-val="sheet">Gates, grills, sheet metal</button>
+                <button type="button" class="grade-chooser__opt" data-chooser-val="structural">Frames, bridges, heavy fab</button>
+                <button type="button" class="grade-chooser__opt" data-chooser-val="cut">Cutting / gouging / metal removal</button>
+                <button type="button" class="grade-chooser__opt" data-chooser-val="wear">Wear overlay / hardfacing</button>
+              </div>
+            </div>
+            <div data-chooser-group="position">
+              <p class="grade-chooser__q">3. Main welding position?</p>
+              <div class="grade-chooser__opts">
+                <button type="button" class="grade-chooser__opt" data-chooser-val="flat">Flat / horizontal</button>
+                <button type="button" class="grade-chooser__opt" data-chooser-val="all">All positions</button>
+                <button type="button" class="grade-chooser__opt" data-chooser-val="overlay">Overlay passes</button>
+              </div>
+            </div>
+          </div>
+          <div class="grade-chooser__result" data-chooser-result hidden>
+            <p class="eyebrow">Recommended</p>
+            <h3 data-chooser-title></h3>
+            <p data-chooser-blurb></p>
+            <a class="btn btn--primary" data-chooser-link href="/shop.html">View details</a>
+          </div>
+        </div>
         <div class="shop-categories reveal" id="shop-categories" role="tablist" aria-label="Product categories"></div>
-
       </div>
-
     </section>
 
 
@@ -213,11 +247,9 @@
 
   </script>
 
-  <script src="js/products.js?v=9"></script>
-
-  <script src="js/cart.js?v=5"></script>
-
-  <script src="js/main.js?v=12"></script>
+  <script src="js/products.js?v=10"></script>
+  <script src="js/cart.js?v=6"></script>
+  <script src="js/main.js?v=13"></script>
 
 </body>
 
