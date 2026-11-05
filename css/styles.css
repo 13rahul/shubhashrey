@@ -3690,7 +3690,6 @@ p {
   .site-preloader__ring--delay,
   .site-preloader__bar-fill,
   .site-preloader__bead-line,
-  .grade-stage__bead,
   .erase.is-on .erase__old::after {
     animation: none !important;
   }
