@@ -109,17 +109,17 @@ const PRODUCTS = [
   },
   {
     id: "cutting",
-    sku: "BW-CAPTAIN-CUT",
+    sku: "BW-CUT",
     name: "Industrial Cutting Electrodes",
-    shortName: "Captain Cut",
+    shortName: "Cutting",
     category: "Cutting & Gouging Electrodes",
     categoryGroup: "cutting",
-    tagline: "Captain-Cut electrodes for metal cutting and gouging",
+    tagline: "Bharatweld electrodes for metal cutting and gouging",
     description:
-      "Bharatweld Captain-Cut cutting electrodes are for metal severing, piercing, gouging, and weld removal on mild steel, cast iron, and non-ferrous metals - a practical tool for maintenance crews and fabrication shops.",
+      "Bharatweld cutting electrodes are for metal severing, piercing, gouging, and weld removal on mild steel, cast iron, and non-ferrous metals - a practical tool for maintenance crews and fabrication shops.",
     price: 2500,
     unit: "",
-    image: "/assets/products/cutting.png?v=3",
+    image: "/assets/products/cutting.png?v=4",
     current: "AC / DC",
     aws: "Cutting / gouging type",
     coating: "Special cutting flux",
@@ -221,7 +221,7 @@ const INDUSTRIES = [
     grades: "Industrial Cutting Electrodes",
     summary:
       "Cut, pierce, and gouge metal for maintenance, demolition, and repair without oxy-fuel equipment.",
-    image: "/assets/products/cutting.png?v=3",
+    image: "/assets/products/cutting.png?v=4",
   },
   {
     id: "hardfacing",

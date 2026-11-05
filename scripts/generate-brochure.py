@@ -46,7 +46,7 @@ PRODUCTS = [
     },
     {
         "name": "Industrial Cutting Electrodes",
-        "aws": "Captain Cut",
+        "aws": "Cutting / gouging",
         "cat": "Cutting & Gouging",
         "tag": "Metal cutting, piercing & gouging without oxy-fuel equipment.",
         "specs": "AC/DC | 4 / 5 mm",

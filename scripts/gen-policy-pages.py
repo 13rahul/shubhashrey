@@ -180,7 +180,7 @@ pages = {
           <li><strong>E6013</strong> - General-purpose rutile electrodes for mild steel</li>
           <li><strong>E7018 / E7018-1</strong> - Low-hydrogen electrodes for structural and high-strength work</li>
           <li><strong>E308L-16</strong> - Stainless steel electrodes for 304/308-type applications</li>
-          <li><strong>Cutting electrodes</strong> - Captain-Cut industrial cutting and gouging</li>
+          <li><strong>Cutting electrodes</strong> - Bharatweld industrial cutting and gouging</li>
           <li><strong>Manganese hardfacing</strong> - Wear-resistant overlay electrodes</li>
         </ul>
         <p>For detailed applications and specifications, see our <a href="shop.html">product catalogue</a> and <a href="welding-process.html">welding procedures</a> guide.</p>

@@ -352,7 +352,7 @@ const GRADE_STAGE_COPY = {
     why: "Extra-low carbon stainless for 304/308 food, chemical, and architectural work.",
   },
   cutting: {
-    why: "Captain-Cut for severing, piercing, and gouging without oxy-fuel gear.",
+    why: "Bharatweld cutting electrodes for severing, piercing, and gouging without oxy-fuel gear.",
   },
   manganese: {
     why: "High-manganese overlays for crushers, rails, and heavy abrasion + impact.",

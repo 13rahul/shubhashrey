@@ -14,7 +14,7 @@ PRODUCTS = [
     ("e-6013.png", "E-6013", "GENERAL PURPOSE"),
     ("e-7018.png", "E-7018", "LOW HYDROGEN"),
     ("e-308l.png", "E-308L", "STAINLESS STEEL"),
-    ("cutting.png", "CAPTAIN CUT", "CUTTING & GOUGING"),
+    ("cutting.png", "CUTTING", "CUTTING & GOUGING"),
     ("manganese.png", "MANGANESE", "HARDFACING"),
 ]
 

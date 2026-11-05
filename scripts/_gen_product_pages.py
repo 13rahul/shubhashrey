@@ -9,8 +9,8 @@ ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "products"
 SITE = "https://shubhshrey.com"
 CSS_V = "30"
-JS_MAIN = "13"
-JS_PRODUCTS = "10"
+JS_MAIN = "14"
+JS_PRODUCTS = "11"
 JS_CART = "6"
 
 PRODUCTS = [
@@ -149,19 +149,19 @@ PRODUCTS = [
     },
     {
         "id": "cutting",
-        "sku": "BW-CAPTAIN-CUT",
+        "sku": "BW-CUT",
         "name": "Industrial Cutting Electrodes",
-        "shortName": "Captain Cut",
+        "shortName": "Cutting",
         "category": "Cutting & Gouging Electrodes",
         "categoryGroup": "cutting",
-        "tagline": "Captain-Cut electrodes for metal cutting and gouging",
+        "tagline": "Bharatweld electrodes for metal cutting and gouging",
         "description": (
-            "Bharatweld Captain-Cut cutting electrodes are for metal severing, piercing, "
+            "Bharatweld cutting electrodes are for metal severing, piercing, "
             "gouging, and weld removal on mild steel, cast iron, and non-ferrous metals — "
             "a practical tool for maintenance crews and fabrication shops."
         ),
         "meta_extra": (
-            "Bharatweld Captain-Cut industrial cutting and gouging electrodes by Shubhshrey Industries. "
+            "Bharatweld industrial cutting and gouging electrodes by Shubhshrey Industries. "
             "Cut, pierce, and gouge without oxy-fuel. Made in India."
         ),
         "benefits": [
@@ -379,7 +379,7 @@ def gallery_html(p: dict, img_path: str) -> str:
     main_alt = f"{p['name']} — Bharatweld welding electrodes packaging"
     if not rods:
         return f'<img src="{img_path}" alt="{esc(main_alt)}" width="1200" height="900" itemprop="image" />'
-    rods_path = f"../assets/products/{rods}?v=3"
+    rods_path = f"../assets/products/{rods}?v=4"
     rods_alt = f"{p['shortName']} electrode rods — Bharatweld"
     return f"""
             <div data-product-gallery>
@@ -398,7 +398,7 @@ def gallery_html(p: dict, img_path: str) -> str:
 def render_page(p: dict) -> str:
     url = f"{SITE}/products/{p['id']}"
     img_url = f"{SITE}/assets/products/{p['image']}"
-    img_path = f"../assets/products/{p['image']}?v=3"
+    img_path = f"../assets/products/{p['image']}?v=4"
     desc = p["meta_extra"]
     title = f"{p['name']} | Bharatweld | Shubhshrey Industries"
     related = related_for(p)
@@ -415,7 +415,7 @@ def render_page(p: dict) -> str:
             cards.append(
                 f"""        <article class="product-item">
           <a class="product-item__media" href="/products/{r['id']}">
-            <img src="../assets/products/{r['image']}?v=3" alt="{esc(r['name'])} - Bharatweld" width="480" height="360" loading="lazy" />
+            <img src="../assets/products/{r['image']}?v=4" alt="{esc(r['name'])} - Bharatweld" width="480" height="360" loading="lazy" />
           </a>
           <div class="product-item__body">
             <p class="product-item__cat">{esc(r['category'])}</p>
