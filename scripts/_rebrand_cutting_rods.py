@@ -1,4 +1,4 @@
-"""Remove CAPTAIN CUT from cutting rod photos; stamp BHARATWELD; rebuild composite."""
+"""Remove CAPTAIN CUT from cutting rod photos; stamp BHARATWELD™; rebuild composite."""
 from __future__ import annotations
 
 from pathlib import Path
@@ -88,7 +88,7 @@ def cover_rod_bands(im: Image.Image) -> Image.Image:
 def stamp_bharatweld(im: Image.Image) -> Image.Image:
     w, h = im.size
     font = load_font(max(18, int(w * 0.055)))
-    label = "BHARATWELD"
+    label = "BHARATWELD™"
     centers = [int(w * x) for x in (0.18, 0.40, 0.62, 0.84)]
     mid_y = int(h * 0.42)
     base = ImageDraw.Draw(im)

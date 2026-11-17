@@ -66,7 +66,7 @@ add(
     processes="SMAW;GMAW;GTAW;Cutting",
     electrodes="E7018;E6013;E308L;Cutting",
     volume="High",
-    pitch="Heavy fab + PEB + boiler works - Bharatweld E7018 + cutting rods",
+    pitch="Heavy fab + PEB + boiler works - BHARATWELD™ E7018 + cutting rods",
     source="Website",
     notes="Also sales@jaisonsglobal.com; CNC/laser/plasma cutting, PEB, welding & painting",
     products="Heavy fabrication; PEB structures; boiler manufacturing; CNC/laser/plasma cutting; welding & painting",
@@ -166,7 +166,7 @@ add(
     processes="SMAW;GTAW",
     electrodes="E7018;E6013;E308L",
     volume="High",
-    pitch="IBR boiler fab - lead with Bharatweld E7018; SS parts need E308L",
+    pitch="IBR boiler fab - lead with BHARATWELD™ E7018; SS parts need E308L",
     source="Website;Maps",
     notes="20,000+ sq ft Bhosari facility; ISO 9001 & IBR",
 )
@@ -212,7 +212,7 @@ add(
     processes="SMAW;GTAW",
     electrodes="E7018;E6013;E308L",
     volume="High",
-    pitch="IBR boilers & pressure parts - Bharatweld E7018 trial pack",
+    pitch="IBR boilers & pressure parts - BHARATWELD™ E7018 trial pack",
     source="Website",
     notes="Boilers, thermic fluid heaters, heat exchangers, SS fabrication",
 )
@@ -258,7 +258,7 @@ add(
     processes="SMAW;GTAW",
     electrodes="E7018;E6013;E308L",
     volume="High",
-    pitch="Coded pressure vessels - Bharatweld E7018 for CS shells",
+    pitch="Coded pressure vessels - BHARATWELD™ E7018 for CS shells",
     source="Website",
     notes="info@pilonengineering.com also listed",
 )
@@ -513,7 +513,7 @@ add(
     processes="SMAW;GMAW",
     electrodes="E6013;E7018",
     volume="Med",
-    pitch="Auto sheet & fabricated components - Bharatweld E6013 cartons",
+    pitch="Auto sheet & fabricated components - BHARATWELD™ E6013 cartons",
     source="Website",
     notes="Supplies Tata Motors, Force Motors, etc.",
 )
@@ -697,7 +697,7 @@ add(
     processes="SMAW;GMAW",
     electrodes="E7018;E6013",
     volume="Med",
-    pitch="Engineering fab - Bharatweld E6013/E7018 intro pack",
+    pitch="Engineering fab - BHARATWELD™ E6013/E7018 intro pack",
     source="Chamber directory (GCCIA)",
     notes="",
 )
@@ -904,7 +904,7 @@ add(
     processes="SMAW;GMAW",
     electrodes="E7018;E6013",
     volume="Med",
-    pitch="Engineering fab - Bharatweld E7018 intro",
+    pitch="Engineering fab - BHARATWELD™ E7018 intro",
     source="Chamber directory (GCCIA)",
     notes="Listed as Subhash Pvt Ltd on chamber list",
 )
@@ -1135,7 +1135,7 @@ add(
     processes="SMAW;GMAW",
     electrodes="E7018;E6013",
     volume="High",
-    pitch="EOT/goliath crane girders - Bharatweld E7018 for structural welds",
+    pitch="EOT/goliath crane girders - BHARATWELD™ E7018 for structural welds",
     source="Website",
     notes="2000+ crane installations claimed",
 )
@@ -1227,7 +1227,7 @@ add(
     processes="SMAW;GMAW",
     electrodes="E7018;E6013",
     volume="High",
-    pitch="EOT cranes & hoists - Bharatweld E7018 for crane fab",
+    pitch="EOT cranes & hoists - BHARATWELD™ E7018 for crane fab",
     source="Website",
     notes="Also Alandi unit listed on profile",
 )
@@ -1570,7 +1570,7 @@ DIRECTORY_ROWS = [
     ("Shree Samarth Industries (Sector 7-237)", "General engineering", "SME", "Plot No. 237, Sector No. 7, PCNTDA, Bhosari, Pune - 411026", "Sector 7", "9881204321", "Industrial unit - E6013"),
     ("Shree Stamping", "Auto-component manufacturers", "SME", "Plot No. J-158, MIDC, Bhosari, Pune - 411026", "J Block", "020-27120378", "Stampings - E6013 fixtures"),
     ("Shree Yash Auto Comp Pvt Ltd", "Auto-component manufacturers", "SME", "Plot No. J-363, MIDC, Bhosari, Pune - 411026", "J Block", "020-27120955", "Auto components - maintenance electrodes"),
-    ("Sharp Arc Welding Services", "Industrial maintenance", "Micro", "Paras Industrial Premises, Gala No. 10, Plot No. 71/1B/12, General T Block, MIDC, Bhosari, Pune - 411026", "General Block", "9822073369", "Welding services - stock Bharatweld electrodes"),
+    ("Sharp Arc Welding Services", "Industrial maintenance", "Micro", "Paras Industrial Premises, Gala No. 10, Plot No. 71/1B/12, General T Block, MIDC, Bhosari, Pune - 411026", "General Block", "9822073369", "Welding services - stock BHARATWELD™ electrodes"),
 ]
 
 PROCESS_BY_INDUSTRY = {

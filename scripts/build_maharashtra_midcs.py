@@ -661,7 +661,7 @@ def write_excel(rows: list[dict]) -> Path | None:
     ws["A1"].font = Font(bold=True, size=14)
     notes = [
         "",
-        "Purpose: territory plan for Bharatweld / Shubhshrey Industries electrode sales.",
+        "Purpose: territory plan for BHARATWELD™ / Shubhshrey Industries electrode sales.",
         "Official industrial-area names sourced from MIDC EODB Plot List With Trees.",
         "Maharashtra Industries Dept. cites 289+ MIDC areas; this sheet lists the EODB",
         "registry areas plus common sales aliases (Bhosari, Mahape, etc.).",

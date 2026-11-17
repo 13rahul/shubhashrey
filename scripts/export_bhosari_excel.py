@@ -39,7 +39,7 @@ def main():
 
     # README first
     ws = wb.create_sheet("README", 0)
-    ws["A1"] = "Bhosari MIDC Prospects - Bharatweld / Shubhshrey Industries"
+    ws["A1"] = "Bhosari MIDC Prospects - BHARATWELD™ / Shubhshrey Industries"
     ws["A1"].font = Font(bold=True, size=14, color="1F4E79")
     instructions = [
         "",

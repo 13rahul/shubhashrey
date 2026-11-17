@@ -37,7 +37,7 @@ PRELOADER = """
         <span class="site-preloader__ring site-preloader__ring--delay" aria-hidden="true"></span>
         <img src="assets/logo.png" alt="" width="96" height="96" decoding="async" />
       </div>
-      <p class="site-preloader__brand">Bharatweld</p>
+      <p class="site-preloader__brand">BHARATWELD™</p>
       <p class="site-preloader__tag">Shubhshrey Industries</p>
       <div class="site-preloader__bar" aria-hidden="true"><span class="site-preloader__bar-fill"></span></div>
       <p class="site-preloader__pct"><span data-preloader-pct>0</span>%</p>
