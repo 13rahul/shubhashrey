@@ -27,7 +27,7 @@ FOOTER = f"""  <footer class="site-footer">
         <img src="assets/logo.png" alt="" width="56" height="56" />
         <div>
           <strong>SHUBHSHREY INDUSTRIES PRIVATE LIMITED</strong>
-          <p>Bharatweld - Proudly Indian For Indians</p>
+          <p>BHARATWELD™ - Proudly Indian For Indians</p>
 {SOCIAL}
         </div>
       </div>
@@ -83,7 +83,7 @@ def page(title, desc, eyebrow, h1, lead, body):
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>{title} | Bharatweld | Shubhshrey Industries</title>
+  <title>{title} | BHARATWELD™ | Shubhshrey Industries</title>
   <meta name="description" content="{desc}" />
   <link rel="icon" href="assets/logo.png" type="image/png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -135,15 +135,15 @@ def page(title, desc, eyebrow, h1, lead, body):
 pages = {
     "affiliations.html": dict(
         title="Affiliations",
-        desc="Affiliations and industry initiatives of Shubhshrey Industries - Bharatweld, Make in India, and ISO 9001:2015.",
+        desc="Affiliations and industry initiatives of Shubhshrey Industries - BHARATWELD™, Make in India, and ISO 9001:2015.",
         eyebrow="Company",
         h1="Affiliations",
-        lead="How Shubhshrey Industries and Bharatweld align with national manufacturing initiatives and quality frameworks.",
-        body="""        <p>Shubhshrey Industries Private Limited manufactures Bharatweld welding electrodes from MIDC Baramati, Maharashtra. Our affiliations reflect a commitment to Indian manufacturing, certified quality systems, and practical support for fabricators, dealers, and industrial buyers.</p>
+        lead="How Shubhshrey Industries and BHARATWELD™ align with national manufacturing initiatives and quality frameworks.",
+        body="""        <p>Shubhshrey Industries Private Limited manufactures BHARATWELD™ welding electrodes from MIDC Baramati, Maharashtra. Our affiliations reflect a commitment to Indian manufacturing, certified quality systems, and practical support for fabricators, dealers, and industrial buyers.</p>
         <div class="policy-cards">
           <article>
             <h2>Make in India</h2>
-            <p>Bharatweld electrodes are manufactured in India for Indian workshops - Proudly Indian For Indians. We support domestic fabrication, construction, and maintenance supply chains with locally produced consumables.</p>
+            <p>BHARATWELD™ electrodes are manufactured in India for Indian workshops - Proudly Indian For Indians. We support domestic fabrication, construction, and maintenance supply chains with locally produced consumables.</p>
           </article>
           <article>
             <h2>ISO 9001:2015</h2>
@@ -165,22 +165,22 @@ pages = {
     ),
     "approvals.html": dict(
         title="Approvals & Certifications",
-        desc="Approvals and certifications for Bharatweld electrodes - ISO 9001:2015 and electrode classifications from Shubhshrey Industries.",
+        desc="Approvals and certifications for BHARATWELD™ electrodes - ISO 9001:2015 and electrode classifications from Shubhshrey Industries.",
         eyebrow="Quality",
         h1="Approvals &amp; certifications",
-        lead="Standards and certifications that guide Bharatweld manufacturing and product identification.",
+        lead="Standards and certifications that guide BHARATWELD™ manufacturing and product identification.",
         body="""        <p>Shubhshrey Industries manufactures electrodes to recognised welding electrode classifications used across Indian industry. Our plant quality system is certified to ISO 9001:2015.</p>
         <h2>Company certification</h2>
         <ul class="policy-list">
           <li><strong>ISO 9001:2015</strong> - Certified quality management system for manufacturing of welding electrodes</li>
         </ul>
         <h2>Product classifications</h2>
-        <p>Bharatweld grades are identified by industry-standard electrode classifications used by fabricators and inspectors:</p>
+        <p>BHARATWELD™ grades are identified by industry-standard electrode classifications used by fabricators and inspectors:</p>
         <ul class="policy-list">
           <li><strong>E6013</strong> - General-purpose rutile electrodes for mild steel</li>
           <li><strong>E7018 / E7018-1</strong> - Low-hydrogen electrodes for structural and high-strength work</li>
           <li><strong>E308L-16</strong> - Stainless steel electrodes for 304/308-type applications</li>
-          <li><strong>Cutting electrodes</strong> - Bharatweld industrial cutting and gouging</li>
+          <li><strong>Cutting electrodes</strong> - BHARATWELD™ industrial cutting and gouging</li>
           <li><strong>Manganese hardfacing</strong> - Wear-resistant overlay electrodes</li>
         </ul>
         <p>For detailed applications and specifications, see our <a href="shop.html">product catalogue</a> and <a href="welding-process.html">welding procedures</a> guide.</p>
@@ -191,11 +191,11 @@ pages = {
     ),
     "network.html": dict(
         title="Our Network",
-        desc="Bharatweld dealer and distributor network across India - partner with Shubhshrey Industries from Baramati.",
+        desc="BHARATWELD™ dealer and distributor network across India - partner with Shubhshrey Industries from Baramati.",
         eyebrow="Distribution",
         h1="Our network",
-        lead="A growing dealer and distributor network supplying Bharatweld electrodes to workshops and job sites across India.",
-        body="""        <p>Welding consumables must be available where fabricators work - from tier-2 towns to major industrial corridors. Shubhshrey Industries supports a network of distributors, dealers, and channel partners who stock Bharatweld grades and serve local customers with reliable delivery.</p>
+        lead="A growing dealer and distributor network supplying BHARATWELD™ electrodes to workshops and job sites across India.",
+        body="""        <p>Welding consumables must be available where fabricators work - from tier-2 towns to major industrial corridors. Shubhshrey Industries supports a network of distributors, dealers, and channel partners who stock BHARATWELD™ grades and serve local customers with reliable delivery.</p>
         <h2>How our network works</h2>
         <div class="policy-cards">
           <article>
@@ -208,11 +208,11 @@ pages = {
           </article>
           <article>
             <h3>End users</h3>
-            <p>Fabrication shops, contractors, maintenance teams, and plant stores source Bharatweld through our partners or direct enquiry.</p>
+            <p>Fabrication shops, contractors, maintenance teams, and plant stores source BHARATWELD™ through our partners or direct enquiry.</p>
           </article>
         </div>
         <h2>Join the network</h2>
-        <p>If you deal in welding consumables or hardware and want to represent Bharatweld in your territory, apply through our distributor form. We review applications and respond on WhatsApp.</p>
+        <p>If you deal in welding consumables or hardware and want to represent BHARATWELD™ in your territory, apply through our distributor form. We review applications and respond on WhatsApp.</p>
         <div class="cta-row">
           <a class="btn btn--primary" href="distributor.html">Become our distributor</a>
           <a class="btn btn--ghost" href="contact.html">Contact sales</a>
@@ -220,11 +220,11 @@ pages = {
     ),
     "quality-policy.html": dict(
         title="Quality Policy",
-        desc="Quality policy of Shubhshrey Industries - ISO 9001:2015 commitment for Bharatweld welding electrodes.",
+        desc="Quality policy of Shubhshrey Industries - ISO 9001:2015 commitment for BHARATWELD™ welding electrodes.",
         eyebrow="Quality",
         h1="Quality policy",
         lead="Our commitment to consistent electrode quality, customer satisfaction, and continual improvement.",
-        body="""        <p>Shubhshrey Industries Private Limited is committed to manufacturing Bharatweld welding electrodes that meet customer requirements through a management system aligned with <strong>ISO 9001:2015</strong>.</p>
+        body="""        <p>Shubhshrey Industries Private Limited is committed to manufacturing BHARATWELD™ welding electrodes that meet customer requirements through a management system aligned with <strong>ISO 9001:2015</strong>.</p>
         <h2>We achieve this by</h2>
         <ul class="policy-list">
           <li>Commitment, training, and excellence among our people</li>
@@ -237,9 +237,9 @@ pages = {
         <ul class="policy-list">
           <li><strong>Customer satisfaction</strong> - electrodes that perform as expected on the job site</li>
           <li><strong>On-time delivery</strong> - reliable dispatch from Baramati to partners and buyers</li>
-          <li><strong>Consistent product quality</strong> - batch-to-batch stability across Bharatweld grades</li>
+          <li><strong>Consistent product quality</strong> - batch-to-batch stability across BHARATWELD™ grades</li>
         </ul>
-        <p>Quality objectives are communicated across our supply chain. Effectiveness is monitored by management so we can improve day-to-day working and the products that leave our plant under the Bharatweld name.</p>
+        <p>Quality objectives are communicated across our supply chain. Effectiveness is monitored by management so we can improve day-to-day working and the products that leave our plant under the BHARATWELD™ name.</p>
         <p class="policy-signoff"><strong>Shubhshrey Industries Private Limited</strong><br />Directors - Sourabh Bothara &amp; Nikhil Sancheti</p>
         <div class="cta-row">
           <a class="btn btn--primary" href="approvals.html">Approvals &amp; certifications</a>
@@ -248,11 +248,11 @@ pages = {
     ),
     "she-policy.html": dict(
         title="Safety, Health & Environment Policy",
-        desc="Safety, health and environment policy of Shubhshrey Industries - responsible manufacturing of Bharatweld electrodes in Baramati.",
+        desc="Safety, health and environment policy of Shubhshrey Industries - responsible manufacturing of BHARATWELD™ electrodes in Baramati.",
         eyebrow="Responsibility",
         h1="Safety, health &amp; environment",
         lead="Protecting our people, our community in Baramati, and the environment around our manufacturing operations.",
-        body="""        <p>Shubhshrey Industries believes quality manufacturing includes a safe workplace and responsible environmental practice. This policy guides how we produce Bharatweld electrodes at MIDC Baramati.</p>
+        body="""        <p>Shubhshrey Industries believes quality manufacturing includes a safe workplace and responsible environmental practice. This policy guides how we produce BHARATWELD™ electrodes at MIDC Baramati.</p>
         <h2>Safety</h2>
         <ul class="policy-list">
           <li>Maintain safe working conditions on the shop floor and in warehouses</li>

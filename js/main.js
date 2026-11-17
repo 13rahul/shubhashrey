@@ -109,7 +109,7 @@ function injectBrochureFab() {
   a.className = "brochure-fab";
   a.href = "/assets/brochure/bharatweld-brochure.pdf";
   a.setAttribute("download", "");
-  a.setAttribute("aria-label", "Download Bharatweld brochure PDF");
+  a.setAttribute("aria-label", "Download BHARATWELD™ brochure PDF");
   a.innerHTML =
     '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm1 7V3.5L18.5 9H15zM12 19l-4-4h2.5V11h3v4H16l-4 4z"/></svg>' +
     '<span class="brochure-fab__label">Brochure</span>';
@@ -352,7 +352,7 @@ const GRADE_STAGE_COPY = {
     why: "Extra-low carbon stainless for 304/308 food, chemical, and architectural work.",
   },
   cutting: {
-    why: "Bharatweld cutting electrodes for severing, piercing, and gouging without oxy-fuel gear.",
+    why: "BHARATWELD™ cutting electrodes for severing, piercing, and gouging without oxy-fuel gear.",
   },
   manganese: {
     why: "High-manganese overlays for crushers, rails, and heavy abrasion + impact.",
@@ -380,7 +380,7 @@ function initGradeStage() {
     });
     if (img) {
       img.src = product.image;
-      img.alt = `${product.name} — Bharatweld packaging`;
+      img.alt = `${product.name} — BHARATWELD™ packaging`;
     }
     if (cat) cat.textContent = product.category;
     if (name) name.textContent = product.name;
@@ -510,7 +510,7 @@ function renderProductPage() {
 
   root.innerHTML = `
       <div class="empty-state">
-        <h2>Browse Bharatweld electrodes</h2>
+        <h2>Browse BHARATWELD™ electrodes</h2>
         <p>Product pages now use clean URLs. Open the catalogue to choose a grade.</p>
         <a class="btn btn--primary" href="/shop.html">Go to shop</a>
       </div>
@@ -676,7 +676,7 @@ function initContactForm() {
     });
 
     let text =
-      `*New enquiry - Bharatweld / Shubhshrey*\n` +
+      `*New enquiry - BHARATWELD™ / Shubhshrey*\n` +
       `Name: ${firstName} ${lastName}\n` +
       `Email: ${email}\n`;
 
@@ -741,7 +741,7 @@ function initDistributorForm() {
     });
 
     let text =
-      `*Distributor application - Bharatweld / Shubhshrey*\n\n` +
+      `*Distributor application - BHARATWELD™ / Shubhshrey*\n\n` +
       `*Contact person:* ${fullName}\n` +
       `*Company:* ${company}\n` +
       `*Email:* ${email}\n` +

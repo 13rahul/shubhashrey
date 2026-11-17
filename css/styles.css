@@ -1,4 +1,4 @@
-/* Shubhshrey Industries - Bharatweld packaging brand */
+/* Shubhshrey Industries - BHARATWELD™ packaging brand */
 :root {
   --brand: #00aeef;
   --brand-dark: #0090c8;
@@ -832,7 +832,17 @@ p {
   margin: 0 0 var(--space-3);
   color: #fff;
   text-shadow: 0 2px 24px rgba(0, 60, 90, 0.35);
+  text-transform: uppercase;
   animation: riseIn 0.9s var(--ease) both;
+}
+
+.brand-tm {
+  font-size: 0.42em;
+  font-weight: 700;
+  letter-spacing: 0;
+  vertical-align: super;
+  line-height: 0;
+  margin-left: 0.08em;
 }
 
 .hero__tag {
@@ -1142,7 +1152,7 @@ p {
   object-fit: contain;
 }
 
-/* Packaging-inspired characteristics (from Bharatweld box) */
+/* Packaging-inspired characteristics (from BHARATWELD™ box) */
 .pack-traits {
   display: grid;
   grid-template-columns: repeat(2, 1fr);

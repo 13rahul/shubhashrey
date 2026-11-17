@@ -83,7 +83,7 @@ function renderProductCard(product, { featured = false } = {}) {
   return `
     <article class="product-item reveal" data-product-id="${product.id}" data-category="${product.categoryGroup}">
       <a class="product-item__media" href="${productUrl(product.id)}">
-        <img src="${product.image}" alt="${product.name} - Bharatweld" width="480" height="360" loading="lazy" />
+        <img src="${product.image}" alt="${product.name} - BHARATWELD™" width="480" height="360" loading="lazy" />
       </a>
       <div class="product-item__body">
         <p class="product-item__cat">${product.category}</p>
@@ -124,7 +124,7 @@ function renderCartPage() {
     root.innerHTML = `
       <div class="empty-state">
         <h2>Your cart is empty</h2>
-        <p>Browse Bharatweld electrodes and buy a product to get started.</p>
+        <p>Browse BHARATWELD™ electrodes and buy a product to get started.</p>
         <a class="btn btn--primary" href="shop.html">Go to shop</a>
       </div>
     `;
@@ -261,7 +261,7 @@ function buildWhatsAppOrderMessage(form, lines) {
     .join("\n");
 
   let message =
-    `*New Bharatweld order*\n` +
+    `*New BHARATWELD™ order*\n` +
     `Name: ${firstName} ${lastName}\n` +
     `Phone: ${phone}\n` +
     `Email: ${email}\n` +
@@ -335,7 +335,7 @@ function initGradeChooser() {
     if (blurb) {
       blurb.textContent =
         product.tagline ||
-        "Based on your answers, this Bharatweld grade is the best starting point.";
+        "Based on your answers, this BHARATWELD™ grade is the best starting point.";
     }
     if (link) {
       link.href = typeof productUrl === "function" ? productUrl(id) : `/products/${id}`;

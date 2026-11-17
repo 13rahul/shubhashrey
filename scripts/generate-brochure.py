@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Generate Bharatweld / Shubhshrey Industries brand PDF brochure."""
+"""Generate BHARATWELD™ / Shubhshrey Industries brand PDF brochure."""
 from pathlib import Path
 from fpdf import FPDF
 from PIL import Image
@@ -66,7 +66,7 @@ VALUES = [
     ("Quality", "Consistent electrode performance under ISO 9001:2015 processes."),
     ("Innovation", "Continuous improvement for Indian workshop conditions."),
     ("Customer Satisfaction", "Responsive service and electrodes welders can trust."),
-    ("Employee Involvement", "Skilled teams who take pride in every Bharatweld box."),
+    ("Employee Involvement", "Skilled teams who take pride in every BHARATWELD™ box."),
     ("Responsibility to Society", "Make in India manufacturing from MIDC Baramati."),
     ("Dealers as Partners", "Long-term relationships with distributors nationwide."),
 ]
@@ -91,7 +91,7 @@ class Brochure(FPDF):
             self.set_font("Body", "B", 9)
             self.cell(0, 6, title, align="L")
             self.set_xy(120, 3.5)
-            self.cell(76, 6, "BHARATWELD  |  Proudly Indian For Indians", align="R")
+            self.cell(76, 6, "BHARATWELD™  |  Proudly Indian For Indians", align="R")
 
     def brand_footer(self, page_label=""):
         self.set_fill_color(*BRAND_DEEP)
@@ -138,7 +138,7 @@ def draw_cover(pdf: Brochure):
     pdf.set_y(88)
     pdf.set_text_color(*WHITE)
     pdf.set_font("Body", "B", 36)
-    pdf.cell(0, 14, "BHARATWELD", align="C")
+    pdf.cell(0, 14, "BHARATWELD™", align="C")
     pdf.ln()
     pdf.set_font("Body", "I", 13)
     pdf.cell(0, 8, "Proudly Indian For Indians", align="C")
@@ -176,7 +176,7 @@ def draw_cover(pdf: Brochure):
     pdf.set_text_color(*BRAND_DEEP)
     pdf.set_font("Body", "B", 9)
     pdf.set_xy(14, 216)
-    pdf.cell(182, 6, "BHARATWELD ELECTRODE CHARACTERISTICS", align="C")
+    pdf.cell(182, 6, "BHARATWELD™ ELECTRODE CHARACTERISTICS", align="C")
     pdf.ln()
     pdf.set_font("Body", "", 8.5)
     pdf.set_text_color(*INK)
@@ -211,7 +211,7 @@ def draw_about(pdf: Brochure):
     about = (
         "Shubhshrey Industries Private Limited is an ISO 9001:2015 certified manufacturer of welding "
         "electrodes, operating from the Maharashtra Industrial Development Corporation (MIDC) area in "
-        "Baramati. Under our Bharatweld brand - Proudly Indian For Indians - we supply quality welding "
+        "Baramati. Under our BHARATWELD™ brand - Proudly Indian For Indians - we supply quality welding "
         "consumables to fabrication shops, contractors, distributors, and industrial buyers across India."
     )
     pdf.multi_cell(182, 5.2, about)
@@ -311,7 +311,7 @@ def draw_product_pages(pdf: Brochure):
     pdf.add_page()
     pdf.brand_header_bar("PRODUCT RANGE")
     pdf.set_y(22)
-    pdf.section_title("Bharatweld electrodes")
+    pdf.section_title("BHARATWELD™ electrodes")
     pdf.set_font("Body", "", 9.5)
     pdf.set_text_color(*MUTED)
     pdf.multi_cell(
@@ -398,7 +398,7 @@ def draw_product_pages(pdf: Brochure):
     pdf.set_xy(20, 226)
     pdf.set_text_color(*WHITE)
     pdf.set_font("Body", "B", 14)
-    pdf.cell(0, 7, "Partner with Bharatweld")
+    pdf.cell(0, 7, "Partner with BHARATWELD™")
     pdf.ln()
     pdf.set_x(20)
     pdf.set_font("Body", "", 9.5)
@@ -432,7 +432,7 @@ def draw_back_cover(pdf: Brochure):
     pdf.set_y(70)
     pdf.set_text_color(*WHITE)
     pdf.set_font("Body", "B", 28)
-    pdf.cell(0, 12, "BHARATWELD", align="C")
+    pdf.cell(0, 12, "BHARATWELD™", align="C")
     pdf.ln()
     pdf.set_font("Body", "I", 12)
     pdf.cell(0, 8, "Proudly Indian For Indians", align="C")

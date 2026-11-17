@@ -8,7 +8,7 @@ from urllib.parse import quote
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "products"
 SITE = "https://shubhshrey.com"
-CSS_V = "32"
+CSS_V = "33"
 JS_MAIN = "14"
 JS_PRODUCTS = "11"
 JS_CART = "6"
@@ -23,12 +23,12 @@ PRODUCTS = [
         "categoryGroup": "mild-steel",
         "tagline": "General-purpose rutile electrode for mild steel fabrication",
         "description": (
-            "Bharatweld E6013 is a rutile-coated general-purpose electrode for mild steel. "
+            "BHARATWELD™ E6013 is a rutile-coated general-purpose electrode for mild steel. "
             "Smooth arc, easy slag removal, and a clean bead — ideal for gates, grills, "
             "sheet metal, and everyday workshop welding across India."
         ),
         "meta_extra": (
-            "Buy Bharatweld E6013 rutile welding electrodes from Shubhshrey Industries, "
+            "Buy BHARATWELD™ E6013 rutile welding electrodes from Shubhshrey Industries, "
             "Baramati. AWS E6013, all-position, AC/DC. Made in India."
         ),
         "benefits": [
@@ -68,12 +68,12 @@ PRODUCTS = [
         "categoryGroup": "mild-steel",
         "tagline": "Low-hydrogen electrode for structural and high-strength steel",
         "description": (
-            "Bharatweld E7018 (E7018/E7018-1) is a low-hydrogen electrode for high-strength, "
+            "BHARATWELD™ E7018 (E7018/E7018-1) is a low-hydrogen electrode for high-strength, "
             "crack-resistant welds on structural steel, heavy fabrication, bridges, and "
             "pressure-boundary work where ductility matters."
         ),
         "meta_extra": (
-            "Bharatweld E7018 / E7018-1 low-hydrogen welding electrodes by Shubhshrey Industries. "
+            "BHARATWELD™ E7018 / E7018-1 low-hydrogen welding electrodes by Shubhshrey Industries. "
             "Structural, heavy fabrication, and high-tensile steel. Made in India."
         ),
         "benefits": [
@@ -113,12 +113,12 @@ PRODUCTS = [
         "categoryGroup": "stainless",
         "tagline": "Stainless electrode for 304/308 grades and corrosion-resistant work",
         "description": (
-            "Bharatweld E308L-16 is designed for 18/8 stainless steels including AISI 304L and 308L. "
+            "BHARATWELD™ E308L-16 is designed for 18/8 stainless steels including AISI 304L and 308L. "
             "Stable arc, clean bead appearance, and reliable performance for food, chemical, "
             "and architectural stainless applications."
         ),
         "meta_extra": (
-            "Bharatweld E308L-16 stainless welding electrodes from Shubhshrey Industries. "
+            "BHARATWELD™ E308L-16 stainless welding electrodes from Shubhshrey Industries. "
             "For AISI 304L/308L food, chemical, and architectural stainless. Made in India."
         ),
         "benefits": [
@@ -154,14 +154,14 @@ PRODUCTS = [
         "shortName": "Cutting",
         "category": "Cutting & Gouging Electrodes",
         "categoryGroup": "cutting",
-        "tagline": "Bharatweld electrodes for metal cutting and gouging",
+        "tagline": "BHARATWELD™ electrodes for metal cutting and gouging",
         "description": (
-            "Bharatweld cutting electrodes are for metal severing, piercing, "
+            "BHARATWELD™ cutting electrodes are for metal severing, piercing, "
             "gouging, and weld removal on mild steel, cast iron, and non-ferrous metals — "
             "a practical tool for maintenance crews and fabrication shops."
         ),
         "meta_extra": (
-            "Bharatweld industrial cutting and gouging electrodes by Shubhshrey Industries. "
+            "BHARATWELD™ industrial cutting and gouging electrodes by Shubhshrey Industries. "
             "Cut, pierce, and gouge without oxy-fuel. Made in India."
         ),
         "benefits": [
@@ -199,12 +199,12 @@ PRODUCTS = [
         "categoryGroup": "hardfacing",
         "tagline": "High-manganese overlay for impact and abrasion resistance",
         "description": (
-            "Bharatweld manganese hardfacing electrodes deposit wear-resistant overlays on "
+            "BHARATWELD™ manganese hardfacing electrodes deposit wear-resistant overlays on "
             "crushers, excavator parts, railway components, and mining equipment subject to "
             "heavy impact and abrasion in Indian industrial conditions."
         ),
         "meta_extra": (
-            "Bharatweld manganese hardfacing electrodes from Shubhshrey Industries. "
+            "BHARATWELD™ manganese hardfacing electrodes from Shubhshrey Industries. "
             "Wear-resistant overlays for mining, crushers, and railways. Made in India."
         ),
         "benefits": [
@@ -243,7 +243,7 @@ PRELOADER = """  <div class="site-preloader" id="site-preloader" role="status" a
         <span class="site-preloader__ring site-preloader__ring--delay" aria-hidden="true"></span>
         <img src="../assets/logo.png" alt="" width="96" height="96" decoding="async" />
       </div>
-      <p class="site-preloader__brand">Bharatweld</p>
+      <p class="site-preloader__brand">BHARATWELD<span class="brand-tm">™</span></p>
       <p class="site-preloader__tag">Shubhshrey Industries</p>
       <div class="site-preloader__bar" aria-hidden="true"><span class="site-preloader__bar-fill"></span></div>
       <p class="site-preloader__pct"><span data-preloader-pct>0</span>%</p>
@@ -259,7 +259,7 @@ FOOTER = """  <footer class="site-footer">
         <img src="../assets/logo.png" alt="" width="56" height="56" />
         <div>
           <strong>SHUBHSHREY INDUSTRIES PRIVATE LIMITED</strong>
-          <p>Bharatweld - Proudly Indian For Indians</p>
+          <p>BHARATWELD™ - Proudly Indian For Indians</p>
           <div class="social-links">
             <a href="https://www.linkedin.com/company/shubhshrey-industries-pvt-ltd/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 114.127 0 2.063 2.063 0 01-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
             <a href="http://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
@@ -341,7 +341,7 @@ def amp_picker_html(p: dict) -> str:
     return f"""
             <div class="amp-picker" data-amp-picker>
               <h2 class="product-detail__subhead">Suggested current by diameter</h2>
-              <p>Pick a diameter to see a typical amperage window for Bharatweld {esc(p["shortName"])}.</p>
+              <p>Pick a diameter to see a typical amperage window for BHARATWELD™ {esc(p["shortName"])}.</p>
               <div class="amp-picker__chips">
                 {"".join(chips)}
               </div>
@@ -376,11 +376,11 @@ def compare_html(p: dict) -> str:
 
 def gallery_html(p: dict, img_path: str) -> str:
     rods = p.get("rods")
-    main_alt = f"{p['name']} — Bharatweld welding electrodes packaging"
+    main_alt = f"{p['name']} — BHARATWELD™ welding electrodes packaging"
     if not rods:
         return f'<img src="{img_path}" alt="{esc(main_alt)}" width="1200" height="900" itemprop="image" />'
     rods_path = f"../assets/products/{rods}?v=4"
-    rods_alt = f"{p['shortName']} electrode rods — Bharatweld"
+    rods_alt = f"{p['shortName']} electrode rods — BHARATWELD™"
     return f"""
             <div data-product-gallery>
               <img src="{img_path}" alt="{esc(main_alt)}" width="1200" height="900" itemprop="image" data-gallery-main />
@@ -400,7 +400,7 @@ def render_page(p: dict) -> str:
     img_url = f"{SITE}/assets/products/{p['image']}"
     img_path = f"../assets/products/{p['image']}?v=4"
     desc = p["meta_extra"]
-    title = f"{p['name']} | Bharatweld | Shubhshrey Industries"
+    title = f"{p['name']} | BHARATWELD™ | Shubhshrey Industries"
     related = related_for(p)
     benefits = "".join(f"        <li>{esc(b)}</li>\n" for b in p["benefits"])
     apps = "".join(f"          <li>{esc(a)}</li>\n" for a in p["applications"])
@@ -415,7 +415,7 @@ def render_page(p: dict) -> str:
             cards.append(
                 f"""        <article class="product-item">
           <a class="product-item__media" href="/products/{r['id']}">
-            <img src="../assets/products/{r['image']}?v=4" alt="{esc(r['name'])} - Bharatweld" width="480" height="360" loading="lazy" />
+            <img src="../assets/products/{r['image']}?v=4" alt="{esc(r['name'])} - BHARATWELD™" width="480" height="360" loading="lazy" />
           </a>
           <div class="product-item__body">
             <p class="product-item__cat">{esc(r['category'])}</p>
@@ -441,7 +441,7 @@ def render_page(p: dict) -> str:
         "mpn": p["sku"],
         "description": p["description"],
         "image": [img_url],
-        "brand": {"@type": "Brand", "name": "Bharatweld"},
+        "brand": {"@type": "Brand", "name": "BHARATWELD™"},
         "manufacturer": {
             "@type": "Organization",
             "name": "Shubhshrey Industries Private Limited",
@@ -463,7 +463,7 @@ def render_page(p: dict) -> str:
     }
 
     wa = "https://wa.me/919168679621?text=" + quote(
-        f"Hello, I need a quote for Bharatweld {p['shortName']} ({p['sku']})."
+        f"Hello, I need a quote for BHARATWELD™ {p['shortName']} ({p['sku']})."
     )
 
     return f"""<!DOCTYPE html>
@@ -477,14 +477,14 @@ def render_page(p: dict) -> str:
   <link rel="canonical" href="{url}" />
   <meta property="og:type" content="product" />
   <meta property="og:site_name" content="Shubhshrey Industries" />
-  <meta property="og:title" content="{esc(p['name'])} | Bharatweld" />
+  <meta property="og:title" content="{esc(p['name'])} | BHARATWELD™" />
   <meta property="og:description" content="{esc(desc)}" />
   <meta property="og:url" content="{url}" />
   <meta property="og:image" content="{img_url}" />
-  <meta property="product:brand" content="Bharatweld" />
+  <meta property="product:brand" content="BHARATWELD™" />
   <meta property="product:retailer_item_id" content="{esc(p['sku'])}" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="{esc(p['name'])} | Bharatweld" />
+  <meta name="twitter:title" content="{esc(p['name'])} | BHARATWELD™" />
   <meta name="twitter:description" content="{esc(desc)}" />
   <meta name="twitter:image" content="{img_url}" />
   <link rel="icon" href="../assets/logo.png" type="image/png" />

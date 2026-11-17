@@ -35,7 +35,7 @@ const PRODUCTS = [
     categoryGroup: "mild-steel",
     tagline: "General-purpose rutile electrode for mild steel fabrication",
     description:
-      "Bharatweld E6013 is a rutile-coated general-purpose electrode for mild steel. Smooth arc, easy slag removal, and a clean bead - ideal for gates, grills, sheet metal, and everyday workshop welding across India.",
+      "BHARATWELD™ E6013 is a rutile-coated general-purpose electrode for mild steel. Smooth arc, easy slag removal, and a clean bead - ideal for gates, grills, sheet metal, and everyday workshop welding across India.",
     price: 1900,
     unit: "",
     image: "/assets/products/e-6013.png?v=3",
@@ -62,7 +62,7 @@ const PRODUCTS = [
     categoryGroup: "mild-steel",
     tagline: "Low-hydrogen electrode for structural and high-strength steel",
     description:
-      "Bharatweld E7018 (E7018/E7018-1) is a low-hydrogen electrode for high-strength, crack-resistant welds on structural steel, heavy fabrication, bridges, and pressure-boundary work where ductility matters.",
+      "BHARATWELD™ E7018 (E7018/E7018-1) is a low-hydrogen electrode for high-strength, crack-resistant welds on structural steel, heavy fabrication, bridges, and pressure-boundary work where ductility matters.",
     price: 3000,
     unit: "",
     image: "/assets/products/e-7018.png?v=3",
@@ -89,7 +89,7 @@ const PRODUCTS = [
     categoryGroup: "stainless",
     tagline: "Stainless electrode for 304/308 grades and corrosion-resistant work",
     description:
-      "Bharatweld E308L-16 is designed for 18/8 stainless steels including AISI 304L and 308L. Stable arc, clean bead appearance, and reliable performance for food, chemical, and architectural stainless applications.",
+      "BHARATWELD™ E308L-16 is designed for 18/8 stainless steels including AISI 304L and 308L. Stable arc, clean bead appearance, and reliable performance for food, chemical, and architectural stainless applications.",
     price: 5000,
     unit: "",
     image: "/assets/products/e-308l.png?v=3",
@@ -114,9 +114,9 @@ const PRODUCTS = [
     shortName: "Cutting",
     category: "Cutting & Gouging Electrodes",
     categoryGroup: "cutting",
-    tagline: "Bharatweld electrodes for metal cutting and gouging",
+    tagline: "BHARATWELD™ electrodes for metal cutting and gouging",
     description:
-      "Bharatweld cutting electrodes are for metal severing, piercing, gouging, and weld removal on mild steel, cast iron, and non-ferrous metals - a practical tool for maintenance crews and fabrication shops.",
+      "BHARATWELD™ cutting electrodes are for metal severing, piercing, gouging, and weld removal on mild steel, cast iron, and non-ferrous metals - a practical tool for maintenance crews and fabrication shops.",
     price: 2500,
     unit: "",
     image: "/assets/products/cutting.png?v=4",
@@ -143,7 +143,7 @@ const PRODUCTS = [
     categoryGroup: "hardfacing",
     tagline: "High-manganese overlay for impact and abrasion resistance",
     description:
-      "Bharatweld manganese hardfacing electrodes deposit wear-resistant overlays on crushers, excavator parts, railway components, and mining equipment subject to heavy impact and abrasion in Indian industrial conditions.",
+      "BHARATWELD™ manganese hardfacing electrodes deposit wear-resistant overlays on crushers, excavator parts, railway components, and mining equipment subject to heavy impact and abrasion in Indian industrial conditions.",
     price: 20000,
     unit: "",
     image: "/assets/products/manganese.png?v=3",
@@ -178,7 +178,7 @@ const COMPANY_VALUES = [
   },
   {
     title: "Employee Involvement",
-    text: "Skilled teams trained in safe production practices who take pride in every Bharatweld box that leaves Baramati.",
+    text: "Skilled teams trained in safe production practices who take pride in every BHARATWELD™ box that leaves Baramati.",
   },
   {
     title: "Responsibility to Society",

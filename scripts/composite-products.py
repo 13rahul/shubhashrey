@@ -1,4 +1,4 @@
-"""Composite real welding rod photos with Bharatweld packaging box."""
+"""Composite real welding rod photos with BHARATWELD™ packaging box."""
 from pathlib import Path
 from PIL import Image, ImageDraw, ImageFont
 
@@ -33,7 +33,7 @@ def load_font(size: int, bold: bool = False):
 
 
 def crop_pack_box_from_photo() -> Image.Image:
-    """Crop the physical Bharatweld box from the reference photo."""
+    """Crop the physical BHARATWELD™ box from the reference photo."""
     img = Image.open(PACK_PHOTO).convert("RGBA")
     w, h = img.size
     # Box occupies roughly the left-center of the photo
