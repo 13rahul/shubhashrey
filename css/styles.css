@@ -2882,31 +2882,41 @@ p {
   padding-bottom: var(--space-4);
 }
 
-.profile-facts {
-  list-style: none;
-  margin: 0 0 1.25rem;
+.profile-certs {
+  background:
+    linear-gradient(135deg, rgba(0, 120, 168, 0.98), rgba(0, 174, 239, 0.92));
+  padding: 1.35rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.profile-certs__inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.25rem 2rem;
+}
+
+.profile-certs img {
+  height: 64px;
+  width: auto;
+  object-fit: contain;
+  background: transparent !important;
+  border-radius: 0;
   padding: 0;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 0.75rem;
+  box-shadow: none !important;
 }
 
-.profile-facts li {
-  background: #fff;
-  border: 1px solid var(--line);
-  border-radius: var(--radius-sm);
-  padding: 0.85rem 1rem;
-  font-size: 0.92rem;
-  box-shadow: var(--shadow-sm);
+.profile-certs img.footer-badge--mark {
+  height: 72px;
 }
 
-.profile-facts strong {
-  display: block;
-  font-size: 0.75rem;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: var(--brand-dark);
-  margin-bottom: 0.25rem;
+.profile-certs img.footer-badge--mii {
+  height: 52px;
+}
+
+.profile-certs img.footer-badge--msme {
+  height: 46px;
 }
 
 .profile-nav {
@@ -3040,8 +3050,20 @@ p {
 }
 
 @media (max-width: 900px) {
-  .profile-facts {
-    grid-template-columns: repeat(2, 1fr);
+  .profile-certs img {
+    height: 48px;
+  }
+
+  .profile-certs img.footer-badge--mark {
+    height: 56px;
+  }
+
+  .profile-certs img.footer-badge--mii {
+    height: 40px;
+  }
+
+  .profile-certs img.footer-badge--msme {
+    height: 36px;
   }
 
   .profile-pillars {
@@ -3055,8 +3077,28 @@ p {
 }
 
 @media (max-width: 640px) {
-  .profile-facts {
-    grid-template-columns: 1fr;
+  .profile-certs {
+    padding: 1rem 0;
+  }
+
+  .profile-certs__inner {
+    gap: 0.85rem 1.15rem;
+  }
+
+  .profile-certs img {
+    height: 40px;
+  }
+
+  .profile-certs img.footer-badge--mark {
+    height: 46px;
+  }
+
+  .profile-certs img.footer-badge--mii {
+    height: 34px;
+  }
+
+  .profile-certs img.footer-badge--msme {
+    height: 30px;
   }
 }
 
