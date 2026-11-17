@@ -8,7 +8,7 @@ from urllib.parse import quote
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "products"
 SITE = "https://shubhshrey.com"
-CSS_V = "30"
+CSS_V = "32"
 JS_MAIN = "14"
 JS_PRODUCTS = "11"
 JS_CART = "6"
@@ -506,7 +506,7 @@ def render_page(p: dict) -> str:
     <div class="header-inner">
       <a class="logo-link" href="../index.html">
         <img src="../assets/logo.png" alt="Shubhshrey Industries logo" width="52" height="52" />
-        <span class="logo-text">Shubhshrey Industries</span>
+        <span class="logo-text">Shubhshrey Industries Pvt. Ltd.</span>
       </a>
       <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav">
         <span></span><span></span><span></span>

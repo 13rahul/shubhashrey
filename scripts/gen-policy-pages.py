@@ -97,7 +97,7 @@ def page(title, desc, eyebrow, h1, lead, body):
     <div class="header-inner">
       <a class="logo-link" href="index.html">
         <img src="assets/logo.png" alt="Shubhshrey Industries logo" width="52" height="52" />
-        <span class="logo-text">Shubhshrey Industries</span>
+        <span class="logo-text">Shubhshrey Industries Pvt. Ltd.</span>
       </a>
       <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav">
         <span></span><span></span><span></span>

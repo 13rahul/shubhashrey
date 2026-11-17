@@ -435,9 +435,9 @@ p {
 
 .logo-text {
   font-family: var(--font-display);
-  font-size: 1rem;
+  font-size: 0.92rem;
   font-weight: 700;
-  letter-spacing: 0.03em;
+  letter-spacing: 0.02em;
   text-transform: uppercase;
   line-height: 1.2;
   white-space: nowrap;
@@ -3838,19 +3838,6 @@ p {
   height: auto;
   background: #f7fafc;
   border-radius: var(--radius-sm);
-}
-
-.grade-stage__bead {
-  position: absolute;
-  left: 12%;
-  right: 12%;
-  bottom: 12%;
-  height: 4px;
-  border-radius: 999px;
-  background: linear-gradient(90deg, transparent, var(--brand), #fff, var(--brand-deep, #0078a8));
-  opacity: 0.85;
-  transform-origin: left center;
-  animation: beadDraw 2s var(--ease-out) infinite alternate;
 }
 
 .grade-stage__copy h3 {
